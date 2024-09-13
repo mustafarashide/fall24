@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.7)  12 SEP 2024 23:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.7)  13 SEP 2024 08:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -208,6 +208,24 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 \Gin@req@height=\dimen154
 \Gin@req@width=\dimen155
 )
+(c:/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(c:/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen156
+\captionmargin=\dimen157
+\caption@leftmargin=\dimen158
+\caption@rightmargin=\dimen159
+\caption@width=\dimen160
+\caption@indent=\dimen161
+\caption@parindent=\dimen162
+\caption@hangindent=\dimen163
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count322
+\c@continuedfloat=\count323
+)
 (c:/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -217,53 +235,53 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (c:/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count322
-\Gm@cntv=\count323
-\c@Gm@tempcnt=\count324
-\Gm@bindingoffset=\dimen156
-\Gm@wd@mp=\dimen157
-\Gm@odd@mp=\dimen158
-\Gm@even@mp=\dimen159
-\Gm@layoutwidth=\dimen160
-\Gm@layoutheight=\dimen161
-\Gm@layouthoffset=\dimen162
-\Gm@layoutvoffset=\dimen163
+\Gm@cnth=\count324
+\Gm@cntv=\count325
+\c@Gm@tempcnt=\count326
+\Gm@bindingoffset=\dimen164
+\Gm@wd@mp=\dimen165
+\Gm@odd@mp=\dimen166
+\Gm@even@mp=\dimen167
+\Gm@layoutwidth=\dimen168
+\Gm@layoutheight=\dimen169
+\Gm@layouthoffset=\dimen170
+\Gm@layoutvoffset=\dimen171
 \Gm@dimlist=\toks28
 )
 (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count325
+\l__color_backend_stack_int=\count327
 \l__pdf_internal_box=\box55
 )
 (./PS_1.aux)
 \openout1 = `PS_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
  (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count326
-\scratchdimen=\dimen164
+\scratchcounter=\count328
+\scratchdimen=\dimen172
 \scratchbox=\box56
-\nofMPsegments=\count327
-\nofMParguments=\count328
+\nofMPsegments=\count329
+\nofMParguments=\count330
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count329
-\MPscratchDim=\dimen165
-\MPnumerator=\count330
-\makeMPintoPDFobject=\count331
+\MPscratchCnt=\count331
+\MPscratchDim=\dimen173
+\MPnumerator=\count332
+\makeMPintoPDFobject=\count333
 \everyMPtoPDFconversion=\toks30
 ) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -274,6 +292,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -309,21 +330,21 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 23--27
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 24--28
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--27
+Underfull \hbox (badness 10000) in paragraph at lines 24--28
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
 
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -333,114 +354,112 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--64
+Underfull \hbox (badness 10000) in paragraph at lines 50--65
 
  []
 
 <./images/question3b.png, id=12, 803.0pt x 803.0pt>
 File: ./images/question3b.png Graphic file (type png)
 <use ./images/question3b.png>
-Package pdftex.def Info: ./images/question3b.png  used on input line 85.
-(pdftex.def)             Requested size: 270.65791pt x 270.66385pt.
+Package pdftex.def Info: ./images/question3b.png  used on input line 92.
+(pdftex.def)             Requested size: 164.58194pt x 164.5793pt.
 <./images/question3c.png, id=14, 803.0pt x 803.0pt>
 File: ./images/question3c.png Graphic file (type png)
 <use ./images/question3c.png>
-Package pdftex.def Info: ./images/question3c.png  used on input line 89.
-(pdftex.def)             Requested size: 270.65791pt x 270.66385pt.
+Package pdftex.def Info: ./images/question3c.png  used on input line 102.
+(pdftex.def)             Requested size: 164.58194pt x 164.5793pt.
 
 
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.91 		\end{solution}
-                     
+l.108 		\end{solution}
+                      
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 [2]
-Underfull \vbox (badness 10000) detected at line 91
- []
-
-
-Underfull \vbox (badness 10000) detected at line 91
- []
-
+<./images/question4.png, id=20, 414.04688pt x 523.20468pt>
+File: ./images/question4.png Graphic file (type png)
+<use ./images/question4.png>
+Package pdftex.def Info: ./images/question4.png  used on input line 119.
+(pdftex.def)             Requested size: 180.45717pt x 228.03926pt.
 
 
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.91 		\end{solution}
-                     
+l.123 			A
+          4.
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-[3 <./images/question3b.png>]
+[3 <./images/question3b.png> <./images/question3c.png>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -448,33 +467,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.99 				\\
-           
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.100 				\part
-               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.102 				\\
+l.127 				\\
             
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -487,7 +480,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.103 				\part
+l.128 				\part
                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -500,7 +493,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.105 				\\
+l.130 				\\
             
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -513,7 +506,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.106 				\part
+l.131 				\part
                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -526,7 +519,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.108 				\\
+l.133 				\\
             
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -539,7 +532,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.109 				\part
+l.134 				\part
                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -552,7 +545,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.111 				\\
+l.136 				\\
             
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -565,7 +558,33 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.112 				\part
+l.137 				\part
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 				\\
+            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.140 				\part
                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -576,12 +595,12 @@ or  <return>  to continue without it.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.116 \end{document}
+l.144 \end{document}
                     
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-[4 <./images/question3c.png>]
+[4 <./images/question4.png>]
 This exam contains 4 questions with 5 parts, 0 subparts, and 0 subsubparts.
 (./PS_1.aux)
  ***********
@@ -590,13 +609,13 @@ L3 programming layer <2024-08-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4260 strings out of 473579
- 61608 string characters out of 5732264
- 1935960 words of memory out of 5000000
- 27142 multiletter control sequences out of 15000+600000
+ 5625 strings out of 473579
+ 87923 string characters out of 5732264
+ 1936960 words of memory out of 5000000
+ 28501 multiletter control sequences out of 15000+600000
  563618 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,512b,396s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,10n,65p,512b,548s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dis
@@ -605,10 +624,10 @@ pe1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
 fb>
-Output written on PS_1.pdf (4 pages, 179937 bytes).
+Output written on PS_1.pdf (4 pages, 267925 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
+ 64 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

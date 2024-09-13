@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{caption}
 \graphicspath{ {./images/} }
 \usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
 \lhead{Mustafa Rashid\\}
@@ -82,15 +83,42 @@
 				The concentration in blood of 3 mg of the drug after 2 hours is 0.04 mg/liter 
 				
 				\part Drug concentration (mg/l) as a function of $x$, the amount in mg of the drug given, and $t$, the time in hours since the injection with $x$ held constant at 4 mg\\
-				\includegraphics[width=0.7\linewidth]{question3b}
+				\makebox[0pt][l]{
+					\begin{minipage}{\textwidth}
+						\centering
+						\includegraphics[width=.4\textwidth]{question3b}
+						\captionof{figure}{}
+					\end{minipage}
+				}
 				
-				\part As more mg of the drug is given, the maximum concentration of the dose in the blood in mg/l increases. This can be seen on the graphs as the peaks of the functions $f(4,t)$, $f(3,t)$, $f(2,t)$, and $f(1,t)$. The highest peak is at $a=4$ and the lowest peak is at $a=1$. The time $t$ hours since the injection for the drug to reach its maximum concentration increases as the value of $a$ or the the value of the dose given increases.
 				
-				\includegraphics[width=0.7\linewidth]{question3c}
+				\part As more mg of the drug is given, the maximum concentration of the dose in the blood in mg/l increases. This can be seen on the graphs as the peaks of the functions $f(4,t)$, $f(3,t)$, $f(2,t)$, and $f(1,t)$. The highest peak is at $a=4$ and the lowest peak is at $a=1$. The time $t$ hours since the injection for the drug to reach its maximum concentration increases as the value of $a$ or the the value of the dose given increases.\\
+				\makebox[0pt][l]{
+					\begin{minipage}{\textwidth}
+						\centering
+						\includegraphics[width=.4\textwidth]{question3c}
+						\captionof{figure}{}
+					\end{minipage}
+				}
+				
+				\medskip
+				
+
 			\end{parts}
 		\end{solution}
 		
-		\question Without a calculation or computer, match the functions (a)-(f) with their cross-sections with $x$ fixed in the Figure 1. Explain your reasoning
+		\question Without a calculation or computer, match the functions (a)-(f) with their cross-sections with $x$ fixed in the Figure 3. Explain your reasoning
+			
+			\makebox[0pt][l]{%
+				\begin{minipage}{\textwidth}
+					\centering
+					\includegraphics[width=.4\textwidth]{question4}
+					\captionof{figure}{}
+					\label{fig:fig1}
+				\end{minipage}
+			}
+			
+			\medskip
 			\begin{solution}
 			A4.
 			\begin{parts}
