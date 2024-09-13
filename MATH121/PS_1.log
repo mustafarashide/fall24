@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.7)  13 SEP 2024 08:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.7)  13 SEP 2024 14:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -350,252 +350,66 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+<./images/question2.png, id=1, 889.82437pt x 633.86812pt>
+File: ./images/question2.png Graphic file (type png)
+<use ./images/question2.png>
+Package pdftex.def Info: ./images/question2.png  used on input line 56.
+(pdftex.def)             Requested size: 164.58194pt x 117.23474pt.
+
+Underfull \vbox (badness 3460) detected at line 58
+ []
+
+
 
 [1
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--65
-
- []
-
-<./images/question3b.png, id=12, 803.0pt x 803.0pt>
+<./images/question3b.png, id=14, 803.0pt x 803.0pt>
 File: ./images/question3b.png Graphic file (type png)
 <use ./images/question3b.png>
-Package pdftex.def Info: ./images/question3b.png  used on input line 92.
+Package pdftex.def Info: ./images/question3b.png  used on input line 89.
 (pdftex.def)             Requested size: 164.58194pt x 164.5793pt.
-<./images/question3c.png, id=14, 803.0pt x 803.0pt>
+<./images/question3c.png, id=15, 803.0pt x 803.0pt>
 File: ./images/question3c.png Graphic file (type png)
 <use ./images/question3c.png>
-Package pdftex.def Info: ./images/question3c.png  used on input line 102.
+Package pdftex.def Info: ./images/question3c.png  used on input line 99.
 (pdftex.def)             Requested size: 164.58194pt x 164.5793pt.
+
+Underfull \vbox (badness 10000) detected at line 105
+ []
+
 
 
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.108 		\end{solution}
+l.105 		\end{solution}
                       
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-[2]
-<./images/question4.png, id=20, 414.04688pt x 523.20468pt>
+[2 <./images/question2.png>]
+<./images/question4.png, id=22, 414.04688pt x 523.20468pt>
 File: ./images/question4.png Graphic file (type png)
 <use ./images/question4.png>
-Package pdftex.def Info: ./images/question4.png  used on input line 119.
+Package pdftex.def Info: ./images/question4.png  used on input line 116.
 (pdftex.def)             Requested size: 180.45717pt x 228.03926pt.
 
 
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.123 			A
+l.120 			A
           4.
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 [3 <./images/question3b.png> <./images/question3c.png>]
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.127 				\\
-            
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.128 				\part
-               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.130 				\\
-            
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.131 				\part
-               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.133 				\\
-            
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.134 				\part
-               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.136 				\\
-            
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.137 				\part
-               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.139 				\\
-            
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.140 				\part
-               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.144 \end{document}
+l.131 \end{document}
                     
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -609,25 +423,25 @@ L3 programming layer <2024-08-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5625 strings out of 473579
- 87923 string characters out of 5732264
- 1936960 words of memory out of 5000000
- 28501 multiletter control sequences out of 15000+600000
+ 5637 strings out of 473579
+ 88218 string characters out of 5732264
+ 1935960 words of memory out of 5000000
+ 28513 multiletter control sequences out of 15000+600000
  563618 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,512b,548s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,10n,65p,512b,542s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
-fb>
-Output written on PS_1.pdf (4 pages, 267925 bytes).
+/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on PS_1.pdf (4 pages, 917434 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 71 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
