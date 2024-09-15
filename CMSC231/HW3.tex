@@ -1,0 +1,119 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\graphicspath{ {./images/} }
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Problem Set 1\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+
+\begin{document}
+	
+	\begingroup  
+	\centering
+	\LARGE Discrete Mathematics\\
+	\LARGE Homework 3\\[0.5em]
+	\large \today\\[0.5em]
+	\large Mustafa Rashid\par
+	\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	\begin{questions}
+	
+	\question  A menagerie consists of seven brown dogs, two black dogs, six gray cats, ten black cats, five blue birds, six yellow birds, and one black bird. Determine which of the following statements are true and which are false.
+	\begin{parts}
+		\part Every animal in the menagerie is brown or gray or black.
+		\part There is an animal in the menagerie that is neither a cat nor a dog.
+		\part No animal in the menagerie is blue.
+		\part There are in the menagerie a dog, a cat, and a bird that all have the same color.
+	\end{parts}
+	\begin{solution}
+		\begin{parts}
+			\part False. There is a blue bird.
+			\part True.
+			\part False. There is a blue bird.
+			\part True.
+		\end{parts}
+	\end{solution}
+	\question Find a counterexample to show that the statement below is false.\\
+		\begin{center}
+			$\forall a \in \mathbb{Z}, (a-1)/a \textrm{ is not an integer.}$
+		\end{center} 
+
+	\begin{solution}
+		The negation of the statement would be $\exists a \in \mathbb{Z}, (a-1)/a \textrm{ is an integer.}$
+		If $a=0$, $a-1/1$ = $0$ which is $\in \mathbb{Z}$. Since the negation is true for $a=0$ then the original statement is false.
+	\end{solution}
+	
+	\question Rewrite each of the following statements in the form "$\forall$  \makebox[1cm]{\hrulefill} $x,$  \makebox[1cm]{\hrulefill}.
+	\begin{parts}
+		\part Every real number is positive, negative, or zero.
+		\part No logicians are lazy.
+		\part The number $-1$ is not equal to the square of any real number.
+	\end{parts}
+	
+	\begin{solution}
+		A3. (double check a)
+		\begin{parts}
+			\part $\forall$ real numbers $x, x>0 \lor x<0 \lor x=0$ 
+			\part $\forall$ logicians $l$, $l$ is not lazy
+			\part $\forall$ real numbers $x, x^2 \neq -1$
+		\end{parts}
+	\end{solution}
+	
+	\question In any mathematics or computer science text other than this book, find an example of a statement that is universal but is implicitly quantified. Copy the statement as it appears and rewrite it making the quantification explicit. Give a complete citation for your example, including title, author, publisher, year, and page number.
+	
+	\begin{solution}
+		Theorem 9.1: Convergence of a Monotone, Bounded Sequence\\
+		If a sequence $s_n$ is bounded and monotone, it converges.
+		
+		For every sequence $s_n$, if $s_n$ is bounded and monotone, $s_n$ converges.
+		
+		Citation: Calculus 6th edition by Hughes-Hallet, Gleaason, McCallum et al., Wiley \& Sons, Inc., 2013, page 495
+	\end{solution}
+	
+	\question Let $\mathbb{R}$ be the domain of the predicate variable $x$. Which of the following are true and which are false? Give counterexamples for the statements that are false. 
+		\begin{parts}
+			\part $ab=0 \implies a=0$ or $b=0$
+			\part $a<b$ and $c<d \implies ac<bd$
+		\end{parts}
+	\begin{solution}
+		\begin{parts}
+			\part True.
+			\part False.\\
+			Example (1)\\
+			$a=-2, b=-1, c=-5, d=-3$\\
+			$a<b$ and $c<d$\\
+			$ac \geq bd$
+			\newpage
+			Example (2)\\
+			$a=1, b=2, c=-5, d=-4$\\
+			$a<b$ and $c<d$\\
+			$ac \geq bd$\\
+		\end{parts}	
+	\end{solution}
+		
+	\question Which of the following is a negation for "All dogs are loyal"? More than one answer may be correct.
+	\begin{parts}
+		\part All dogs are loyal.
+		\part No dogs are loyal.
+		\part Some dogs are disloyal.
+		\part Some dogs are loyal.
+		\part There is a disloyal animal that is not a dog.
+		\part There is a dog that is disloyal.
+		\part No animals that are not dogs are loyal.
+		\part Some animals that are not dogs are loyal.
+	\end{parts}
+	
+	\begin{solution}
+		(c) and (f)
+	\end{solution}
+\end{questions}
+\end{document}
