@@ -189,9 +189,73 @@
 			For any real positive number we can find another real positive number that is lower than it
 		\end{parts}
 	\end{solution}
-	\question Use the laws for negating universal and existential statements to derive the following rule:\\
+	\question Use the laws for negating universal and existential statements to derive the following rule:
 	\begin{center}
-		$\neg (\exists x \in D(\exists y \in E(P(x,y)))) \equiv \forall x \in D()$
+		$\neg (\exists x \in D(\exists y \in E(P(x,y)))) \equiv \forall x \in D(\forall y \in E(\neg(P(x,y))))$
 	\end{center}
+	\begin{solution}
+		$\neg (\exists x \in D(\exists y \in E(P(x,y))))$\\
+		$\forall x \in D(\neg(\exists y \in E(P(x,y))))$\\
+		$\forall x \in D(\forall y \in E(\neg(P(x,y))))$
+	\end{solution}
+	\question The following is the definition for  $\lim_{x\to a} f(x) = L$: 
+	\begin{center}
+		For all real numbers $\varepsilon >0$, there exists a real number $\delta>0$ such that for all real numbers $x$, if $a-\delta < x < a+\delta$ and $x\neq a$ then $L-\varepsilon < f(x) < L+\varepsilon$.
+	\end{center}
+	Write what it means for  $\lim_{x\to a} f(x) \neq L$. In other words, write the negation of the definition.
+	\begin{solution}
+		There exists a real number $\varepsilon>0$ such that for all real numbers $\delta >0$ there exists a real number $x$ such that $x\leq a-\delta$ or $x\geq a+\delta$ or $x=a$ and $f(x)\leq L-\varepsilon$ or $f(x)\geq L+\varepsilon$
+	\end{solution}
+	Some of the follwoing arguments are valid by universal modus ponens or universal modus tollens; others are invalid and exhibit the converse or the inverse error. State which are valid and which are invalid. Justify your answers
+	\question All honest people pay their taxes. \\
+	Darth is not honest.\\
+	$\therefore$ Darth does not pay his taxes.
+	\begin{solution}
+		Let $H(p)$ be $p$ is honest and $T(p)$ be $p$ pays their taxes.\\
+		$\forall \textrm{ people } p$, if $H(p)$ then $T(p)$\\
+		$\neg H(d)$ for a particular person, Darth\\
+		$\therefore \neg T(d)$\\
+		The argument is invalid as it exhibits the inverse error.
+	\end{solution}
+	
+	\question If a compilation of a computer program produces error messages, then the program is not correct. \\
+	Compilation of this program does not produce error messages.\\
+	$\therefore$ This program is correct.
+	\begin{solution}
+		Let $P(x)$ be $x$ is a compilation of that produces error messages and $Q(x)$ be $x$ is not correct.\\
+		$\forall x$, if $P(x)$ then $Q(x)$\\
+		$\neg P(x)$ for a particular computer program\\
+		$\therefore \neg Q(x)$\\
+		The argument is invalid as it exhibits the inverse error.
+	\end{solution}
+	
+	\question If an infinite series converges, then its terms go to 0. \\
+	The terms of the infinite series $\sum_{n=1}^{\infty} \frac{n}{n+1}$ do not go to 0.\\
+	$\therefore$ The infinite series $\sum_{n=1}^{\infty} \frac{n}{n+1}$ does not converge.
+	\begin{solution}
+		Let $P(x)$ be $x$ is an infinite series that converges and $Q(x)$ be $x$ is a series whose terms go to 0.\\
+		$\forall x$, if $P(x)$ then $Q(x)$\\
+		$\neg Q(x)$ for a particular infinite series\\
+		$\therefore \neg P(x)$\\
+		The argument is valid by modus tollens.
+	\end{solution}
+	\question Derive the validity of universal modus tollens from the validity of universal instantiation and modus tollens.
+	\begin{solution}
+		Given:\\
+		1. $p \longrightarrow q$\\
+		$\neg q$\\
+		$\therefore \neg p$\\
+		2. $\forall x \in D, P(x)$\\
+		$x \in D$\\
+		$\therefore P(x)$\\
+		To be found:\\
+		$\forall x, P(x) \longrightarrow Q(x)$\\
+		$\neg Q(a)$\\
+		$\neg P(a)$\\
+		
+		Let $\forall a \in D, \neg Q(a)$\\
+		By (2) we see that $\neg Q(a)$ and by (1) we can see than $\neg Q(a)$ implies $\neg Q(a)$
+		 
+	\end{solution}
 \end{questions}
 \end{document}
