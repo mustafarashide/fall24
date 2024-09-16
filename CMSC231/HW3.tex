@@ -6,7 +6,7 @@
 \graphicspath{ {./images/} }
 \usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
 \lhead{Mustafa Rashid\\}
-\rhead{Problem Set 1\\}
+\rhead{Chapter 3\\}
 \chead{\hline} 
 \thispagestyle{empty} 
 \newcommand*{\setdef}[1]{\left\{#1 \right\}} 
@@ -16,7 +16,7 @@
 	\begingroup  
 	\centering
 	\LARGE Discrete Mathematics\\
-	\LARGE Homework 3\\[0.5em]
+	\LARGE Chapter 3 Homework\\[0.5em]
 	\large \today\\[0.5em]
 	\large Mustafa Rashid\par
 	\large Fall 2024\par
@@ -49,7 +49,7 @@
 
 	\begin{solution}
 		The negation of the statement would be $\exists a \in \mathbb{Z}, (a-1)/a \textrm{ is an integer.}$
-		If $a=0$, $a-1/1$ = $0$ which is $\in \mathbb{Z}$. Since the negation is true for $a=0$ then the original statement is false.
+		If $a=0$, $a-1/1$ = $0$ which is $\in \mathbb{Z}$. Since the negation is true for $a=0$ the original statement is false.
 	\end{solution}
 	
 	\question Rewrite each of the following statements in the form "$\forall$  \makebox[1cm]{\hrulefill} $x,$  \makebox[1cm]{\hrulefill}.
@@ -115,5 +115,83 @@
 	\begin{solution}
 		(c) and (f)
 	\end{solution}
+	
+	\question Determine whether the proposed negations is correct. If it is not, write a correct negation.\\
+	\begin{parts}
+		\part 	Statement: The product of any irrational number and any rational number is irrational.\\
+		Proposed negation: The product of any irrational number and any rational number is rational.\\
+		\part Statement: For all real numbers $x_1$ and $x_2$, if $x_1^2=x_2^2$ then $x_1=x_2$.\\
+		Proposed negation: For all real numbers $x_1$ and $x_2$, if  $x_1^2=x_2^2$ then $x_1\neq x_2$.
+	\end{parts}
+	
+	\begin{solution}
+		\begin{parts}
+			\part Incorrect.\\
+			There is a rational number that is the product of an irrational number and a rational number.
+			\part Incorrect.\\
+			There exists real numbers $x_1$ and $x_2$ such that $x_1^2 = x_2^2$ and $x_1 \neq x_2$
+		\end{parts}
+	\end{solution}
+	
+	\question Write a negation for each statement.
+	\begin{parts}
+		\part $\forall n \in \mathbb{Z}$, if $n$ is prime then $n$ is odd or $n=2$
+		\part $\forall$ integers $n$, if $n$ is divisible by 6, then $n$ is divisible 2 and $n$ is divisible by 3
+	\end{parts}
+	\begin{solution}
+		\begin{parts}
+		\part $\exists n \in \mathbb{Z}$, such that $n$ is prime and $n$ is even and $n \neq 2$
+		\part $\exists$ an integer $n$, such that $n$ is divisible by 6 and $n$ is not divisible by 2 or $n$ is not divisible by 3 
+		\end{parts}
+	\end{solution}
+	
+	\question Give an example to show that a universal conditional statement is not logically equivalent to its inverse.
+	
+	\begin{solution}
+		\begin{center}
+		$\forall x \in D,$ if $P(x)$ then $Q(x) \not\equiv \forall x \in D$, if $\neg P(x)$ then $\neg Q(x)$
+		\end{center}
+		For all animals $x$, if $x$ is a dog then it can be a pet\\
+		The inverse of the above statement would be:\\
+		For all animals $x$, if $x$ is not a dog then it cannot be a pet\\
+		This is false as there are pets that are not dogs!
+	\end{solution}
+	
+	\question There is a triangle $x$ such that for all circles $y, y$ is above $x$. (Tarski World in Figure 3.3.1)
+	\begin{solution}
+		$\exists x$, $x$ is a triangle such that $\forall y$, $y$ is a circle, $y$ is above $x$
+		\begin{center}
+			\begin{tabular}{ c c c }
+				choose $x$ & , then given $y=$ & check that $y$ is above $x$ \\ 
+				f or i & a & yes \\  
+				 & b & yes \\    
+				 & c & yes
+			\end{tabular}
+		\end{center}
+		For triangles f or i, no matter what circle y we choose, we find that the circle is above the triangle.
+		
+	\end{solution}
+	
+	For the following questions, (a) rewrite the statement in English without using the symbol $\forall$ or $\exists$ or variables and expressing your answer as simply as possible, and (b) write a negation for the statement.
+	\question $\exists$ a real number $u$ such that $\forall$ real numbers $v, uv = v$.
+	\begin{solution}
+		\begin{parts}
+			\part There is at least one real number such that when it is multiplied by any other real number, the result is the other real number.
+			\part $\forall$ real numbers $u$, $\exists$ a real number $v$ such that $uv \neq v$\\
+			For all real numbers there is at least one other real number such that their product is not equal to the other real number.
+		\end{parts}
+	\end{solution}
+	\question $\exists x \in \mathbb{R^+}$ such that $\forall y \in \mathbb{R^+}, x \leq y$
+	\begin{solution}
+		\begin{parts}
+			\part There is at least one positive real number that is less than or equal to all the other positive real numbers
+			\part $\forall x \in \mathbb{R^+}, \exists y \in \mathbb{R^+}$ such that $x>y$\\
+			For any real positive number we can find another real positive number that is lower than it
+		\end{parts}
+	\end{solution}
+	\question Use the laws for negating universal and existential statements to derive the following rule:\\
+	\begin{center}
+		$\neg (\exists x \in D(\exists y \in E(P(x,y)))) \equiv \forall x \in D()$
+	\end{center}
 \end{questions}
 \end{document}
