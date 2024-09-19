@@ -26,236 +26,253 @@
 	\printanswers
 	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
 	\begin{questions}
-	
-	\question  A menagerie consists of seven brown dogs, two black dogs, six gray cats, ten black cats, five blue birds, six yellow birds, and one black bird. Determine which of the following statements are true and which are false.
-	\begin{parts}
-		\part Every animal in the menagerie is brown or gray or black.
-		\part There is an animal in the menagerie that is neither a cat nor a dog.
-		\part No animal in the menagerie is blue.
-		\part There are in the menagerie a dog, a cat, and a bird that all have the same color.
-	\end{parts}
-	\begin{solution}
+		\begin{center}
+			Exercise Set 3.1
+		\end{center}
+		\question  A menagerie consists of seven brown dogs, two black dogs, six gray cats, ten black cats, five blue birds, six yellow birds, and one black bird. Determine which of the following statements are true and which are false.
 		\begin{parts}
-			\part False. There is a blue bird.
-			\part True.
-			\part False. There is a blue bird.
-			\part True.
+			\setcounter{partno}{2}\part Every animal in the menagerie is brown or gray or black.
+			\part There is an animal in the menagerie that is neither a cat nor a dog.
+			\part No animal in the menagerie is blue.
+			\part There are in the menagerie a dog, a cat, and a bird that all have the same color.
 		\end{parts}
-	\end{solution}
-	\question Find a counterexample to show that the statement below is false.\\
+		\begin{solution}
+			\begin{parts}
+				\setcounter{partno}{2}\part False. There is a blue bird.
+				\part True.
+				\part False. There is a blue bird.
+				\part True.
+			\end{parts}
+		\end{solution}
+		\setcounter{question}{9} \question Find a counterexample to show that the statement below is false.\\
 		\begin{center}
 			$\forall a \in \mathbb{Z}, (a-1)/a \textrm{ is not an integer.}$
 		\end{center} 
-
-	\begin{solution}
-		The negation of the statement would be $\exists a \in \mathbb{Z}, (a-1)/a \textrm{ is an integer.}$
-		If $a=0$, $a-1/1$ = $0$ which is $\in \mathbb{Z}$. Since the negation is true for $a=0$ the original statement is false.
-	\end{solution}
-	
-	\question Rewrite each of the following statements in the form "$\forall$  \makebox[1cm]{\hrulefill} $x,$  \makebox[1cm]{\hrulefill}.
-	\begin{parts}
-		\part Every real number is positive, negative, or zero.
-		\part No logicians are lazy.
-		\part The number $-1$ is not equal to the square of any real number.
-	\end{parts}
-	
-	\begin{solution}
-		A3. (double check a)
+		
+		\begin{solution}
+			The negation of the statement would be $\exists a \in \mathbb{Z}, (a-1)/a \textrm{ is an integer.}$
+			If $a=0$, $a-1/1$ = $0$ which is $\in \mathbb{Z}$. Since the negation is true for $a=0$ the original statement is false.
+		\end{solution}
+		
+		\setcounter{question}{15}\question Rewrite each of the following statements in the form "$\forall$  \makebox[1cm]{\hrulefill} $x,$  \makebox[1cm]{\hrulefill}.
 		\begin{parts}
-			\part $\forall$ real numbers $x, x>0 \lor x<0 \lor x=0$ 
-			\part $\forall$ logicians $l$, $l$ is not lazy
-			\part $\forall$ real numbers $x, x^2 \neq -1$
+			\setcounter{partno}{1}\part Every real number is positive, negative, or zero.
+			\setcounter{partno}{3}\part No logicians are lazy.
+			\setcounter{partno}{5}\part The number $-1$ is not equal to the square of any real number.
 		\end{parts}
-	\end{solution}
-	
-	\question In any mathematics or computer science text other than this book, find an example of a statement that is universal but is implicitly quantified. Copy the statement as it appears and rewrite it making the quantification explicit. Give a complete citation for your example, including title, author, publisher, year, and page number.
-	
-	\begin{solution}
-		Theorem 9.1: Convergence of a Monotone, Bounded Sequence\\
-		If a sequence $s_n$ is bounded and monotone, it converges.
 		
-		For every sequence $s_n$, if $s_n$ is bounded and monotone, $s_n$ converges.
+		\begin{solution}
+			\begin{parts}
+				\setcounter{partno}{1}\part $\forall$ real numbers $x, x>0 \lor x<0 \lor x=0$ 
+				\setcounter{partno}{3}\part $\forall$ logicians $l$, $l$ is not lazy
+				\setcounter{partno}{5}\part $\forall$ real numbers $x, x^2 \neq -1$
+			\end{parts}
+		\end{solution}
 		
-		Citation: Calculus 6th edition by Hughes-Hallet, Gleaason, McCallum et al., Wiley \& Sons, Inc., 2013, page 495
-	\end{solution}
-	
-	\question Let $\mathbb{R}$ be the domain of the predicate variable $x$. Which of the following are true and which are false? Give counterexamples for the statements that are false. 
+		\setcounter{question}{30}\question In any mathematics or computer science text other than this book, find an example of a statement that is universal but is implicitly quantified. Copy the statement as it appears and rewrite it making the quantification explicit. Give a complete citation for your example, including title, author, publisher, year, and page number.
+		
+		\begin{solution}
+			Theorem 9.1: Convergence of a Monotone, Bounded Sequence\\
+			If a sequence $s_n$ is bounded and monotone, it converges.
+			
+			For every sequence $s_n$, if $s_n$ is bounded and monotone, $s_n$ converges.
+			
+			Citation: Calculus 6th edition by Hughes-Hallet, Gleaason, McCallum et al., Wiley \& Sons, Inc., 2013, page 495
+		\end{solution}
+		
+		\setcounter{question}{32}\question Let $\mathbb{R}$ be the domain of the predicate variable $x$. Which of the following are true and which are false? Give counterexamples for the statements that are false. 
 		\begin{parts}
-			\part $ab=0 \implies a=0$ or $b=0$
-			\part $a<b$ and $c<d \implies ac<bd$
+			\setcounter{partno}{2}\part $ab=0 \implies a=0$ or $b=0$
+			\setcounter{partno}{3}\part $a<b$ and $c<d \implies ac<bd$
 		\end{parts}
-	\begin{solution}
+		\begin{solution}
+			\begin{parts}
+				\setcounter{partno}{2}\part True.
+				\setcounter{partno}{3}\part False.\\
+				Example (1)\\
+				$a=-2, b=-1, c=-5, d=-3$\\
+				$a<b$ and $c<d$\\
+				$ac \geq bd$
+				\newpage
+				Example (2)\\
+				$a=1, b=2, c=-5, d=-4$\\
+				$a<b$ and $c<d$\\
+				$ac \geq bd$\\
+			\end{parts}	
+		\end{solution}
+		\begin{center}
+			Exercise Set 3.2
+		\end{center}
+		\setcounter{question}{1}\question Which of the following is a negation for "All dogs are loyal"? More than one answer may be correct.
 		\begin{parts}
-			\part True.
-			\part False.\\
-			Example (1)\\
-			$a=-2, b=-1, c=-5, d=-3$\\
-			$a<b$ and $c<d$\\
-			$ac \geq bd$
-			\newpage
-			Example (2)\\
-			$a=1, b=2, c=-5, d=-4$\\
-			$a<b$ and $c<d$\\
-			$ac \geq bd$\\
-		\end{parts}	
-	\end{solution}
+			\part All dogs are loyal.
+			\part No dogs are loyal.
+			\part Some dogs are disloyal.
+			\part Some dogs are loyal.
+			\part There is a disloyal animal that is not a dog.
+			\part There is a dog that is disloyal.
+			\part No animals that are not dogs are loyal.
+			\part Some animals that are not dogs are loyal.
+		\end{parts}
 		
-	\question Which of the following is a negation for "All dogs are loyal"? More than one answer may be correct.
-	\begin{parts}
-		\part All dogs are loyal.
-		\part No dogs are loyal.
-		\part Some dogs are disloyal.
-		\part Some dogs are loyal.
-		\part There is a disloyal animal that is not a dog.
-		\part There is a dog that is disloyal.
-		\part No animals that are not dogs are loyal.
-		\part Some animals that are not dogs are loyal.
-	\end{parts}
-	
-	\begin{solution}
-		(c) and (f)
-	\end{solution}
-	
-	\question Determine whether the proposed negations is correct. If it is not, write a correct negation.\\
-	\begin{parts}
-		\part 	Statement: The product of any irrational number and any rational number is irrational.\\
-		Proposed negation: The product of any irrational number and any rational number is rational.\\
-		\part Statement: For all real numbers $x_1$ and $x_2$, if $x_1^2=x_2^2$ then $x_1=x_2$.\\
-		Proposed negation: For all real numbers $x_1$ and $x_2$, if  $x_1^2=x_2^2$ then $x_1\neq x_2$.
-	\end{parts}
-	
-	\begin{solution}
-		\begin{parts}
-			\part Incorrect.\\
+		\begin{solution}
+			(c) and (f)
+		\end{solution}
+		\begin{center}
+			Determine whether the proposed negation is correct. If it is not, write a correct negation.\\
+		\end{center}
+		\setcounter{question}{11}\question 
+		\begin{quote}
+			Statement: The product of any irrational number and any rational number is irrational.\\
+			Proposed negation: The product of any irrational number and any rational number is rational.\\
+		\end{quote}
+		
+		\begin{solution}
+			Incorrect.\\
 			There is a rational number that is the product of an irrational number and a rational number.
-			\part Incorrect.\\
+		\end{solution}
+		\setcounter{question}{13}\question \begin{quote}
+			Statement: For all real numbers $x_1$ and $x_2$, if $x_1^2=x_2^2$ then $x_1=x_2$.\\
+			Proposed negation: For all real numbers $x_1$ and $x_2$, if  $x_1^2=x_2^2$ then $x_1\neq x_2$.
+		\end{quote}
+		\begin{solution}
+			Incorrect.\\
 			There exists real numbers $x_1$ and $x_2$ such that $x_1^2 = x_2^2$ and $x_1 \neq x_2$
-		\end{parts}
-	\end{solution}
-	
-	\question Write a negation for each statement.
-	\begin{parts}
-		\part $\forall n \in \mathbb{Z}$, if $n$ is prime then $n$ is odd or $n=2$
-		\part $\forall$ integers $n$, if $n$ is divisible by 6, then $n$ is divisible 2 and $n$ is divisible by 3
-	\end{parts}
-	\begin{solution}
-		\begin{parts}
-		\part $\exists n \in \mathbb{Z}$, such that $n$ is prime and $n$ is even and $n \neq 2$
-		\part $\exists$ an integer $n$, such that $n$ is divisible by 6 and $n$ is not divisible by 2 or $n$ is not divisible by 3 
-		\end{parts}
-	\end{solution}
-	
-	\question Give an example to show that a universal conditional statement is not logically equivalent to its inverse.
-	
-	\begin{solution}
+		\end{solution}
 		\begin{center}
-		$\forall x \in D,$ if $P(x)$ then $Q(x) \not\equiv \forall x \in D$, if $\neg P(x)$ then $\neg Q(x)$
+			Write a negation for each statement.
 		\end{center}
-		For all animals $x$, if $x$ is a dog then it can be a pet\\
-		The inverse of the above statement would be:\\
-		For all animals $x$, if $x$ is not a dog then it cannot be a pet\\
-		This is false as there are pets that are not dogs!
-	\end{solution}
-	
-	\question There is a triangle $x$ such that for all circles $y, y$ is above $x$. (Tarski World in Figure 3.3.1)
-	\begin{solution}
-		$\exists x$, $x$ is a triangle such that $\forall y$, $y$ is a circle, $y$ is above $x$
+		\setcounter{question}{18}\question  $\forall n \in \mathbb{Z}$, if $n$ is prime then $n$ is odd or $n=2$
+		\begin{solution}
+			$\exists n \in \mathbb{Z}$, such that $n$ is prime and $n$ is even and $n \neq 2$
+		\end{solution}
+		\setcounter{question}{20}\question $\forall$ integers $n$, if $n$ is divisible by 6, then $n$ is divisible 2 and $n$ is divisible by 3
+		\begin{solution}
+			$\exists$ an integer $n$, such that $n$ is divisible by 6 and $n$ is not divisible by 2 or $n$ is not divisible by 3 
+		\end{solution}
+		
+		
+		\setcounter{question}{34}\question Give an example to show that a universal conditional statement is not logically equivalent to its inverse.
+		
+		\begin{solution}
+			\begin{center}
+				$\forall x \in D,$ if $P(x)$ then $Q(x) \not\equiv \forall x \in D$, if $\neg P(x)$ then $\neg Q(x)$
+			\end{center}
+			For all animals $x$, if $x$ is a dog then it can be a pet\\
+			The inverse of the above statement would be:\\
+			For all animals $x$, if $x$ is not a dog then it cannot be a pet\\
+			This is false as there are pets that are not dogs!
+		\end{solution}
+		
 		\begin{center}
-			\begin{tabular}{ c c c }
-				choose $x$ & , then given $y=$ & check that $y$ is above $x$ \\ 
-				f or i & a & yes \\  
-				 & b & yes \\    
-				 & c & yes
-			\end{tabular}
+			Exercise Set 3.3
 		\end{center}
-		For triangles f or i, no matter what circle y we choose, we find that the circle is above the triangle.
+		\setcounter{question}{7}\question There is a triangle $x$ such that for all circles $y, y$ is above $x$. (Tarski World in Figure 3.3.1)
+		\begin{solution}
+			$\exists x$, $x$ is a triangle such that $\forall y$, $y$ is a circle, $y$ is above $x$
+			\begin{center}
+				\begin{tabular}{ c c c }
+					choose $x$ & , then given $y=$ & check that $y$ is above $x$ \\ 
+					f or i & a & yes \\  
+					& b & yes \\    
+					& c & yes
+				\end{tabular}
+			\end{center}
+			For triangles f or i, no matter what circle y we choose, we find that the circle is above the triangle.
+			
+		\end{solution}
 		
-	\end{solution}
-	
-	For the following questions, (a) rewrite the statement in English without using the symbol $\forall$ or $\exists$ or variables and expressing your answer as simply as possible, and (b) write a negation for the statement.
-	\question $\exists$ a real number $u$ such that $\forall$ real numbers $v, uv = v$.
-	\begin{solution}
+		For the following questions, (a) rewrite the statement in English without using the symbol $\forall$ or $\exists$ or variables and expressing your answer as simply as possible, and (b) write a negation for the statement.
+		\setcounter{question}{15}\question $\exists$ a real number $u$ such that $\forall$ real numbers $v, uv = v$.
+		\begin{solution}
+			\begin{parts}
+				\part There is at least one real number such that when it is multiplied by any other real number, the result is the other real number.
+				\part $\forall$ real numbers $u$, $\exists$ a real number $v$ such that $uv \neq v$\\
+				For all real numbers there is at least one other real number such that their product is not equal to the other real number.
+			\end{parts}
+		\end{solution}
+		\setcounter{question}{18}\question $\exists x \in \mathbb{R^+}$ such that $\forall y \in \mathbb{R^+}, x \leq y$
+		\begin{solution}
+			\begin{parts}
+				\part There is at least one positive real number that is less than or equal to all the other positive real numbers
+				\part $\forall x \in \mathbb{R^+}, \exists y \in \mathbb{R^+}$ such that $x>y$\\
+				For any real positive number we can find another real positive number that is lower than it
+			\end{parts}
+		\end{solution}
+		\setcounter{question}{23}\question 
 		\begin{parts}
-			\part There is at least one real number such that when it is multiplied by any other real number, the result is the other real number.
-			\part $\forall$ real numbers $u$, $\exists$ a real number $v$ such that $uv \neq v$\\
-			For all real numbers there is at least one other real number such that their product is not equal to the other real number.
+			\setcounter{partno}{1}\part  Use the laws for negating universal and existential statements to derive the following rule: 
 		\end{parts}
-	\end{solution}
-	\question $\exists x \in \mathbb{R^+}$ such that $\forall y \in \mathbb{R^+}, x \leq y$
-	\begin{solution}
-		\begin{parts}
-			\part There is at least one positive real number that is less than or equal to all the other positive real numbers
-			\part $\forall x \in \mathbb{R^+}, \exists y \in \mathbb{R^+}$ such that $x>y$\\
-			For any real positive number we can find another real positive number that is lower than it
-		\end{parts}
-	\end{solution}
-	\question Use the laws for negating universal and existential statements to derive the following rule:
-	\begin{center}
-		$\neg (\exists x \in D(\exists y \in E(P(x,y)))) \equiv \forall x \in D(\forall y \in E(\neg(P(x,y))))$
-	\end{center}
-	\begin{solution}
-		$\neg (\exists x \in D(\exists y \in E(P(x,y))))$\\
-		$\forall x \in D(\neg(\exists y \in E(P(x,y))))$\\
-		$\forall x \in D(\forall y \in E(\neg(P(x,y))))$
-	\end{solution}
-	\question The following is the definition for  $\lim_{x\to a} f(x) = L$: 
-	\begin{center}
-		For all real numbers $\varepsilon >0$, there exists a real number $\delta>0$ such that for all real numbers $x$, if $a-\delta < x < a+\delta$ and $x\neq a$ then $L-\varepsilon < f(x) < L+\varepsilon$.
-	\end{center}
-	Write what it means for  $\lim_{x\to a} f(x) \neq L$. In other words, write the negation of the definition.
-	\begin{solution}
-		There exists a real number $\varepsilon>0$ such that for all real numbers $\delta >0$ there exists a real number $x$ such that $x\leq a-\delta$ or $x\geq a+\delta$ or $x=a$ and $f(x)\leq L-\varepsilon$ or $f(x)\geq L+\varepsilon$
-	\end{solution}
-	Some of the follwoing arguments are valid by universal modus ponens or universal modus tollens; others are invalid and exhibit the converse or the inverse error. State which are valid and which are invalid. Justify your answers
-	\question All honest people pay their taxes. \\
-	Darth is not honest.\\
-	$\therefore$ Darth does not pay his taxes.
-	\begin{solution}
-		Let $H(p)$ be $p$ is honest and $T(p)$ be $p$ pays their taxes.\\
-		$\forall \textrm{ people } p$, if $H(p)$ then $T(p)$\\
-		$\neg H(d)$ for a particular person, Darth\\
-		$\therefore \neg T(d)$\\
-		The argument is invalid as it exhibits the inverse error.
-	\end{solution}
-	
-	\question If a compilation of a computer program produces error messages, then the program is not correct. \\
-	Compilation of this program does not produce error messages.\\
-	$\therefore$ This program is correct.
-	\begin{solution}
-		Let $P(x)$ be $x$ is a compilation of that produces error messages and $Q(x)$ be $x$ is not correct.\\
-		$\forall x$, if $P(x)$ then $Q(x)$\\
-		$\neg P(x)$ for a particular computer program\\
-		$\therefore \neg Q(x)$\\
-		The argument is invalid as it exhibits the inverse error.
-	\end{solution}
-	
-	\question If an infinite series converges, then its terms go to 0. \\
-	The terms of the infinite series $\sum_{n=1}^{\infty} \frac{n}{n+1}$ do not go to 0.\\
-	$\therefore$ The infinite series $\sum_{n=1}^{\infty} \frac{n}{n+1}$ does not converge.
-	\begin{solution}
-		Let $P(x)$ be $x$ is an infinite series that converges and $Q(x)$ be $x$ is a series whose terms go to 0.\\
-		$\forall x$, if $P(x)$ then $Q(x)$\\
-		$\neg Q(x)$ for a particular infinite series\\
-		$\therefore \neg P(x)$\\
-		The argument is valid by modus tollens.
-	\end{solution}
-	\question Derive the validity of universal modus tollens from the validity of universal instantiation and modus tollens.
-	\begin{solution}
-		Given:\\
-		1. $p \longrightarrow q$\\
-		$\neg q$\\
-		$\therefore \neg p$\\
-		2. $\forall x \in D, P(x)$\\
-		$x \in D$\\
-		$\therefore P(x)$\\
-		To be found:\\
-		$\forall x, P(x) \longrightarrow Q(x)$\\
-		$\neg Q(a)$\\
-		$\neg P(a)$\\
+		\begin{center}
+			$\neg (\exists x \in D(\exists y \in E(P(x,y)))) \equiv \forall x \in D(\forall y \in E(\neg(P(x,y))))$
+		\end{center}
+		\begin{solution}
+			$\neg (\exists x \in D(\exists y \in E(P(x,y))))$\\
+			$\forall x \in D(\neg(\exists y \in E(P(x,y))))$\\
+			$\forall x \in D(\forall y \in E(\neg(P(x,y))))$
+		\end{solution}
 		
-		Let $\forall a \in D, \neg Q(a)$\\
-		By (2) we see that $\neg Q(a)$ and by (1) we can see than $\neg Q(a)$ implies $\neg Q(a)$
-		 
-	\end{solution}
-\end{questions}
+		\setcounter{question}{42}\question The following is the definition for  $\lim_{x\to a} f(x) = L$: 
+		\begin{center}
+			For all real numbers $\varepsilon >0$, there exists a real number $\delta>0$ such that for all real numbers $x$, if $a-\delta < x < a+\delta$ and $x\neq a$ then $L-\varepsilon < f(x) < L+\varepsilon$.
+		\end{center}
+		Write what it means for  $\lim_{x\to a} f(x) \neq L$. In other words, write the negation of the definition.
+		\begin{solution}
+			There exists a real number $\varepsilon>0$ such that for all real numbers $\delta >0$ there exists a real number $x$ such that $x\leq a-\delta$ or $x\geq a+\delta$ or $x=a$ and $f(x)\leq L-\varepsilon$ or $f(x)\geq L+\varepsilon$
+		\end{solution}
+		\begin{center}
+			Exercise Set 3.4
+		\end{center}
+		Some of the follwoing arguments are valid by universal modus ponens or universal modus tollens; others are invalid and exhibit the converse or the inverse error. State which are valid and which are invalid. Justify your answers
+		\setcounter{question}{11}\question All honest people pay their taxes. \\
+		Darth is not honest.\\
+		$\therefore$ Darth does not pay his taxes.
+		\begin{solution}
+			Let $H(p)$ be $p$ is honest and $T(p)$ be $p$ pays their taxes.\\
+			$\forall \textrm{ people } p$, if $H(p)$ then $T(p)$\\
+			$\neg H(d)$ for a particular person, Darth\\
+			$\therefore \neg T(d)$\\
+			The argument is invalid as it exhibits the inverse error.
+		\end{solution}
+		
+		\setcounter{question}{13}\question If a compilation of a computer program produces error messages, then the program is not correct. \\
+		Compilation of this program does not produce error messages.\\
+		$\therefore$ This program is correct.
+		\begin{solution}
+			Let $P(x)$ be $x$ is a compilation of that produces error messages and $Q(x)$ be $x$ is not correct.\\
+			$\forall x$, if $P(x)$ then $Q(x)$\\
+			$\neg P(x)$ for a particular computer program\\
+			$\therefore \neg Q(x)$\\
+			The argument is invalid as it exhibits the inverse error.
+		\end{solution}
+		
+		\setcounter{question}{17}\question If an infinite series converges, then its terms go to 0. \\
+		The terms of the infinite series $\sum_{n=1}^{\infty} \frac{n}{n+1}$ do not go to 0.\\
+		$\therefore$ The infinite series $\sum_{n=1}^{\infty} \frac{n}{n+1}$ does not converge.
+		\begin{solution}
+			Let $P(x)$ be $x$ is an infinite series that converges and $Q(x)$ be $x$ is a series whose terms go to 0.\\
+			$\forall x$, if $P(x)$ then $Q(x)$\\
+			$\neg Q(x)$ for a particular infinite series\\
+			$\therefore \neg P(x)$\\
+			The argument is valid by modus tollens.
+		\end{solution}
+		\setcounter{question}{34}\question Derive the validity of universal modus tollens from the validity of universal instantiation and modus tollens.
+		\begin{solution}
+			Given:\\
+			1. $p \longrightarrow q$\\
+			$\neg q$\\
+			$\therefore \neg p$\\
+			2. $\forall x \in D, P(x)$\\
+			$x \in D$\\
+			$\therefore P(x)$\\
+			To be found:\\
+			$\forall x, P(x) \longrightarrow Q(x)$\\
+			$\neg Q(a)$\\
+			$\neg P(a)$\\
+			
+			Let $\forall a \in D, \neg Q(a)$\\
+			By (2) we see that $\neg Q(a)$ and by (1) we can see than $\neg Q(a)$ implies $\neg Q(a)$
+			
+		\end{solution}
+	\end{questions}
 \end{document}
