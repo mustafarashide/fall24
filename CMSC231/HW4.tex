@@ -1,0 +1,200 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\graphicspath{ {./images/} }
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Chapter 4\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+\newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
+
+\begin{document}
+	
+	\begingroup  
+	\noindent\LARGE Discrete Mathematics\\
+	\noindent\LARGE Chapter 4 Homework\\
+	\noindent\large \today\\
+	\noindent\large Mustafa Rashid\par
+	\noindent\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	
+	\centering\large Exercise Set 4.1\\
+	\begin{questions}
+		\setcounter{question}{4} \question  There are distinct integers $m$ and $n$ such that $\frac{1}{m}+\frac{1}{n}$ is an integer.
+		
+		\begin{solution}
+			 Suppose $m=-2$ and $n=2$, then:
+			 $$\frac{1}{m}+\frac{1}{n} = -\frac{1}{2}+\frac{1}{2}=0$$
+			 The statement is true since $0 \in \mathbb{Z}$
+		\end{solution}
+		
+		\setcounter{question}{12} \question For all integers m and n, if $2m+n$ is odd then $m$ and $n$ are both odd.
+		
+	 \begin{solution}
+	 	The counterexample would have to satisfy the statement $\exists m,n \in Z$ such that $2m+n$ is odd and $n$ is even or $m$ is even\\
+	 	Suppose $m=4$ and $n=1$, then
+	 	$$2m+n = 2\cdot4 + 1 = 9$$
+	 	9 is odd by definition because $\exists n \in \mathbb{Z}$ such that $9=2n+1$ and $n=4$ is even by definition because $\exists k \in \mathbb{Z}$ such that $4=2k$ so $m=4$ and $n=1$ is a counterexample that disproves the statement.
+	 \end{solution}
+		
+		\setcounter{question}{40} \question \textbf{Theorem:} The product of an even integer and an odd integer is even.\\
+		"\textbf{Proof:} Suppose $m$ is an even integer and $n$ is an odd integer. If $m\cdot n$ is even, then by definition of even there exists an integer $r$ such that $m\cdot n = 2r$. Also since $m$ is even, there exists an integer $p$ such that $m=2p$, and since $n$ is odd there exists an integer $q$ such that $n=2q+1$. Thus $$mn = (2p)(2q+1) = 2r,$$ where $r$ is an integer. By definition of even, then, $m\cdot n$ is an even, as was to be shown."
+		\begin{solution}
+			The proof confuses what is known and what is still to be shown. It is known that the definition of even for an integer $n$ is $\exists k \in \mathbb{Z}$ such that $n=2k$ but the proof assumes that is the case for $m\cdot n$ without showing or proving it.
+		\end{solution}
+		
+		\setcounter{question}{56} \question If $m$ and $n$ are positive integers and $mn$ is a perfect square, then $m$ and $n$ are perfect squares.   
+		
+		\begin{solution}
+			$\forall m,n \in \mathbb{Z}$, if $m\cdot n$ is a perfect square, then $m$ and $n$ are perfect squares.\\
+			The statement is false, we can prove this by finding a counterexample that satisfies:
+			$\exists m,n \in \mathbb{Z}$ such that $m\cdot n$  is a perfect square and $m$ is not a perfect square or $n$ is not a perfect square
+			\begin{proof}
+			Suppose $m=2$ and $n=18$ then by definition of perfect square $\exists k \in \mathbb{Z}$ such that $mn = k^2$
+			$$mn = 2\cdot18$$
+			$$36 = 6^2$$
+			However that is not the case for $m$ or $n$ as we can see that $\exists l \notin \mathbb{Z}$ such that $m=l^2$ or $\exists q \notin \mathbb{Z}$ such that $n=q^2$
+			$$l = \sqrt[]{2}$$
+			$$q = \sqrt[]{18}$$
+			\end{proof}
+		\end{solution}
+		
+		\setcounter{question}{57} \question The difference of the squares of any two consecutive integers is odd. 
+		
+		\begin{solution}
+			$\forall m,n \in \mathbb{Z}$ if $m$ and $n$ are consecutive then $m^2-n^2$ is odd
+			\begin{proof}
+				Suppose $m$ and $n$ are consecutive integers\\
+				Because $m$ and $n$ are consecutive, then by definition either 1 or 2\\
+				$$m=n+1$$ 
+				$$n=m+1$$
+			\end{proof}
+		\end{solution}
+	\end{questions}
+	
+	\centering\large Exercise Set 4.2\\
+	\begin{questions}
+		\setcounter{question}{15} \question The quotient of any two rational numbers is a rational number.
+		%        \begin{solution}
+			% 	\textcolor{red}{REPLACE WITH ANSWER}
+			% \end{solution}
+		\setcounter{question}{19} \question Given any two rational numbers $r$ and $s$ with $r<s$, there is another rational number between r and s.
+		%        \begin{solution}
+			% 	\textcolor{red}{REPLACE WITH ANSWER}
+			% \end{solution}
+		\setcounter{question}{37} \question   Find the mistake in the following \textbf{"proof"} that the sum of any two rational numbers is a rational number\\
+
+		"\textbf{Proof:} Suppose $r$ and $s$ are rational numbers. Then $r=a/b$ and $s=c/d$ for some integers $a, b, c$ and $d$ with $b \neq 0$ and $d \neq 0$ (by definition of rational). Then $$r+s=\frac{a}{b}+\frac{c}{d},$$ But this is a sum of two fractions, which is a fraction. So $r+s$ is a rational number since a rational number is a fraction"\\ 
+		
+		%    \begin{solution}
+			% 	\textcolor{red}{REPLACE WITH ANSWER}
+			% \end{solution}
+	\end{questions}
+	% \pagebreak  
+	\centering\large Exercise Set 4.3
+	\begin{questions}
+		\begin{quote}
+			For 20 and 23 determine whether the statement is true or false. Prove the statement directly from the definitions if it is true, and give a counterexample if it is false.
+		\end{quote}
+		\setcounter{question}{19} \question The sum of any three consecutive integers is divisible by 3. (Two integers are \textbf{consecutive} if, and only if, one is one more than the other.)
+		%   \begin{solution}
+			% \textcolor{red}{REPLACE WITH ANSWER}
+			%  \end{solution}
+		\setcounter{question}{22} \question A sufficient condition for an integer to be divisible by 8 is that it be divisible by 16.
+		%    \begin{solution}
+			% 	\textcolor{red}{REPLACE WITH ANSWER}
+			% \end{solution}
+		\setcounter{question}{47} \question Prove that for any nonnegative integer n, if the sum of the digits of n is divisible by 3, then n is divisible by 3.
+		%    \begin{solution}
+			% 	\textcolor{red}{REPLACE WITH ANSWER}
+			% \end{solution}
+		\centering\large Exercise Set 4.4
+		\begin{questions}
+			\setcounter{question}{7} \question 
+			\begin{parts}
+				\part 50 $div$ 7
+				\part 50 $mod$ 7
+			\end{parts}
+			%    \begin{solution}
+				%        \textcolor{red}{REPLACE WITH ANSWER}
+				% \end{solution} 
+			\setcounter{question}{16} \question Prove that the product of any two consecutive integers is even.
+			% \begin{solution}
+				% \textcolor{red}{REPLACE WITH ANSWER}
+				% \end{solution} 
+			\setcounter{question}{20} \question Suppose $b$ is an integer. If $b$ $mod$ $12=5$, what is $8b$ $mod$ 12? In other words, if division of $b$ by 12 gives a remainder of 5, what is the remainder when 8b is divided by 12?
+			\begin{solution}
+				\textcolor{red}{REPLACE WITH ANSWER}
+			\end{solution} 
+			\setcounter{question}{25} \question Prove that a necessary and sufficient condition for a nonnegative integer $n$ to be divisible by a positive integer $d$ is that $n$ $mod$ $d=0$
+			
+			% \begin{solution}
+				% \textcolor{red}{REPLACE WITH ANSWER}
+				% \end{solution} 
+			\setcounter{question}{42} \question Prove that If $n$ is an odd integer, then $n^4$ $mod$ 16 $=1$
+			% \begin{solution}
+				%     \textcolor{red}{REPLACE WITH ANSWER}
+				% \end{solution} 
+		\end{questions}
+		
+		\centering\large Exercise Set 4.5
+		\begin{questions}
+			\setcounter{question}{6}\question Formulate the negation and prove by contradiction\\
+			There is no least positive rational number 
+			% \begin{solution}
+				%         \textcolor{red}{REPLACE WITH ANSWER}
+				%     \end{solution} 
+			\setcounter{question}{21}\question Consider the statement "For all real numbers $r$, if $r^2$ is irrational then r is irrational."
+			\begin{parts}
+				\part Write what you would suppose and what you would need to show to prove this statement by contradiction.
+				\part Write what you would suppose and what you would need to show to prove this statement by contraposition.
+			\end{parts}
+			% \begin{solution}
+				%          \textcolor{red}{REPLACE WITH ANSWER}
+				%      \end{solution} 
+			\begin{quote}
+				Prove 24 and 29 in two ways: \textbf{a)} by contraposition and \textbf{b)} by contradiciton.
+			\end{quote}
+			\setcounter{question}{23}\question The reciprocal of any irrational number is irrational. (The \textbf{reciprocal} of a nonzero real number $x$ is $1/x$
+			% \begin{solution}
+				%         \textcolor{red}{REPLACE WITH ANSWER}
+				%     \end{solution} 
+			\setcounter{question}{28}\question For all integers $a, b,$ and $c$ if $a\mid b$ and $a\doesnotdivide c$, then $a\doesnotdivide (b+c)$
+			% \begin{solution}
+				%         \textcolor{red}{REPLACE WITH ANSWER}
+				%     \end{solution} 
+		\end{questions}
+		\centering\large Exercise Set 4.6
+		\begin{questions}
+			\setcounter{question}{10}\question Determine whether the statement "The sum of any two positive irrational numbers is irrational." is true or false. Prove it if it is true and disprove it if it is false.
+			% \begin{solution}
+				%        \textcolor{red}{REPLACE WITH ANSWER}
+				%    \end{solution} 
+			\setcounter{question}{13}\question Consider the following sentence: If $x$ is rational then $\sqrt{x}$ is irrational. Is this sentence always true, sometimes true and sometimes false, or always false? Justify your answer.
+			% \begin{solution}
+				%        \textcolor{red}{REPLACE WITH ANSWER}
+				%    \end{solution} 
+			\setcounter{question}{23}\question Prove that $\log_5 (2)$ is irrational.
+			% \begin{solution}
+				%        \textcolor{red}{REPLACE WITH ANSWER}
+				%    \end{solution} 
+			\setcounter{question}{34}\question Prove that there is at most one real number $b$ with the property that $br =r$ for all real numbers $r$.
+			% \begin{solution}
+				%        \textcolor{red}{REPLACE WITH ANSWER}
+				%    \end{solution} 
+		\end{questions}
+		
+		
+	\end{questions}
+\end{document}
