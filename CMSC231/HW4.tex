@@ -45,7 +45,7 @@
 	 	The counterexample would have to satisfy the statement $\exists m,n \in Z$ such that $2m+n$ is odd and $n$ is even or $m$ is even\\
 	 	Suppose $m=4$ and $n=1$, then
 	 	$$2m+n = 2\cdot4 + 1 = 9$$
-	 	9 is odd by definition because $\exists n \in \mathbb{Z}$ such that $9=2n+1$ and $n=4$ is even by definition because $\exists k \in \mathbb{Z}$ such that $4=2k$ so $m=4$ and $n=1$ is a counterexample that disproves the statement.
+	 	9 is odd by definition because $\exists l \in \mathbb{Z}$ such that $9=2l+1$ and $m=4$ is even by definition because $\exists k \in \mathbb{Z}$ such that $4=2k$ so $m=4$ and $n=1$ is a counterexample that disproves the statement.
 	 \end{solution}
 		
 		\setcounter{question}{40} \question \textbf{Theorem:} The product of an even integer and an odd integer is even.\\
@@ -64,7 +64,7 @@
 			Suppose $m=2$ and $n=18$ then by definition of perfect square $\exists k \in \mathbb{Z}$ such that $mn = k^2$
 			$$mn = 2\cdot18$$
 			$$36 = 6^2$$
-			However that is not the case for $m$ or $n$ as we can see that $\exists l \notin \mathbb{Z}$ such that $m=l^2$ or $\exists q \notin \mathbb{Z}$ such that $n=q^2$
+			However that is not the case for $m$ or $n$ as we can see that $\nexists l \in \mathbb{Z}$ such that $m=l^2$ or $\nexists q \in \mathbb{Z}$ such that $n=q^2$
 			$$l = \sqrt[]{2}$$
 			$$q = \sqrt[]{18}$$
 			\end{proof}
@@ -76,9 +76,10 @@
 			$\forall m,n \in \mathbb{Z}$ if $m$ and $n$ are consecutive then $m^2-n^2$ is odd
 			\begin{proof}
 				Suppose $m$ and $n$ are consecutive integers\\
-				Because $m$ and $n$ are consecutive, then by definition either 1 or 2\\
-				$$m=n+1$$ 
-				$$n=m+1$$
+				Because $m$ and $n$ are consecutive, then by definition\\
+				$$m-n=1$$ 
+				$$m=n+1$$
+				The difference between the squares of $m$ and $n$ can then be found by 
 			\end{proof}
 		\end{solution}
 	\end{questions}
