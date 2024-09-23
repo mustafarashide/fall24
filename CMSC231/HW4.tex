@@ -34,19 +34,19 @@
 		\setcounter{question}{4} \question  There are distinct integers $m$ and $n$ such that $\frac{1}{m}+\frac{1}{n}$ is an integer.
 		
 		\begin{solution}
-			 Suppose $m=-2$ and $n=2$, then:
-			 $$\frac{1}{m}+\frac{1}{n} = -\frac{1}{2}+\frac{1}{2}=0$$
-			 The statement is true since $0 \in \mathbb{Z}$
+			Suppose $m=-2$ and $n=2$, then:
+			$$\frac{1}{m}+\frac{1}{n} = -\frac{1}{2}+\frac{1}{2}=0$$
+			The statement is true since $0 \in \mathbb{Z}$
 		\end{solution}
 		
 		\setcounter{question}{12} \question For all integers m and n, if $2m+n$ is odd then $m$ and $n$ are both odd.
 		
-	 \begin{solution}
-	 	The counterexample would have to satisfy the statement $\exists m,n \in Z$ such that $2m+n$ is odd and $n$ is even or $m$ is even\\
-	 	Suppose $m=4$ and $n=1$, then
-	 	$$2m+n = 2\cdot4 + 1 = 9$$
-	 	9 is odd by definition because $\exists l \in \mathbb{Z}$ such that $9=2l+1$ and $m=4$ is even by definition because $\exists k \in \mathbb{Z}$ such that $4=2k$ so $m=4$ and $n=1$ is a counterexample that disproves the statement.
-	 \end{solution}
+		\begin{solution}
+			The counterexample would have to satisfy the statement $\exists m,n \in Z$ such that $2m+n$ is odd and $n$ is even or $m$ is even\\
+			Suppose $m=4$ and $n=1$, then
+			$$2m+n = 2\cdot4 + 1 = 9$$
+			9 is odd by definition because $\exists l \in \mathbb{Z}$ such that $9=2l+1$ and $m=4$ is even by definition because $\exists k \in \mathbb{Z}$ such that $4=2k$ so $m=4$ and $n=1$ is a counterexample that disproves the statement.
+		\end{solution}
 		
 		\setcounter{question}{40} \question \textbf{Theorem:} The product of an even integer and an odd integer is even.\\
 		"\textbf{Proof:} Suppose $m$ is an even integer and $n$ is an odd integer. If $m\cdot n$ is even, then by definition of even there exists an integer $r$ such that $m\cdot n = 2r$. Also since $m$ is even, there exists an integer $p$ such that $m=2p$, and since $n$ is odd there exists an integer $q$ such that $n=2q+1$. Thus $$mn = (2p)(2q+1) = 2r,$$ where $r$ is an integer. By definition of even, then, $m\cdot n$ is an even, as was to be shown."
@@ -61,12 +61,12 @@
 			The statement is false, we can prove this by finding a counterexample that satisfies:
 			$\exists m,n \in \mathbb{Z}$ such that $m\cdot n$  is a perfect square and $m$ is not a perfect square or $n$ is not a perfect square
 			\begin{proof}
-			Suppose $m=2$ and $n=18$ then by definition of perfect square $\exists k \in \mathbb{Z}$ such that $mn = k^2$
-			$$mn = 2\cdot18$$
-			$$36 = 6^2$$
-			However that is not the case for $m$ or $n$ as we can see that $\nexists l \in \mathbb{Z}$ such that $m=l^2$ or $\nexists q \in \mathbb{Z}$ such that $n=q^2$
-			$$l = \sqrt[]{2}$$
-			$$q = \sqrt[]{18}$$
+				Suppose $m=2$ and $n=18$ then by definition of perfect square $\exists k \in \mathbb{Z}$ such that $mn = k^2$
+				$$mn = 2\cdot18$$
+				$$36 = 6^2$$
+				However that is not the case for $m$ or $n$ as we can see that $\nexists l \in \mathbb{Z}$ such that $m=l^2$ or $\nexists q \in \mathbb{Z}$ such that $n=q^2$
+				$$l = \sqrt[]{2}$$
+				$$q = \sqrt[]{18}$$
 			\end{proof}
 		\end{solution}
 		
@@ -77,30 +77,92 @@
 			\begin{proof}
 				Suppose $m$ and $n$ are consecutive integers\\
 				Because $m$ and $n$ are consecutive, then by definition\\
-				$$m-n=1$$ 
-				$$m=n+1$$
-				The difference between the squares of $m$ and $n$ can then be found by 
+				\[m-n=1\]
+				\[m=n+1\]
+				The difference between the squares of $m$ and $n$ will then be
+				\[(m)^2-(n)^2\tag{1}\]
+				\[(n+1)^2-(n)^2\tag{2}\]
+				Then from (2) we can get (3) by distribution 
+				\[(n+1)(n+1)-n^2\]
+				\[n^2+2n+1-n^2\tag{3}\]
+				Then from (3) we can get (4) by the existence of the additive inverse of $n^2$ i.e. $-n^2$
+				\[2n+1\tag{4}\]
+				We can see that $\forall m,n \in \mathbb{Z}$, if $m=n+1$ (m and n are consecutive) we can write the difference of there squares as:
+				$$(m)^2-(n)^2=2n+1$$
+				Then by the definition of odd we can see that the integer $2n+1$ is odd since it is equal to twice some integer $n$ plus one.
+				
+				
+				
+				
+				
 			\end{proof}
 		\end{solution}
 	\end{questions}
-	
+	\pagebreak
 	\centering\large Exercise Set 4.2\\
 	\begin{questions}
 		\setcounter{question}{15} \question The quotient of any two rational numbers is a rational number.
-		%        \begin{solution}
-			% 	\textcolor{red}{REPLACE WITH ANSWER}
-			% \end{solution}
+		\begin{solution}
+			$$\forall m,n \in \mathbb{Q}, \frac{m}{n} \in \mathbb{Q}$$
+			We can see that this statement is false as its negation is true
+			$$\exists m,n \in \mathbb{Q}, \frac{m}{n} \notin \mathbb{Q}$$
+			Suppose $m$ is any rational number and $n$ is equal to zero, this results in $\frac{m}{n}$ being undefined and therefore $\notin \mathbb{Q}$.
+			The statement would be true if it was changed to the following
+			\begin{quote}
+				The quotient of any two rational numbers $\frac{m}{n}$ is rational if and only if $n\neq 0$
+			\end{quote}
+		\end{solution}
 		\setcounter{question}{19} \question Given any two rational numbers $r$ and $s$ with $r<s$, there is another rational number between r and s.
-		%        \begin{solution}
-			% 	\textcolor{red}{REPLACE WITH ANSWER}
-			% \end{solution}
+		\begin{solution}
+			$$\forall r,s \in \mathbb{Q}, \textrm{ if } r<s, \exists k \in \mathbb{Q} \textrm{ such that } r<k<s$$
+			The statement is true.
+			\begin{proof}
+				Suppose $r$ and $s$ are two rational numbers such that 
+				$$r<s$$
+				Then by T19 we can obtain (1)
+				\[r+r<s+r\]
+				\[2r<s+r\tag{1}\]
+				Multiplying (1) by $\frac{1}{2}$ on both sides we can obtain (2) by T20
+				\[r<\frac{s+r}{2}\tag{2}\]
+				By the definition of real numbers (A-3) we can rewrite $r<s$ as $s>r$ then we can again use T19 to obtain (3) 
+				\[s+s>r+s\]
+				\[2s>r+s\tag{3}\]
+				Multiplying (3) by $\frac{1}{2}$ on both sides we can obtain (4) by T20
+				\[s>\frac{r+s}{2}\tag{4}\]
+				We can then use the commutative property of real numbers (F1) to rewrite (4) into (5)
+				\[s>\frac{s+r}{2}\tag{5}\]
+				We can see that (2) $\land$ (5) will give us
+				\[r<\frac{s+r}{2}<s\tag{6}\]
+				Now we can prove that $s+r$ is rational from the fact that $s,r \in \mathbb{Q}$.\\ By definition of rational we can see that $\exists a,b,c,d \in \mathbb{Z} \textrm{ such that } b \neq 0 \textrm{ and } d\neq0$
+				$$s=\frac{a}{b}$$
+				$$r=\frac{c}{d}$$
+				The sum $s+r$ can then be rewritten by T14
+				$$s+r=\frac{a}{b}+\frac{c}{d}$$
+				$$=\frac{ad+bc}{bd}$$
+				Let $p=ad+bc$ and q=$bd$, we can see that $p\in\mathbb{Z}$ since the products of integers are integers and the sums of integers are also integers. We can also see that $q \in\mathbb{Z}$ and $q\neq0$ by the zero product property
+				\[s+r=\frac{p}{q}\tag{7}\]
+				Therefore, $s+r$ is rational by the definition of a rational number.
+				Now we can then prove that $\frac{s+r}{2} \in \mathbb{Q}$\\
+				By (7) we have that $s+r$ is rational and we can see that $2 \in \mathbb{Q}$
+				$$s+r=\frac{p}{q}$$
+				$$2=\frac{2}{1}$$
+				We can then see that $\frac{s+r}{2}$ is equal to 
+				$$\frac{s+r}{2}=\frac{\frac{p}{q}}{\frac{2}{1}}$$
+				$$=\frac{p}{2q}$$
+				Since $p \in \mathbb{Z}$ and $2q \in \mathbb{Z}$ as they are both products of integers we can then see that $\frac{s+r}{2}\in \mathbb{Q}$\\
+				The original statement to be proven is then true 
+				$$\forall r,s \in \mathbb{Q}, \textrm{ if } r<s, \exists k \in \mathbb{Q} \textrm{ such that } r<k<s$$
+				where $k=\frac{s+r}{2}$
+			\end{proof}
+		\end{solution}
+		\pagebreak
 		\setcounter{question}{37} \question   Find the mistake in the following \textbf{"proof"} that the sum of any two rational numbers is a rational number\\
-
+		
 		"\textbf{Proof:} Suppose $r$ and $s$ are rational numbers. Then $r=a/b$ and $s=c/d$ for some integers $a, b, c$ and $d$ with $b \neq 0$ and $d \neq 0$ (by definition of rational). Then $$r+s=\frac{a}{b}+\frac{c}{d},$$ But this is a sum of two fractions, which is a fraction. So $r+s$ is a rational number since a rational number is a fraction"\\ 
 		
-		%    \begin{solution}
-			% 	\textcolor{red}{REPLACE WITH ANSWER}
-			% \end{solution}
+		\begin{solution}
+			The "proof" restates itself as its conclusion to prove itself. The final line "this is a sum of two fractions, which is a fraction" is an assumption of what is to be proved since $\frac{a}{b}$ and $\frac{c}{d}$ are just $r$ and $s$ so we have restated what is to be proved as an assumption.
+		\end{solution}
 	\end{questions}
 	% \pagebreak  
 	\centering\large Exercise Set 4.3
@@ -109,93 +171,311 @@
 			For 20 and 23 determine whether the statement is true or false. Prove the statement directly from the definitions if it is true, and give a counterexample if it is false.
 		\end{quote}
 		\setcounter{question}{19} \question The sum of any three consecutive integers is divisible by 3. (Two integers are \textbf{consecutive} if, and only if, one is one more than the other.)
-		%   \begin{solution}
-			% \textcolor{red}{REPLACE WITH ANSWER}
-			%  \end{solution}
+		\begin{solution}
+			$$\forall x,y,z \in \mathbb{Z}, \textrm{ if } x,y,z \textrm{ are consecutive, then } 3 \mid x+y+z$$
+			The statement is true.
+			\begin{proof}
+				Suppose $x,y,z \in \mathbb{Z}$, because $x$ and $y$ are consecutive then by definition we have the following
+				$$y=x+1$$
+				And because $y$ and $z$ are consecutive we have the following
+				$$z=y+1$$
+				$$z=x+2$$
+				Then we can restate the sum $x+y+z$ as
+				$$=x+x+1+x+2$$
+				$$=3x+3$$
+				By the definition of divisible, $3 \mid 3x+3 \Leftrightarrow \exists k \in \mathbb{Z} $ such that $3x+3 = 3k$\\
+				By the distributive property
+				$$3x+3 = 3(x+1)$$
+				$$3(x+1)=3k$$
+				We can see that since $x\in\mathbb{Z}$ then $x+1$ is also $\in \mathbb{Z}$ so we have shown that $3x+3$ is divisible by 3 by definition of divisible
+			\end{proof}
+		\end{solution}
 		\setcounter{question}{22} \question A sufficient condition for an integer to be divisible by 8 is that it be divisible by 16.
-		%    \begin{solution}
-			% 	\textcolor{red}{REPLACE WITH ANSWER}
-			% \end{solution}
-		\setcounter{question}{47} \question Prove that for any nonnegative integer n, if the sum of the digits of n is divisible by 3, then n is divisible by 3.
-		%    \begin{solution}
-			% 	\textcolor{red}{REPLACE WITH ANSWER}
-			% \end{solution}
-		\centering\large Exercise Set 4.4
-		\begin{questions}
-			\setcounter{question}{7} \question 
-			\begin{parts}
-				\part 50 $div$ 7
-				\part 50 $mod$ 7
-			\end{parts}
-			%    \begin{solution}
-				%        \textcolor{red}{REPLACE WITH ANSWER}
-				% \end{solution} 
-			\setcounter{question}{16} \question Prove that the product of any two consecutive integers is even.
-			% \begin{solution}
-				% \textcolor{red}{REPLACE WITH ANSWER}
-				% \end{solution} 
-			\setcounter{question}{20} \question Suppose $b$ is an integer. If $b$ $mod$ $12=5$, what is $8b$ $mod$ 12? In other words, if division of $b$ by 12 gives a remainder of 5, what is the remainder when 8b is divided by 12?
-			\begin{solution}
-				\textcolor{red}{REPLACE WITH ANSWER}
-			\end{solution} 
-			\setcounter{question}{25} \question Prove that a necessary and sufficient condition for a nonnegative integer $n$ to be divisible by a positive integer $d$ is that $n$ $mod$ $d=0$
-			
-			% \begin{solution}
-				% \textcolor{red}{REPLACE WITH ANSWER}
-				% \end{solution} 
-			\setcounter{question}{42} \question Prove that If $n$ is an odd integer, then $n^4$ $mod$ 16 $=1$
-			% \begin{solution}
-				%     \textcolor{red}{REPLACE WITH ANSWER}
-				% \end{solution} 
-		\end{questions}
-		
-		\centering\large Exercise Set 4.5
-		\begin{questions}
-			\setcounter{question}{6}\question Formulate the negation and prove by contradiction\\
-			There is no least positive rational number 
-			% \begin{solution}
-				%         \textcolor{red}{REPLACE WITH ANSWER}
-				%     \end{solution} 
-			\setcounter{question}{21}\question Consider the statement "For all real numbers $r$, if $r^2$ is irrational then r is irrational."
-			\begin{parts}
-				\part Write what you would suppose and what you would need to show to prove this statement by contradiction.
-				\part Write what you would suppose and what you would need to show to prove this statement by contraposition.
-			\end{parts}
-			% \begin{solution}
-				%          \textcolor{red}{REPLACE WITH ANSWER}
-				%      \end{solution} 
-			\begin{quote}
-				Prove 24 and 29 in two ways: \textbf{a)} by contraposition and \textbf{b)} by contradiciton.
-			\end{quote}
-			\setcounter{question}{23}\question The reciprocal of any irrational number is irrational. (The \textbf{reciprocal} of a nonzero real number $x$ is $1/x$
-			% \begin{solution}
-				%         \textcolor{red}{REPLACE WITH ANSWER}
-				%     \end{solution} 
-			\setcounter{question}{28}\question For all integers $a, b,$ and $c$ if $a\mid b$ and $a\doesnotdivide c$, then $a\doesnotdivide (b+c)$
-			% \begin{solution}
-				%         \textcolor{red}{REPLACE WITH ANSWER}
-				%     \end{solution} 
-		\end{questions}
-		\centering\large Exercise Set 4.6
-		\begin{questions}
-			\setcounter{question}{10}\question Determine whether the statement "The sum of any two positive irrational numbers is irrational." is true or false. Prove it if it is true and disprove it if it is false.
-			% \begin{solution}
-				%        \textcolor{red}{REPLACE WITH ANSWER}
-				%    \end{solution} 
-			\setcounter{question}{13}\question Consider the following sentence: If $x$ is rational then $\sqrt{x}$ is irrational. Is this sentence always true, sometimes true and sometimes false, or always false? Justify your answer.
-			% \begin{solution}
-				%        \textcolor{red}{REPLACE WITH ANSWER}
-				%    \end{solution} 
-			\setcounter{question}{23}\question Prove that $\log_5 (2)$ is irrational.
-			% \begin{solution}
-				%        \textcolor{red}{REPLACE WITH ANSWER}
-				%    \end{solution} 
-			\setcounter{question}{34}\question Prove that there is at most one real number $b$ with the property that $br =r$ for all real numbers $r$.
-			% \begin{solution}
-				%        \textcolor{red}{REPLACE WITH ANSWER}
-				%    \end{solution} 
-		\end{questions}
-		
-		
+		\begin{solution}
+			$$\forall n \in \mathbb{Z}, \textrm{ if } n \mid 16 \textrm{ then } n\mid 8$$
+			\begin{proof}
+				Suppose that n is an integer that is divisible by 16, then by definition
+				$$\exists k \in \mathbb{Z} \textrm{ such that } n=16k$$
+				By T8 we can rewrite 16 as $2 \cdot 8$ and then by commutative laws
+				$$n=2\cdot8k$$
+				$$n=8\cdot2k$$
+				We can see that $2k$ is an integer since it is the product of two integers, so let us rewrite it as $p$
+				$$p=2k$$
+				$$n=8p$$
+				By definition of divisibility 
+				$$\exists p \in \mathbb{Z} \textrm{ such that } n=8p \Leftrightarrow n \mid 8$$
+			\end{proof}
+		\end{solution}
+		\setcounter{question}{47} \question Prove that for any non-negative integer n, if the sum of the digits of n is divisible by 3, then n is divisible by 3.
+		\begin{solution}
+			$$\forall n \in \mathbb{Z}, n>0, \textrm{ if the sum of digits of n is divisible by 3 then, }3\mid n$$
+			\begin{proof}
+				Suppose $n \in \mathbb{Z}, n>0$ then by definition of decimal representation we have
+				$$n=d_k\cdot10^k+d_{k-1}\cdot10^{k-1}+...+d_2\cdot10^2+d_1\cdot10+d_0$$
+				For any $k>0 \in \mathbb{Z}$
+				$$10^k=99..9+1$$ where we have $k$ 99..9
+				$$10^k=9\cdot10^{k-1}+9\cdot10^{k-2}+...+9\cdot10^1+9\cdot10^0+1$$
+				Substituting this back into $n$ we get $n=$
+				$$d_k\cdot(9\cdot10^{k-1}+9\cdot10^{k-2}+...+9\cdot10^1+9\cdot10^0+1)+d_{k-1}\cdot(9\cdot10^{k-2}+9\cdot10^{k-3}\\+...+9\cdot10^1+9\cdot10^0+1)+...+d_2\cdot(9\cdot10+9\cdot10^0+1)+d_1\cdot(9+1)+d_0$$\\
+				$$=(9\cdot d_k\cdot10_{k-1}+9\cdot d_k\cdot10^{k-2}+...+9\cdot d_k\cdot10^1+9\cdot d_k\cdot10^0)\\
+				+(9\cdot d_{k-1}\cdot10^{k-2}+9\cdot d_{k-1}\cdot10^{k-3}+...+9\cdotd d_{k-1}\cdot10^1+9\cdot d_{k-1}\cdot10^0)\\
+				+...+(9\cdot d_2\cdot10+9\cdot d_2\cdot10^0)+(9\cdot d_1)
+				+(d_k+d_{k-1}+d_2+d_1+d_0)$$\\
+				Let $t$ represent the sum of the integers of $n$
+				$$=9(d_k\cdot10_{k-1}+\cdot d_k\cdot10^{k-2}+...+d_k-1\cdot10^{k-2}+...+d_1)+t$$
+				Let $(d_k\cdot10_{k-1}+\cdot d_k\cdot10^{k-2}+...+d_k-1\cdot10^{k-2}+...+d_1)$ be some integer $\delta$
+				$$n=9\delta+t$$
+				By definition of divisibility we can see that $3\mid9\delta$ because $9\delta = 3\cdot3\delta$. For $n\mid3$ then we need $3\mid t$ where $t$ is the sum of the integers of n. So if the sum is divisible then we can rewrite $n$ as the following where $q$ is some integer
+				$$n=3\cdot3\delta+3q$$
+				$$n=3(3\delta+q)$$
+				Since the sum of integers are integers and the products of integers are integers then $n$ is divisible by 3 provided  $3\mid t$
+		\end{proof}
+		\end{solution}
 	\end{questions}
+	\centering\large Exercise Set 4.4
+	\begin{questions}
+		\setcounter{question}{7} \question 
+		\begin{parts}
+			\part 50 $div$ 7
+			\part 50 $mod$ 7
+		\end{parts}
+		\begin{solution}
+			$$50=7\cdot7+1$$
+			\begin{parts}
+				\part 7
+				\part 1
+			\end{parts}
+	
+		\end{solution}
+		\setcounter{question}{16} \question Prove that the product of any two consecutive integers is even.
+		\begin{solution}
+			$$\forall m,n \in \mathbb{Z}, \textrm{m and n are consecutive, } \exists k \in \mathbb{Z} \textrm{ such that } mn=2k$$
+			\begin{proof}
+				Suppose $m$ and $n$ are any two consecutive integers, then by definition	
+				Theorem 4.4.2 there are two cases, either $m$ is odd and $n$ is even or $m$ is even and $n$ is odd\\
+				Case 1\\
+				Because $m$ is odd, then by definition 
+				$$\exists q \in \mathbb{Z} \textrm{ such that } m=2q+1$$
+				Because $n$ is even, then by definition 
+				$$\exists k \in \mathbb{Z} \textrm{ such that } n=2k$$
+				The product $mn$ then becomes
+				$$mn=(2q+1)(2k)$$
+				$$=4qk+2k$$
+				By distribution
+				$$=2(2qk+k)$$
+				Since the sum of integers are integers we can let $p=2qk+k$
+				$$mn=2p$$
+				Therefore by definition $mn$ is even\\
+				Case 2\\
+				Because $m$ is even, then by definition 
+				$$\exists q \in \mathbb{Z} \textrm{ such that } m=2q$$
+				Because $n$ is odd, then by definition 
+				$$\exists k \in \mathbb{Z} \textrm{ such that } n=2k+1$$
+				The product $mn$ then becomes
+				$$mn=(2q)(2k+1)$$
+				$$=4qk+2q$$
+				By distribution
+				$$=2(2qk+q)$$
+				Since $2qk+q$ is the product of integers then we can represent it as an integer $v$
+				$$mn=2v$$
+				Therefore by definition $mn$ is even since for both case 1 and case 2 we  arrive at $mn=2v$ or $mn=2p$
+			\end{proof}
+		\end{solution}
+		\setcounter{question}{20} \question Suppose $b$ is an integer. If $b$ mod $12=5$, what is $8b$ mod 12? In other words, if division of $b$ by 12 gives a remainder of 5, what is the remainder when 8b is divided by 12?
+		\begin{solution}
+			$$b \textrm{ mod } 12 =5 $$
+			$$b=12q+5$$
+			$$8b=96q+40$$
+			$$8b=12(8q+3)+4$$
+			The remainder is 4
+		\end{solution} 
+		\setcounter{question}{25} \question Prove that a necessary and sufficient condition for a non-negative integer $n$ to be divisible by a positive integer $d$ is that $n$ $mod$ $d=0$
+		\begin{solution}
+			$$\forall n,d \in \mathbb{Z}, n\geq0, d>0, \textrm{ if }n \textrm{ mod } d=0 \Leftrightarrow d \mid n $$ 
+			\begin{proof}
+				Suppose not. That is suppose
+		\[\exists n,d \in \mathbb{Z}, n\geq0, d>0 \textrm{ s.t.}(n\textrm{ mod } d=0 \land n\doesnotdivide d)\lor(n \textrm{ mod } d\neq0 \land n \mid d)\]
+				By definition, $n \textrm{ mod } d=0$ is
+				$$n=dk+r$$
+				Where $k\in\mathbb{Z}$ and $r=0$ so by existence of identity elements $n=dk$\\
+				By definition $n\doesnotdivide d$ is, $\forall k \in \mathbb{Z}$,
+				$$n\neq dk$$
+				So we have $n=dk$ and $n\neq dk$ which is a contradiction. 
+				
+				
+			\end{proof}
+		\end{solution}
+		\setcounter{question}{42} \question Prove that If $n$ is an odd integer, then $n^4$ $\mod$ 16 $=1$
+			\begin{solution}
+				$$\forall n \in \mathbb{Z}, \textrm{ if n is odd then } n^4\mod16 =1 }$$
+				\begin{proof}
+					Suppose $n \in \mathbb{Z}$ such that $n$ is odd, then by the quotient remainder theorem we can rewrite $n$ as
+					$$4q \textrm{ or } 4q+1 \textrm{ or } 4q+2 \textrm{ or } 4q+3$$
+					Because $n$ is odd, then by definition we have two cases 1) $n=4q+1$ or 2) $n=4q+3$\\
+					Case 1\\
+					$$n=4q+1$$
+					$$n^4=(4q+1)^4$$
+					Then by distributive laws we have the following
+					$$=(4q+1)(4q+1)(4q+1)(4q+1)$$
+					$$=(16q^2+8q+1)(16q^2+8q+1)$$
+					$$=256q^4+256q^3+96q^2+16q+1$$
+					$$=16(16q^4+16q^3+6q^2+q)+1$$
+					Since $16q^4+16q^3+6q^2+q$ is the sum of integers and since the products of integers are also integers we can let $p=16q^4+16q^3+6q^2+q$ so we have
+					$$n^4=16p+1$$ 
+					By definition $n^4$ mod $d=1$ means that $n^4=16p+1$ where $p$ is an integer
+					Case 2\\
+					$$n=4q+3$$
+					$$n^4=(4q+3)^4$$
+					Then by distributive laws we have the following
+					$$=(4q+3)(4q+3)(4q+3)(4q+3)$$
+					$$=(16q^2+24q+9)(16q^2+24q+9)$$
+					$$=256q^4+768q^3+864q^2+432q+81$$
+					$$=16(16q^4+48q^3+54q^2+27q+5)+1$$
+					Since $16q^4+48q^3+54q^2+27q+5$ is the sum of integers and since the products of integers are also integers we can let $s=16q^4+48q^3+54q^2+27q+5$ so we have
+					$$n^4=16s+1$$ 
+					By definition $n^4$ mod $d=1$ means that $n^4=16s+1$ where $s$ is an integer
+					In both cases we reach the form $16p+1$ or $16s+1$ where $p$ and $s$ are integers so by definition $n^4$ mod 16 is equal to one for any odd integer $n$
+					\end{proof}
+			\end{solution}
+	\end{questions}
+	
+	\centering\large Exercise Set 4.5
+	\begin{questions}
+		\setcounter{question}{6}\question Formulate the negation and prove by contradiction\\
+		There is no least positive rational number 
+		\begin{solution}
+			P(q), q is the least positive rational number
+			$$\neg(\neg\exists q\in\mathbb{Q^+} \textrm{ s.t. } P(q))$$
+			\begin{proof}
+				Suppose not. That is suppose
+				$$\exists q \in \mathbb{Q^+} \textrm{ s.t. } P(q)$$
+				Consider the number $\frac{q}{2}$. Since $q$ is a positive real number then $\frac{q}{2}$ is also a positive real number. By T22 and T19 we have the following
+				$$0+1<1+1$$
+				$$1<2$$
+				By T20 we can multiply both sides by $q$ and then by $\frac{1}{2}$ to get the following
+				$$q<2q$$
+				$$\frac{q}{2}<q$$
+				We have found a positive rational number, $\frac{q}{2}$, that is less than the least positive rational number $q$ which contradicts the original statement. 
+			\end{proof}
+		\end{solution}
+		\setcounter{question}{21}\question Consider the statement "For all real numbers $r$, if $r^2$ is irrational then r is irrational."
+		\begin{parts}
+			\part Write what you would suppose and what you would need to show to prove this statement by contradiction.
+			\part Write what you would suppose and what you would need to show to prove this statement by contra-position.
+		\end{parts}
+			\begin{solution}
+				\begin{parts}
+					\part Suppose $\exists r \in \mathbb{R}, r^2 \notin \mathbb{Q} \land r \in \mathbb{Q}$ and then show this leads to a contradiction because the square of a rational number cannot be an irrational number
+					\part Suppose there is a real number that is rational and show how its square is also a rational number
+				\end{parts}
+			\end{solution}
+		\begin{quote}
+			Prove 24 and 29 in two ways: \textbf{a)} by contra-position and \textbf{b)} by contradiction.
+		\end{quote}
+		\setcounter{question}{23}\question The reciprocal of any irrational number is irrational. (The \textbf{reciprocal} of a nonzero real number $x$ is $1/x$)
+		\begin{solution}
+			$$\forall x \notin \mathbb{Q}, (1/x) \notin \mathbb{Q}$$
+			\begin{parts}
+				\part \begin{proof}
+					Suppose not. That is suppose
+					$$\exists x \notin \mathbb{Q}, (1/x) \in \mathbb{Q}$$
+					By definition of rational we have
+					$$\nexists m,n \in \mathbb{Z} \textrm{ s.t. }x=\frac{m}{n}$$
+					By F6 we have
+					$$1/x=\frac{n}{m}$$
+					And since $1/x$ is rational then by definition 
+					$$\exists p,q \in \mathbb{Z} \textrm{ s.t. }1/x=\frac{p}{q}$$
+					By F6 we again have
+					$$1/(1/x)=x=\frac{q}{p}$$
+					So we have $x=\frac{q}{p}$ where $p,q \in \mathbb{Z}$ and $x=\frac{m}{n}$ where $m,n \notin \mathbb{Z}$ which is a contradiction and so the supposition is false
+				\end{proof}
+				\part \begin{proof}
+					Suppose $1/x$ is a rational number, then by definition $\exists m,n \in \mathbb{Z}$ such that $1/x=\frac{m}{n}$\\
+					By F6 we can find $x$
+					$$x=\frac{n}{m}$$
+					Therefore $x$ is a rational number because $m,n \in \mathbb{Z}$
+					\end{proof}
+			\end{parts}
+		\end{solution}
+		\setcounter{question}{28}\question For all integers $a, b,$ and $c$ if $a\mid b$ and $a\doesnotdivide c$, then $a\doesnotdivide (b+c)$
+			\begin{solution}
+				$$\forall a,b,c \in \mathbb{Z}, \textrm{ if } a \mid b, \textrm{ then } a\doesnotdivide(b+c)$$
+				\begin{parts}
+					\part \begin{proof}
+							Suppose not. That is suppose
+							$$\exists a,b,c \in \mathbb{Z}, a\mid b \land a\mid(b+c)$$
+							By definition of divisibility we have the following where $b\neq0$ and $(b+c)\neq0$
+							$$\exists k \in \mathbb{Z} \textrm{ s.t. }b=ka$$
+							$$\exists q \in \mathbb{Z} \textrm{ s.t. }b+c=ka$$
+							So we have $b=b+c$ and since $b\neq0$ and $(b+c)\neq0$ this is a contradiction which disproves the supposition.
+							\end{proof} 
+					\part \begin{proof}
+					Suppose $a,b,c \in \mathbb{Z}$ such that $a\mid(b+c)$ then by definition of divisibility we have the following where $(b+c)\neq0$
+					$$\exists k\in \mathbb{Z} \textrm{ s.t. }b+c=ka$$
+					But $a\mid b$ means $\exists q\in\mathbb{Z}$ such that $b=qa$ which is false because $b+c=ka$ 
+					\end{proof}
+				\end{parts}
+			\end{solution}
+	\end{questions}
+	\centering\large Exercise Set 4.6
+	\begin{questions}
+		\setcounter{question}{10}\question Determine whether the statement "The sum of any two positive irrational numbers is irrational." is true or false. Prove it if it is true and disprove it if it is false.
+		\begin{solution}
+			$$\forall m,n \notin \mathbb{Q}, m+n \notin \mathbb{Q}$$
+			False. To show this we will prove that $1-\sqrt{2}$ is irrational and then give a counterexample.
+			\begin{proof}
+			Suppose that $1-\sqrt[]{2}$ is rational, then by definition, for some integers $m$ and $n$ with $n\neq0$
+			$$1-\sqrt{2}=\frac{m}{n}$$
+			Adding $-1$ to both sides we obtain
+			$$-\sqrt{2}=\frac{m}{n}-1$$
+			Multiplying both sides by -1 we then obtain
+			$$\sqrt{2}=1-\frac{m}{n}$$
+			By substitution and the rule of subtracting fractions with a common denominator we then obtain
+			$$\sqrt{2}=\frac{n}{n}-\frac{m}{n}$$
+			$$\sqrt{2}=\frac{n-m}{n}$$
+			Since the differences of integers are integers we have $n-m$ is an integer and so $\sqrt{2}$ is a quotient of integers and therefore rational by definition but this contradicts the fact that $\sqrt{2}$ is irrational. Therefore $1-\sqrt{2}$ is irrational.
+			\end{proof}
+			Let $s, t$ be the irrational numbers $\sqrt{2}$ and $1-\sqrt{2}$ so their sum will then be
+			$$s+t=1-\sqrt{2}+\sqrt{2}$$
+			$$=1$$
+			Since 1 is a rational number as it can be written as the quotient of two integers where the denominator is not equal to the zero, the statement is false.
+		\end{solution}
+		\setcounter{question}{13}\question Consider the following sentence: If $x$ is rational then $\sqrt{x}$ is irrational. Is this sentence always true, sometimes true and sometimes false, or always false? Justify your answer.
+		\begin{solution}
+		$$\forall x \in \mathbb{Q}, \sqrt{x} \notin \mathbb{Q}$$
+		If the sentence was always true then we would not be able to find a rational number whose square root is rational. Counterexamples can include 1,4,9,25 and so on. If the statement was always false then would not be able to find rational numbers whose square is rational. Counterexamples include 2,3,5,7 and so on. Therefore the statement is sometimes true and sometimes false.
+		\end{solution}
+		\setcounter{question}{23}\question Prove that $\log_5 (2)$ is irrational.
+		\begin{solution}
+		\begin{proof}
+		Suppose not. That is suppose $\log_5 (2)$ is rational. Then by definition we can rewrite $\log_5 (2)$ as the following where $m$ and $n$ are integers and $n\neq0$
+		$$\log_5 (2)=\frac{m}{n}$$
+		By definition of logarithms we then have
+		$$5^{\frac{m}{n}}=2$$
+		Raising both sides to the nth power we then have
+		$$5^m=2^n$$
+		By the unique factorization of prime numbers we have
+		$$5^m=5\times5\times5\times5\times...\times5$$
+		$$2^n=2\times2\times2\times2\times...\times2$$
+		Dividing both sides by $2^n$ we then obtain
+		$$\frac{5^m}{2^n}=1$$
+		$$\frac{5\times5\times5\times5\times...\times5}{2\times2\times2\times2\times...\times2}=1$$
+		Which is a contradiction as this cannot be equal to one so our supposition is false and the original statement is true
+		\end{proof}
+		\end{solution}
+	
+		\setcounter{question}{34}\question Prove that there is at most one real number $b$ with the property that $br =r$ for all real numbers $r$.
+		\begin{solution}
+			$$\exists b \in \mathbb{R} \textrm{ such that } \forall r \in \mathbb{R}, br=r $$
+			Let $b=1$ and so the product of 1 with any other real number is the other real number\\
+			\begin{proof}
+				Suppose that there is another real number $c$ whose product with any other real number is the other number
+				$$b\cdot c = b = c$$
+				This is a contradiction as $c$ is the other real number but it is equal to $b$ so there is at most real number $b$ with the property $br=r$ for all real numbers $r$.
+			\end{proof}
+		\end{solution}
+	\end{questions}
+	
+	
+\end{questions}
 \end{document}
