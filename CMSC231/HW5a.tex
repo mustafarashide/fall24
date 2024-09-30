@@ -6,7 +6,6 @@
 \usepackage{caption}
 \usepackage{array}
 \usepackage[dvipsnames]{xcolor}
-\graphicspath{ {./images/} }
 \usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
 \lhead{Mustafa Rashid\\}
 \rhead{Chapter 5.1\\}
@@ -95,7 +94,15 @@
 		\setcounter{question}{73} \question Prove that if $p$ is a prime number and $r$ is an integer with $0<r<p$, then $\binom{p}{r}$ is divisiple by $p$.
 		
 		\begin{solution}
-			\textbf{Insert Solution Here...}
+			\begin{proof}
+				Suppose $p$ is a prime number and r is an integer with $0<r<p$\\
+				$$\binom{p}{r}=\frac{p!}{r!(p-r)!}$$
+				Because $p$ is prime its only factors are $p$ and 1.\\
+				$$=p\cdot\frac{(p-1)!}{r!(p-r)!}$$
+				Because $r<p$, $(p-r)!$ is contained in $(p-1)!$ so we will get to a point where the fraction becomes $\frac{(p-1)(p-2)(p-r)!}{r!(p-r)!}=\frac{(p-1)(p-2)(...)}{r!}$\\
+				From definition of $nCr$ we know that $\binom{p}{r} \in \mathbb{Z}$ and since $p\in\mathbb{Z}$ and since the product of two integers must be an integer then $\frac{(p-1)(p-2)(...)}{r!} \in \mathbb{Z}$\\
+				Therefore $\binom{p}{r}=pk$ for some integer $k$ and so by definition $p\mid\binom{p}{r}$
+			\end{proof}
 		\end{solution}
 	\end{questions}
 \end{document}
