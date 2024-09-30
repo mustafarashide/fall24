@@ -1,0 +1,101 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\graphicspath{ {./images/} }
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Chapter 5.1\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+\newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
+
+\begin{document}
+	
+	\begingroup  
+	\noindent\LARGE Discrete Mathematics\\
+	\noindent\LARGE Chapter 5.1 Homework\\
+	\noindent\large \today\\
+	\noindent\large Mustafa Rashid\par
+	\noindent\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	
+	\centering\large Exercise Set 5.1\\
+	\begin{questions}
+		\setcounter{question}{8} \question  Find explicit formulas for the sequence of the form $a_1,a_2,a_3,...$ with the initial terms below
+		$$1-\frac{1}{2},\frac{1}{2}-\frac{1}{3},\frac{1}{3}-\frac{1}{4},\frac{1}{4}-\frac{1}{5},\frac{1}{5}-\frac{1}{6},\frac{1}{6}-\frac{1}{7}$$
+		
+		\begin{solution}
+			$$a_k=\frac{1}{k}-\frac{1}{k+1} \textrm{  for all integers } k\geq0$$
+		\end{solution}
+		\setcounter{question}{28} \question Evaluate the summation for the indicated values of the variable
+		$$1(1!)+2(2!)+3(3!)+...+m(m!);m=2$$
+		
+		\begin{solution}
+		$$=1(1!)+2(2!)$$
+		$$=1+4$$
+		$$=5$$
+		\end{solution}
+		\setcounter{question}{42} \question Write using summation or product notation
+		$$(1-t)\cdot(1-t^2)\cdot(1-t^3)\cdot(1-t^4)$$
+		
+		\begin{solution}
+		$$\prod_{k=1}^{4} (1-t^k)$$
+		\end{solution}
+		
+		
+		\setcounter{question}{51} \question Transform by making the change of variable $j=i-1$
+		$$\sum^{n-1}_{i=1}\frac{i}{(n-1)^2}$$
+		
+		\begin{solution}
+		$$i=j+1$$
+		$$j=i-1$$
+		When $i=1$, then $j=1-1=0$ so the lower limit is 0. When $i=n-1$, $j+1=n-1$, $j=n-2$ so the upper limit is $n-2$.\\
+		Substituting $i=j+1$ we then have
+		$$\sum^{n-1}_{i=1}\frac{i}{(n-i)^2}=\sum^{n-2}_{j=0}\frac{j+1}{(n-j-1)^2}$$
+		\end{solution}
+		
+		\setcounter{question}{54} \question Write as a single summation or product
+		$$2\cdot\sum^{n}_{k=1}(3k^2+4)+5\cdot\sum^{n}_{k=1}(2k^2-1)$$
+		
+		\begin{solution}
+		By Theorem 5.1.1 (2)
+		$$2\cdot\sum^{n}_{k=1}(3k^2+4)+5\cdot\sum^{n}_{k=1}(2k^2-1)=\sum^{n}_k=(6k^2+8)+\sum^{n}_{k-1}(10k^2-5)$$
+				By Theorem 5.1.1 (1)
+				$$=\sum^{n}_{k=1}(6k^2+8+10k^2-5)$$
+								$$=\sum^{n}_{k=1}16k^2+3$$
+		\end{solution}
+		
+		Compute 59 \& 62. Assume the values of the variables are restricted so the functions are defined.
+		\setcounter{question}{58} \question $$\frac{4!}{0!}$$
+		
+		\begin{solution}
+		$0!=1$ by defintion and $4!=4\cdot3\cdot2\cdot1$
+		$$=\frac{24}{1}$$
+		$$=24$$
+		\end{solution}
+		
+		\setcounter{question}{61} \question $$\frac{n!}{(n-2)!}$$
+		
+		\begin{solution}
+		$$=\frac{n(n-1)(n-2)!}{(n-2)!}$$
+		$$=n(n-1)$$
+		$$=n^2-n$$
+		\end{solution}
+		
+		\setcounter{question}{73} \question Prove that if $p$ is a prime number and $r$ is an integer with $0<r<p$, then $\binom{p}{r}$ is divisiple by $p$.
+		
+		\begin{solution}
+			\textbf{Insert Solution Here...}
+		\end{solution}
+	\end{questions}
+\end{document}
