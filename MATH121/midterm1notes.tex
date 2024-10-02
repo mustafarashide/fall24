@@ -24,6 +24,10 @@
 	\begin{itemize}
 		\item 	Distance between point s $(x,y,z)$ and $a,b,c$ in 3-space
 		$$=\sqrt{(x-a)^2+(y-b)^2+(z-c)^2}$$
+		\item Function notation: $f(x,y)$ is the value of the function $f$ with inputs $x$ and $y$
+		\item Points in 3-space are specified by their coordinates relative to the $x,y,z$-axes
+		\item Some planes in 3-space can be specified by simple equations given by one variable equal to a constant. For example, the $xy$-plane (where $z=0$), the $xz$-plane where ($y=0$), and the $yz$-plane (where $x=0$)
+
 		
 	\end{itemize}
 
@@ -31,10 +35,56 @@
 		\begin{itemize}
 		\item The graph of a function of two variables, $f$, is the set of all points $(x,y,z)$ such that $z=f(x,y)$. In general the graph of a function of two variables is a surface in 3-space.
 		\item For a function $f(x,y)$, the function we get by holding $x$ fixed and letting $y$ vary is called a \textbf{cross-section} of $f$ with $x$ fixed. The graph of the cross-section of $f(x,y)$ with $x=c$ is the curve or cross-section, we get by intersecting the graph of $f$ with the plane $x=c$. We define a cross-section of $f$ with $y$ fixed similarly. 
+		\item Simple changes to a function, such as adding or multiplying by a constant, affect the graph by shifting, stretching or flipping, just as for functions of one variable.
+		\item A cross-section of a function $f(x,y)$ is the one-variable function obtained by setting $x$ or $y$ equal to a constant 
+		\item A cylinder is the result of having one of the variables unspecified, such as $f(x,y)=x^2$
 		\end{itemize}
 		\noindent 12.3 Contour Diagrams
 		\begin{itemize}
 			\item Contour diagrams are used to represent functions of two variables as they are difficult to see function behavior from a surface
 			\item Contour lines, or level curves, are obtained from a surface by slicing it with horizontal planes. A contour diagram is a collection of level curves labeled with function values.
+			\item A contour of the function $f(x,y)$ is the set of poiunts in the $xy$-plane satisfying $f(x,y)=$ constant. Contours can be thought of as horizontal slices of the graph of a function at a particular height
+			\item A contour diagram for a function $f(x,y)$ is a graph of several contours for a selction of constants
+			\item In a contour diagram with equally-spaced function values, contours that are closer together represent more rapid change of the function
+			\item To find a contour algebraically, set the formula for $f(x,y)$ equal to a constant
+			\item Sometimes contours can be seen numerically in a table of values by seeing where the same values occur in the table
+			\item A Cobb-Douglas production function has the form
+			$$f(N,V)=cN^{\alpha}V^{\beta}$$
+		\end{itemize}
+		\noindent 12.4 Linear Functions
+		\begin{itemize}
+			\item If a plane has slope $m$ in the $x$-direction, has slope $n$ in the $y$-direction, and passes through the point $(x_0,y_0,z_0)$, then its equation is
+			$$z=z_0+m(x-x_0)+n(y-y_0)$$
+			This plane is the graph of the linear function
+			$$f(x,y)=z_0+m(x-x_0)+n(y-y_0)$$
+			If we write $c=z_0-mx_0-ny_0$, then we can write $f(x,y)$ in the equivalent form
+			$$f(x,y)=c+mx+ny$$
+			\item A linear function can be recognized from its table by the following features:\\
+			- Each row and each column is linear\\
+			- All the rows have the same slope.\\
+			- All the columns have the same slope. (although the slope of the rows and the slope of the columns are generally different)
+			\item Contours of linear functions are parallel lines, evenly spaced.
+		\end{itemize}
+		\noindent 12.5 Functions of Three Variables
+		\begin{itemize}
+			\item A level surface, or level set of a function of three variables, $f(x,y,z)$, is a surface of the form $f(x,y,z)=c$, where $c$ is a constant. The function $f$ can be represented by the family of level surfaces obtained by allowing c to vary.
+			\item Catalog of surfaces\\
+			\begin{minipage}[]{\textwidth}
+			\centering
+			\includegraphics[width=0.8\textwidth]{surfaces}
+			\end{minipage}
+			\item A single surface that is the graph of a two-variable function $f(x,y)$ can be thought of as one member of the family of level surfaces representing the three-variable function
+			$$g(x,y,z)=f(x,y)-z$$
+			The graph of $f$ is the level surface $g=0$
+			\item Every surface that is the graph of a function $z=g(x,y)$ can be rewritten as a level surface by writing $f(x,y,z)=g(x,y)-z=0$.
+			\item Not every level surface $f(x,y,z)=c$ can be rewritten as the graph of a function $z=g(x,y)$. That is, level surfaces of 3-variable functions can describe more surfaces that can be described as graphs of 2-variable functions $z=g(x,y)$.
+		\end{itemize}
+		\noindent 13.1 Displacement Vectors
+		\begin{itemize}
+			\item The displacement vector from one point to another is an arrow with its tail at the first point and its tip at the second. The magnitude (or length) of the displacement vector is the distance between the points and is represented by the length of the arrow. The direction of the displacement vector is the direction of the arrow.
+			\item Displacement vectors which point in the same direction and have the same magnitude are considered to be the same, even if they have the same magnitude are considered to be the same, even if they do not coincide.
+			\item The sum, $\vec{v}+\vec{w}$, of two vectors $\vec{v}$ and $\vec{w}$ is the combined displacement resulting from first applying $\vec{v}$ and then $\vec{w}$. The sum $\vec{w}+\vec{v}$ gives the same displacement.
+			\item The difference, $\vec{w}-\vec{v}$, is the displacement vector that, when added to $\vec{w}=\vec{v}+(\vec{w}-\vec{v})$, gives $\vec{w}$. That is, $\vec{w}=\vec{v}+(\vec{w}-\vec{v})$
+			\item The zero vector, $\vec{0}$, is a displacement vector with zero length
 		\end{itemize}
 \end{document}
