@@ -1,0 +1,36 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newtheorem*{prop}{Proposition}
+\thispagestyle{empty} 
+\newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
+\begin{document}
+\noindent Chapter 5, 10 - Prove using contrapositive proof
+\begin{prop}
+	
+Suppose $x,y,z \in \mathbb{Z}$ and $x\neq0$. If $x\doesnotdivide yz$, then $x\doesnotdivide y$ and $x\doesnotdivide z$
+	
+\end{prop}
+
+\begin{proof}
+	
+We employ contrapositive proof. Suppose $x\mid y$ or $x\mid z$. By definition  $x\mid y$, $y=xq$ for some integer $q$. By definition  $x\mid z, z=ax$ for some integer $a$. From these two definitions of $y$ and $z$ we can write $yz$ equals
+$$yz=xq\cdot ax$$
+We then rearrange this into $aqx\cdot x$ and because the products of integers are integers we can write $k=aqx$ where $k\in\mathbb{Z}$
+$$yz=kx$$
+We have written $yz$ as $k$ multiples of the $x$. Therefore $x\mid yz.$
+\end{proof}
+
+\noindent Chapter 5, 25 - Prove using either direct or contrapositive proof
+\begin{prop}
+	
+Let $n\in\mathbb{N}$. If $2^n-1$ is prime, then $n$ is prime.
+	
+\end{prop}
+
+\begin{proof}
+	Suppose $2^n-1$ is prime, then by definition there are exactly two positive divisors of $2^n-1$ which are $2^n-1$ and 1. 
+\end{proof}
+\end{document}
+
