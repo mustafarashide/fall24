@@ -1,0 +1,123 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{gensymb}
+\graphicspath{ {.} }
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Problem Set 4\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+
+
+
+\begin{document}
+	
+	\begingroup  
+	\centering
+	\LARGE Multi-variable Calculus\\
+	\LARGE Problem Set 4\\[0.5em]
+	\large \today\\[0.5em]
+	\large Mustafa Rashid\par
+	\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	
+	
+	
+	\begin{questions}
+		
+		\question The energy, E, of a body of mass m moving with speed v is given by the formula
+		$$E=f(m,v)=mc^2\left(\frac{1}{\sqrt[]{1-\frac{v^2}{c^2}}}-1\right)$$
+		The speed $v$ is nonnegative and less than the speed of light, $c$, which is a constant.
+		\begin{parts}
+			\part Find $\frac{\partial E}{\partial m}$. What would you expect the sign of $\frac{\partial E}{\partial m}$ to be? Explain.
+			\part  Find $\frac{\partial E}{\partial v}$. What would you expect the sign of $\frac{\partial E}{\partial v}$ to be? Explain.
+		\end{parts}	
+		
+		\begin{solution}
+			\begin{parts}
+			\part $$\frac{\partial E}{\partial m}=c^2\left(\frac{1}{\sqrt[]{1-\frac{v^2}{c^2}}}\right)$$
+		The sign of $\frac{\partial E}{\partial m}$ is positive because as the mass $m$ of the object increases, the energy $E$ increases.
+			\part $$\frac{\partial E}{\partial v}=\frac{\partial\left(mc^2\left(\frac{1}{\sqrt[]{1-\frac{v^2}{c^2}}}\right)\right)}{\partial v}=\frac{\partial\left(mc^2(1-\frac{v^2}{c^2})^{-\frac{1}{2}}-mc^2\right)}{\partial v}$$
+			$$=\frac{\partial \left(mc^2(1-\frac{v^2}{c^2})^{-\frac{1}{2}}\right)}{\partial v}-\frac{\partial (mc^2)}{\partial v}$$
+			$$=-\frac{1}{2}mc^2\left(1-\frac{v^2}{c^2}\right)^{-\frac{3}{2}}\left(-\frac{1}{c^2}\right)$$
+			$$=\frac{1}{2}m\left(1-\frac{v^2}{c^2}\right)^{-\frac{3}{2}}$$
+					The sign of $\frac{\partial E}{\partial v}$ is positive because as the velocity $v$ of the object increases, the energy $E$ increases.
+			\end{parts}
+		
+		\end{solution}
+		
+		\question Let $f(x,y)=x^2e^{xy}$ and $P=(1,0)$
+		\begin{parts}
+			\part Find the equation of the plane tangent to the graph of $f$ at $P.$
+			\part Use Part (a) to approximate $f(1.1,0.8).$
+		\end{parts}
+		\begin{solution}
+			\begin{parts}
+					\part The equation of the tangent plane $z$ is equal to $f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b),$ where $(a,b)=(1,0)$.   
+					\begin{itemize}
+						\item $f_x=\frac{\partial (x^2e^{xy})}{\partial x}=2xe^{xy}+x^2ye^{xy}=(2x+x^2)e^{xy}$
+						\item $f_y=\frac{\partial (x^2e^{xy})}{\partial y}=x^3e^{xy}$
+					\end{itemize}
+					$$f(a,b)=f(1,0)=1^2e^{1\times0}=1$$
+					$$f_x(a,b)=2(1)e^{1\times 0}+1^2\times0\times e^{1\times0}=2$$
+					$$f_y(a,b)=1^3e^{1\times0}=1$$
+					$$z=1+2(x-1)+1(y-0)=1+2(x-1)+y$$
+					$$z=1+2(x-1)+y$$
+					\part $f(1.1,0.8)\approx 1+2(1.1-1)+0.8$\\
+					$f(1.1,0.8)\approx 2$
+			\end{parts}
+		\end{solution}
+		\question A one-meter long bar is heated unevenly, with its temperature in $\degree C$ at a distance $x$ metres from one end at time $t$ given by
+		$$H(x,t)=100e^{-0.1t}\sin(\pi x)\hspace*{1cm}0\leq x\leq 1$$
+		\begin{parts}
+			\part Sketch a graph of $H$ against $x$ for $t=0$ and $t=1.$
+			\part Calculate $H_x(0.2,t)$ and $H_x(0.8,t).$ What is the practical interpretation (in terms of temperature) of these two partial derivatives? Explain why each one has the sign it does.
+			\part Calculate $H_t(x,t).$ What is its sign? What is its interpretation in terms of temperature?
+		\end{parts}
+		\begin{solution}
+			\begin{parts}
+				\part 	\makebox[0pt][l]{
+					\begin{minipage}{\textwidth}
+						\centering
+						\includegraphics[width=.4\textwidth]{question3a}
+						\captionof{figure}{}
+						\label{fig:fig1}
+					\end{minipage}
+				}
+				\part $$H_x=\frac{\partial \left(100e^{-0.1t}\sin(\pi x)\right)}{\partial x}$$
+				$H_x=100\pi\cdot\cos(\pi x)\cdot e^{-0.1t}$\\
+				$H_x(0.2,t)=100\pi\cdot\cos(0.2\pi)\cdot e^{-0.1t}\approx 254.2\cdot e^{-0.1t}$ \degree C\textfractionsolidus meter\\
+				$H_x(0.8,t)=100\pi\cdot\cos(0.8\pi)\cdot e^{-0.1t}\approx -254.2\cdot e^{-0.1t}$  \degree C\textfractionsolidus meter\\
+				These two derivatives show how the temperature in \degree C changes with respect to the distance $x$ in meters from one end at a fixed moment of time $t$. $H_x(0.2,t)$ is positive because the temperature increases where you are 0.2m away from one end but $H_x(0.8,t)$ is negative because the temperature decreases when you are 0.8m from one end.
+				\part $$H_t(x,t)=-0.1\times100\times e^{-0.1t}\times \sin(\pi x)$$
+				$H_t(x,t)=-10e^{-0.1t}\times \sin(\pi x) \degree C \textfractionsolidus \textrm{ unit of time}$\\
+				The sign is negative because $\sin (\pi x)$ is positive for $0\leq x\leq1$ and $t$ is positive.  This means that with respect to time, or as the time increases, the temperature of the bar decreases.
+			\end{parts}
+		\end{solution}
+		\question A student was asked to find the equation of the tangent plane to the surface $z=x^3-y^2$ at the point $(x,y)=(2,3)$. The student's answer was
+		$$z=3x^2(x-2)-2y(y-3)-1.$$
+		\begin{parts}
+			\part At a glance, how do you know this is wrong?
+			\part What mistake did the student make?
+			\part Answer the question correctly.
+		\end{parts}
+		\begin{solution}
+			\begin{parts}
+				\part The slopes of a linear function must be constants and not variables.
+				\part They forgot to evaluate $f_x(a,b)$ and $f_y(a,b)$ at the point $(x,y)=(2,3).$
+				\part $$z=3(2^2)(x-2)-2(3)(y-3)-1$$
+				$$z=12(x-2)-6(y-3)-1$$
+			\end{parts}
+
+			
+		\end{solution}
+\end{questions}
+ \end{document}
