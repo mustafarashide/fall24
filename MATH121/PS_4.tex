@@ -43,15 +43,14 @@
 		
 		\begin{solution}
 			\begin{parts}
-			\part $$\frac{\partial E}{\partial m}=c^2\left(\frac{1}{\sqrt[]{1-\frac{v^2}{c^2}}}\right)$$
+			\part $$\frac{\partial E}{\partial m}=c^2\left(\frac{1}{\sqrt[]{1-\frac{v^2}{c^2}}}-1\right)$$
 		The sign of $\frac{\partial E}{\partial m}$ is positive because as the mass $m$ of the object increases, the energy $E$ increases.
-			\part $$\frac{\partial E}{\partial v}=\frac{\partial\left(mc^2\left(\frac{1}{\sqrt[]{1-\frac{v^2}{c^2}}}\right)\right)}{\partial v}=\frac{\partial\left(mc^2(1-\frac{v^2}{c^2})^{-\frac{1}{2}}-mc^2\right)}{\partial v}$$
-			$$=\frac{\partial \left(mc^2(1-\frac{v^2}{c^2})^{-\frac{1}{2}}\right)}{\partial v}-\frac{\partial (mc^2)}{\partial v}$$
-			$$=-\frac{1}{2}mc^2\left(1-\frac{v^2}{c^2}\right)^{-\frac{3}{2}}\left(-\frac{1}{c^2}\right)$$
-			$$=\frac{1}{2}m\left(1-\frac{v^2}{c^2}\right)^{-\frac{3}{2}}$$
+			\part $$\frac{\partial E}{\partial v}=mc^2\cdot \frac{\partial \left(\sqrt[]{\frac{c^2}{c^2-v^2}}-1\right)}{\partial v}$$
+			$$=mc^2\cdot \frac{\partial (c\cdot(c^2-v^2)^{-1/2})}{\partial v}$$
+			$$=mc^2\cdot c\cdot(-1/2)(c^2-v^2)^{-3/2}\cdot(-2v)$$
+			$$\frac{\partial E}{\partial v}=\frac{mvc^3}{(c^2-v^2)^{-3/2}}$$
 					The sign of $\frac{\partial E}{\partial v}$ is positive because as the velocity $v$ of the object increases, the energy $E$ increases.
 			\end{parts}
-		
 		\end{solution}
 		
 		\question Let $f(x,y)=x^2e^{xy}$ and $P=(1,0)$
@@ -82,13 +81,13 @@
 			\part Calculate $H_x(0.2,t)$ and $H_x(0.8,t).$ What is the practical interpretation (in terms of temperature) of these two partial derivatives? Explain why each one has the sign it does.
 			\part Calculate $H_t(x,t).$ What is its sign? What is its interpretation in terms of temperature?
 		\end{parts}
+		\pagebreak
 		\begin{solution}
 			\begin{parts}
 				\part 	\makebox[0pt][l]{
 					\begin{minipage}{\textwidth}
 						\centering
 						\includegraphics[width=.4\textwidth]{question3a}
-						\captionof{figure}{}
 						\label{fig:fig1}
 					\end{minipage}
 				}
