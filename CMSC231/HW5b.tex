@@ -31,7 +31,24 @@
 	\centering\large Exercise Set 5.2\\
 	\begin{questions}
 		\setcounter{question}{1} \question  Use mathematical induction to show that any postage of at least 12$\mbox{\textcentoldstyle}$ can be obtained using 3$\mbox{\textcentoldstyle}$   and 7$\mbox{\textcentoldstyle}$  stamps.
-		
+		\begin{solution}
+						For all integers $n\geq12$, $n\mbox{\textcentoldstyle}$ can be obtained using 3$\mbox{\textcentoldstyle}$   and 7$\mbox{\textcentoldstyle}$  stamps.
+						\begin{proof}
+							Let the property $P(n)$ be the sentence:
+							$$n \mbox{\textcentoldstyle} \textrm{ can be obtained using } 3\mbox{\textcentoldstyle} \textrm{ and } 7\mbox{\textcentoldstyle} \textrm{ stamps}$$
+							\textbf{Show that P(12) is true:}\\
+							P(12) is true because 12$\mbox{\textcentoldstyle}$ can be obtained using four 3$\mbox{\textcentoldstyle}$ stamps\\
+							\textbf{Show that for all integers $k\geq12$, if $P(k)$ is true then $P(k+1)$ is also true:}\\
+							Suppose that $k$ is any integer with $k\geq12$ such that 
+							$$k\mbox{\textcentoldstyle} \text{ can be obtained using 3}\mbox{\textcentoldstyle}  \text{ and } 7\mbox{\textcentoldstyle} \textrm{ stamps}$$
+							We must show that
+$$(k+1)\mbox{\textcentoldstyle} \text{ can be obtained using 3}\mbox{\textcentoldstyle}  \text{ and } 7\mbox{\textcentoldstyle} \textrm{ stamps}$$
+\textbf{Case 1 (There are two 3$\mbox{\textcentoldstyle}$ stamps among those used to make up the $k\mbox{\textcentoldstyle}$):} In this case replace the two 3$\mbox{\textcentoldstyle}$ stamps with a 7$\mbox{\textcentoldstyle}$ stamp; the result will be a $(k+1)\mbox{\textcentoldstyle}$ stamp.\\
+\textbf{Case 2 (There are no two 3$\mbox{\textcentoldstyle}$ stamps among those used to make up the k$\mbox{\textcentoldstyle}$ stamps)}: In this case, because $k\geq12$, at least two 7$\mbox{\textcentoldstyle}$ stamps must have been used. So remove two 7$\mbox{\textcentoldstyle}$ stamps and replace them by five 3$\mbox{\textcentoldstyle}$ stamps; the result will be $(k+1)\mbox{\textcentoldstyle}$.\\
+Thus in either case $(k+1)\mbox{\textcentoldstyle}$ can be obtained using 3$\mbox{\textcentoldstyle}$  and 7$\mbox{\textcentoldstyle}$ stamps.
+						\end{proof}
+			
+		\end{solution}
 		\setcounter{question}{3}\question  For each integer $n$ with $n\geq2$, let $P(n)$ be the formula
 		$$\sum_{i=1}^{n-1}i(i+1)=\frac{n(n-1)(n+1)}{3}$$
 		\begin{parts}
@@ -40,14 +57,90 @@
 			\part Write $P(k+1)$.
 			\part In a proof by mathematical induction that the formula holds for all integers $n\geq2$, what must be shown in the inductive step?
 		\end{parts}
+		\begin{solution}
+			\begin{parts}
+				\part $$P(2)=\frac{2(1)(3)}{3}=2$$
+				$$\sum_{i=1}^{1}i(i+1)=1(2)=2$$
+				$P(2)$ is true.
+				\part $$P(k)=\frac{k(k-1)(k+1)}3\hspace*{1cm}k\geq2$$
+				\part $$P(k+1)=\frac{k+1(k)(k+2)}{3}$$
+				\part We must show that for all integers $k\geq2$, if $P(k)$ is true then $P(k+1)$ is true.
+			\end{parts}
+	\end{solution}
 		Prove by mathematical induction. Do not derive from Theorem 5.2.2 or Theorem 5.2.3.
 		\setcounter{question}{6}\question For all integers $n\geq1$,
 		$$1+6+11+16+...+(5n-4)=\frac{n(5n-3)}{2}.$$
+		\begin{solution}
+			\begin{proof}
+			Let the property $P(n)$ be the equation
+				$$1+6+11+16+...+(5n-4)=\frac{n(5n-3)}{2}.$$
+			\textbf{Show that P(1) is true:}\\
+			To establish $P(1)$ we must show that
+			$$1=\frac{1(5-3)}{2}$$
+			But the left-hand side of this equation is 1 and the right-hand side is
+			$$\frac{1(5-3)}{2}=\frac{2}{2}=1$$
+			also. Hence $P(1)$ is true.\\
+			\textbf{Show that for all integers $k\geq1$, if $P(k)$ is true then $P(k+1)$ is also true:}\\
+			Suppose that $k$ is any integer with $k\geq1$ such that
+				$$1+6+11+16+...+(5k-4)=\frac{k(5k-3)}{2}$$
+				We must show that
+					$$1+6+11+16+...+(5(k+1)-4)=\frac{(k+1)(5(k+1)-3)}{2},$$
+					Or, equivalently, that
+					$$1+6+11+16+...+5k+1=\frac{(k+1)(5k+2)}{2}$$
+					The left-hand side of $P(k+1)$ is
+					$$1+6+11+16+...+5k-4+5k+1$$ 
+					By substitution from the inductive hypothesis we get:
+					$$=\frac{k(5k-3)}{2}+5k+1$$
+					By algebra we get:
+					$$\frac{k(5k-3)}{2}+\frac{10k+2}{2}=\frac{5k^2+7k+2}{2}$$
+					And the right-hand side of $P(k+1)$ is
+					$$\frac{(k+1)(5k+2)}{2}=\frac{5k^2+7k+2}{2}$$
+					Thus the two sides of $P(k+1)$ are equal to the same quantity and so they are equal to each other. Therefore the equation $P(k+1)$ is true.
+			\end{proof}
+		\end{solution}
 		Prove by mathematical induction.
 		\setcounter{question}{11}\question $$\frac{1}{1\cdot2}+\frac{1}{2\cdot3}+...+\frac{1}{n(n+1)}=\frac{n}{n+1}, \textrm{ for all integers $n\geq1$}$$
+			\begin{solution}
+			\begin{proof}
+				Let the property $P(n)$ be the equation
+				$$\frac{1}{1\cdot2}+\frac{1}{2\cdot3}+...+\frac{1}{n(n+1)}=\frac{n}{n+1}.$$
+				\textbf{Show that P(1) is true:}\\
+				To establish $P(1)$ we must show that
+				$$\frac{1}{1\cdot2}=\frac{1}{1+1}$$
+				But the left-hand side of this equation is $\frac{1}{2}$ and the right-hand side is
+				$$\frac{1}{1+1}=\frac{1}{2}$$
+				also. Hence $P(1)$ is true.\\
+				\textbf{Show that for all integers $k\geq1$, if $P(k)$ is true then $P(k+1)$ is also true:}\\
+				Suppose that $k$ is any integer with $k\geq1$ such that
+				$$\frac{1}{1\cdot2}+\frac{1}{2\cdot3}+...+\frac{1}{k(k+1)}=\frac{k}{k+1}$$
+				We must show that
+				$$\frac{1}{1\cdot2}+\frac{1}{2\cdot3}+...+\frac{1}{k+1(k+2)}=\frac{k+1}{k+2},$$
+				The left-hand side of $P(k+1)$ is
+				$$\frac{1}{1\cdot2}+\frac{1}{2\cdot3}+...+\frac{1}{k(k+1)}+\frac{1}{k+1(k+2)}$$ 
+				By substitution from the inductive hypothesis we get:
+				$$=\frac{k}{k+1}+\frac{1}{k+1(k+2)}$$
+				By algebra we get:
+				$$\frac{k}{k+1}+\frac{1}{k+1(k+2)}=\frac{k(k+2)+1}{(k+1)(k+2)}$$
+				$$=\frac{k^2+2k+1}{(k+1)(k+2)}=\frac{(k+1)(k+1)}{(k+1)(k+2)}$$
+				$$=\frac{k+1}{k+2}$$
+				And the right-hand side of $P(k+1)$ is
+				$$\frac{k+1}{k+2}$$
+				Thus the two sides of $P(k+1)$ are equal to the same quantity and so they are equal to each other. Therefore the equation $P(k+1)$ is true.
+			\end{proof}
+		\end{solution}
 		Use the formula for the sum of the first $n$ integers and/or the formula for the sum of a geometric sequence to evaluate the sums in 23 \& 29.
 		\setcounter{question}{22}\question $$7+8+9+10+...+600$$
+		\begin{solution}
+			$$7+8+9+10+...+600=(1+2+3+4+...+600)-(1+2+3+4+5+6)$$
+			$$=\frac{600\cdot601}{2}-21$$
+			$$=180,279$$
+		\end{solution}
 		\setcounter{question}{28}\question $$1-2+2^2-2^3+...+(-1)^n2^n, \textrm{ where $n$ is a positive integer}$$
+		\begin{solution}
+			$$(-1)^{n-1}\left[1+2+2^2+2^3+...+2^n\right]$$
+			$$=(-1)^{n-1}\left[\frac{(2)^{n+1}-1}{1}\right]$$
+			$$=(-1)^{n-1}(2^{n+1}-1)$$
+		\end{solution}
 		Find the mistake in the proof fragment below.
 		\setcounter{question}{34}\question \textbf{Theorem:} For any integer $n\geq1,$
 		$$\sum_{i=1}^{n}i(i!)=(n+1)!-1.$$
@@ -57,16 +150,103 @@
 		So $1(1!)=2!-1$\\
 		and $1=1$\\
 		Thus $P(1)$ is true."\\
+		\begin{solution}
+			To show that $P(1)$ is true we must either transform the left-hand side and right hand-side independently until we arrive at the same value or transform one side of the equation until it is seen to be equal to the other side of the equation. The proof above starts profe a statement whose truth is not known to arrive at a true conclusion. It is possible to arrive at true conclusions from false statements so this is the mistake that the proof makes.
+		\end{solution}
 			\end{questions}
+		\pagebreak
 		\centering\large Exercise Set 5.3\\
 		\begin{questions}
-		 \setcounter{question}{1}\question Experiment with computing values of the product $(1+\frac{1}{2})+(1+\frac{1}{3})...(1+\frac{1}{n})$ for small values of $n$ to conjecture a formula for this product for general $n$. Prove your conjecture by mathematical induction.
+		 \setcounter{question}{1}\question Experiment with computing values of the product $(1+\frac{1}{1})(1+\frac{1}{2})(1+\frac{1}{3})...(1+\frac{1}{n})$ for small values of $n$ to conjecture a formula for this product for general $n$. Prove your conjecture by mathematical induction.
+		 \begin{solution}
+		 	The conjecture is that for $n\geq1$, the value of the product will be $n+1$.\\
+		 	\begin{tabular}{c c c}
+		 		n&value of product\\
+		 		1&2\\
+		 		2&3\\
+		 		3&4\\
+		 		4&5\\
+		 	\end{tabular}
+		 		\begin{proof}
+		 		Let the property $P(n)$ be the equation
+		 		$$(1+\frac{1}{1})(1+\frac{1}{2})(1+\frac{1}{3})...(1+\frac{1}{n})=n+1.$$
+		 		\textbf{Show that P(1) is true:}\\
+		 		To establish $P(1)$ we must show that
+		 		$$(1+\frac{1}{1})=2$$
+		 		But the left-hand side of this equation is 2 and the right-hand side is 2
+		 		also. Hence $P(1)$ is true.\\
+		 		\textbf{Show that for all integers $k\geq1$, if $P(k)$ is true then $P(k+1)$ is also true:}\\
+		 		Suppose that $k$ is any integer with $k\geq1$ such that
+		 		$$(1+\frac{1}{1})(1+\frac{1}{2})(1+\frac{1}{3})...(1+\frac{1}{k})=k+1$$
+		 		We must show that
+		 		$$(1+\frac{1}{1})(1+\frac{1}{2})(1+\frac{1}{3})...(1+\frac{1}{k+1})=k+2,$$
+		 		The left-hand side of $P(k+1)$ is
+		 		$$(1+\frac{1}{1})(1+\frac{1}{2})(1+\frac{1}{3})...(1+\frac{1}{k})(1+\frac{1}{k+1})$$ 
+		 		By substitution from the inductive hypothesis we get:
+		 		$$=k+1(1+\frac{1}{k+1})$$
+		 		By algebra we get:
+		 		$$k+1(1+\frac{1}{k+1})=k+1+1=k+2$$
+		 		And the right-hand side of $P(k+1)$ is
+		 		$$k+2$$
+		 		Thus the two sides of $P(k+1)$ are equal to the same quantity and so they are equal to each other. Therefore the equation $P(k+1)$ is true.
+		 	\end{proof}
+		 \end{solution}
 		 \setcounter{question}{4}\question Evaluate the sum $\sum_{k=1}^{n}\frac{k}{(k+1)!}$ for $n=1,2,3,4,$ and 5.\\
 		 Make a conjecture about a formula for this sum for general $n$, and prove your conjecture by mathematical induction.
+		 \begin{solution}
+		 	The conjecture is that for $n\geq1$, the sum will be $\frac{(n+1)!-1}{(n+1)!}$
+		 	\begin{tabular}{c c}
+				n&value of sum\\
+				1&1/2\\
+				2&5/6\\
+				3&23/24\\
+				4&119/120\\
+				5&719/720\\
+		 	\end{tabular}
+		 	\begin{proof}
+		 		Let the property $P(n)$ be the equation
+		 		 $$\sum_{i=1}^{n}\frac{i}{(i+1)!}=\frac{(n+1)!-1}{(n+1)!}$$
+		 		 	\textbf{Show that P(1) is true:}\\
+		 		 To establish $P(1)$ we must show that
+		 		 $$\frac{1}{(1+1)!}=\frac{(1+1)!-1}{(1+1)!}$$
+		 		 But the left-hand side of this equation is 1/2 and the right-hand side is 1/2
+		 		 also. Hence $P(1)$ is true.\\
+		 		 \textbf{Show that for all integers $k\geq1$, if $P(k)$ is true then $P(k+1)$ is also true:}\\
+		 		 Suppose that $k$ is any integer with $k\geq1$ such that
+		 		 $$\sum_{i=1}^{k}\frac{i}{(i+1)!}=\frac{(k+1)!-1}{(k+1)!}$$
+		 		 We must show that
+		 		 $$\sum_{i=1}^{k+1}\frac{i}{(i+1)!}=\frac{(k+2)!-1}{(k+2)!},$$
+		 		 The left-hand side of $P(k+1)$ is
+		 		 $$\sum_{i=1}^{k+1}\frac{i}{(i+1)!}$$ 
+		 		 By recursive definition of summation we get:
+		 		 $$\sum_{i=1}^{k+1}\frac{i}{(i+1)!}=\sum_{i=1}^{k}\frac{i}{(i+1)!}+\frac{1}{(k+2)!}$$
+		 		 By substitution from inductive hypothesis we get:
+		 		 $$\sum_{i=1}^{k+1}\frac{i}{(i+1)!}+\sum_{i=1}^{k+1}\frac{1}{(k+2)!}=\frac{(k+1)!-1}{(k+1)!}+\frac{(k+2)!-1}{(k+2)!}$$
+		 		 By algebra we get:
+		 		 $$\frac{(k+1)!-1}{(k+1)!}+\frac{(k+2)!-1}{(k+2)!}$$
+		 		 $$=\frac{(k+1)!(k+2)!-(k+2)!+(k+2)!(k+1)!-(k+1)!}{(k+1)!(k+2)!}$$
+		 		 $$=\frac{(k+1)!\left((k+2)!-(k+2)+(k+2)!-1\right)}{(k+1)!(k+2)!}$$
+		 		 And the right-hand side of $P(k+1)$ is
+		 		 $$\frac{(k+2)!-1}{(k+2)!}$$
+		 		 Thus the two sides of $P(k+1)$ are equal to the same quantity and so they are equal to each other. Therefore the equation $P(k+1)$ is true.
+		 	\end{proof}
+		 \end{solution}
 		 \setcounter{question}{11}\question For any integer $n\geq0, 7^n-2^n$ is divisible by 5.
+		 \begin{solution}
+		 	\begin{proof}
+ 				 	Let $P(n)$ be the property that $7^n-2^n$ is divisible by 5\\
+ 				 		\textbf{Show that P(0) is true:}\\
+ 				 	To establish $P(0)$ we must show that
+ 				 	$$7^0-2^0=5\times k, k\in\mathbb{Z}$$
+ 				 	But the left-hand side of this equation is 0 and the right-hand side is 0 when k=0
+ 				 	also. Hence $P(1)$ is true.\\
+					\textbf{Show that for all integers $k\geq0$, if $P(k)$ is true then $P(k+1)$ is also true:}\\
+					Suppose that $k$ is any integer, with $k\geq0$ such that $7^k-2^k$ is divisible by 5. We must show that $7^{k+1}-2^{k+1}$ is also divisible by 5.
+		 \end{proof}
+		 \end{solution}
 		 \setcounter{question}{27}\question Prove that for all integers $n\geq1,$
 		 $$\frac{1}{3}=\frac{1+3}{5+7}=\frac{1+3+5}{7+9+11}=...$$
-		 $$=\frac{1+3+...+(2n-1)}{(2n+1)+...+(4n-1)}.$$
+		 $$=\frac{1+3+...+(2n-1)}{(2n+1)+...+(4n-1)}$$
 		 \setcounter{question}{34}\question Let $m$ and $n$ be any integers that are greater than or equal to 1.
 		 \begin{parts}
 		 	\part Prove that a necessary condition for an $m\times n$ checkerboard to be completely coverable by L-shaped trominoes is that $mn$ be divisible by 3.
