@@ -137,9 +137,8 @@ Thus in either case $(k+1)\mbox{\textcentoldstyle}$ can be obtained using 3$\mbo
 		\end{solution}
 		\setcounter{question}{28}\question $$1-2+2^2-2^3+...+(-1)^n2^n, \textrm{ where $n$ is a positive integer}$$
 		\begin{solution}
-			$$(-1)^{n-1}\left[1+2+2^2+2^3+...+2^n\right]$$
-			$$=(-1)^{n-1}\left[\frac{(2)^{n+1}-1}{1}\right]$$
-			$$=(-1)^{n-1}(2^{n+1}-1)$$
+			$$=\sum_{i=0}^{n}(-2)^i =\frac{(-2)^{n+1}-1}{(-2)-1}$$
+			$$=\frac{(-2)^{n+1}-1}{-3}=\frac{1}{3}(1-(-2)^{n+1})$$
 		\end{solution}
 		Find the mistake in the proof fragment below.
 		\setcounter{question}{34}\question \textbf{Theorem:} For any integer $n\geq1,$
@@ -238,16 +237,25 @@ Thus in either case $(k+1)\mbox{\textcentoldstyle}$ can be obtained using 3$\mbo
  				 		\textbf{Show that P(0) is true:}\\
  				 	To establish $P(0)$ we must show that
  				 	$$7^0-2^0=5\times k, k\in\mathbb{Z}$$
- 				 	But the left-hand side of this equation is 0 and the right-hand side is 0 when k=0
- 				 	also. Hence $P(1)$ is true.\\
+ 				 	But the left-hand side of this equation is 0 and the right-hand side is 0 when $k=0$
+ 				 	also. Hence $P(0)$ is true.\\
 					\textbf{Show that for all integers $k\geq0$, if $P(k)$ is true then $P(k+1)$ is also true:}\\
-					Suppose that $k$ is any integer, with $k\geq0$ such that $7^k-2^k$ is divisible by 5. We must show that $7^{k+1}-2^{k+1}$ is also divisible by 5.
+					Suppose that $k$ is any integer, with $k\geq0$ such that $7^k-2^k$ is divisible by 5. Because $7^k-2^k$ is divisible by 5, $\exists q \in \mathbb{Z}$ such that $7^k-2^k=5q$. We must show that $7^{k+1}-2^{k+1}$ is also divisible by 5.
+					$$7^{k+1}-2^{k+1}$$
+					$$=7\cdot7^k-2\cdot2^k$$
+					$$=(5+2)\cdot7^k-2\cdot2^k$$
+					$$=5\cdot7^k+2\cdot7^k-2\cdot2^k$$
+					$$=5\cdot7^k+2(7^k-2^k)$$
+					By our inductive hypothesis we can rewrite $7^k-2^k$ as $5q$
+					$$=5\cdot7^k+2(5q)$$
+					$$=5(7^k+2q)$$
+					We have written  $7^{k+1}-2^{k+1}$ as $5(7^k+2q)$ where $7^k+2q \in \mathbb{Z}$ and so by definition $7^{k+1}-2^{k+1}$ is divisible by 5.
 		 \end{proof}
 		 \end{solution}
 		 \setcounter{question}{27}\question Prove that for all integers $n\geq1,$
 		 $$\frac{1}{3}=\frac{1+3}{5+7}=\frac{1+3+5}{7+9+11}=...$$
 		 $$=\frac{1+3+...+(2n-1)}{(2n+1)+...+(4n-1)}$$
-		 \setcounter{question}{34}\question Let $m$ and $n$ be any integers that are greater than or equal to 1.
+		 \setcounter{question}{37}\question Let $m$ and $n$ be any integers that are greater than or equal to 1.
 		 \begin{parts}
 		 	\part Prove that a necessary condition for an $m\times n$ checkerboard to be completely coverable by L-shaped trominoes is that $mn$ be divisible by 3.
 		 	\part Prove that having $mn$ divisible by 3 is not a sufficient condition for an $m\times n$ checkerboard to be completely coverable by L-shaped trominoes.

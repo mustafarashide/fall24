@@ -87,4 +87,48 @@
 			\item The difference, $\vec{w}-\vec{v}$, is the displacement vector that, when added to $\vec{w}=\vec{v}+(\vec{w}-\vec{v})$, gives $\vec{w}$. That is, $\vec{w}=\vec{v}+(\vec{w}-\vec{v})$
 			\item The zero vector, $\vec{0}$, is a displacement vector with zero length
 		\end{itemize}
+		\noindent Second Order Partials
+		\begin{itemize}
+			\item Recall in Calc 1, given $y=f(x)$\\
+			$\frac{dy}{dx}=f^{'}(x)$\\
+						$\frac{d^2y}{dx^2}=f^{''}(x)$
+					\item Can we compute 2nd derivatives for $z=f(x,y)$?
+					\item $$\frac{\partial\left[\frac{\partial f}{\partial x}\right] }{\partial x}=\frac{\partial^2 f}{\partial x^2}=(f_x)_x=f_{xx}$$
+					\item $$\frac{\partial\left[\frac{\partial f}{\partial y}\right] }{\partial y}=\frac{\partial^2 f}{\partial y^2}=(f_y)_y=f_{yy}$$
+						\item $$\frac{\partial\left[\frac{\partial f}{\partial x}\right] }{\partial y}=\frac{\partial^2 f}{\partial y\partial x}=(f_x)_y=f_{xy}$$
+							\item $$\frac{\partial\left[\frac{\partial f}{\partial y}\right] }{\partial x}=\frac{\partial^2 f}{\partial x\partial y}=(f_y)_x=f_{yx}$$
+							\item Fact Let $P=(a,b)$, then, 
+							$$f_{xy}(P)=f_{yx}(P) \textrm{ if $f$ is smooth at P}$$
+							\item Assume $f$ is smooth unless the question says otherwise 
+							\item Quadratic Approximation (also called the second-order Taylor polynomial) of a function $z=f(x,y)$ at a point $P=(a,b)$ is given by:
+							$$Q_{(a,b)}=L_{(a,b)}(x,y)+\frac{1}{2}f_{xx}(a,b)(x-a)^2+f_{xy}(a,b)(x-a)(y-b)+\frac{1}{2}f_{yy}(a,b)(y-b)^2$$
+							$$L_{a,b}(x,y)=f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b)$$
+							\item Taylor polynomial of a polynomial is a polynomial itself
+		\end{itemize}
+		\noindent Critical Points \& 2nd Derivative Test\\
+		\begin{itemize}
+			\item In Calc I, you found \& classified critical points
+			\item How do we find critical points for $f(x,y)$?
+			\item $P=(a,b)$ is critical point for $f(x,y)$ IF $f_x(P)=0$ AND $f_y(P)=0$
+			\item NOTE: P is critical point of $f(x,y)$ if $\nabla f(P)=<0,0>$
+			\item Example
+			$$f(x,y)=x^2-2x+y^2-4y+5$$
+			$$f_x=2x-2$$
+			$$f_y=2y-4$$
+			Set $f_x=0$ and $f_y=0$
+				$$2x-2=0 \Longrightarrow x=1$$
+			$$2y-4=0 \Longrightarrow y=2$$
+			We found a critical point $P(1,2)$ but what is happening at $P$? We need to employ the 2nd derivative test
+			\item Let $P=(a,b)$ be a critical point for $f(x,y)$\\
+			Put D = $f_{xx}(P)\cdot f_{yy}(P)-[f_{xy}(P)]^2$ - Discriminant
+			\item 1) If $D>0$ and $f_{xx}(P)<0$, then $f$ has a local maximum at $P$
+			\item 2) If $D>0$ and $f_{xx}(P)>0$, then $f$ has a local minimum at $P$
+			\item 3) If $D<0$ and then $f$ has a saddle point at $P$
+			\item 4) If $D=0$, then test is inconclusive and we need to try other methods.\\
+			Going back to our example we see that
+			$$D=f_{xx}(P)\cdot f_{yy}(P)-[f_{xy}(P)]^2$$
+			$$D=2\cdot2-0^2$$
+			$$D>0 \hspace*{0.25cm}\&\hspace*{0.25cm} f_{xx}(P)>0$$
+			Since $D>0$ and $f_{xx}>0,$ then by the 2nd derivative test $(1,2)$ is a local minimum.
+		\end{itemize}
 \end{document}
