@@ -1,0 +1,67 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Chapters 5.4 \& Supplement A\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+\newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
+
+\begin{document}
+	
+	\begingroup  
+	\noindent\LARGE Discrete Mathematics\\
+	\noindent\LARGE Chapters 5.4 \& Supplement A\\
+	\noindent\large \today\\
+	\noindent\large Mustafa Rashid\par
+	\noindent\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	
+	\centering\large Exercise Set 5.4\\
+	\begin{questions}
+			\setcounter{question}{1} \question  Suppose $b_1,b_2,b_3,...$ is a sequence defined as follows:
+			\begin{align*} 
+				b_1=&4, b_2=12\\
+				b_k=&b_{k-2}+b_{k-1}\textrm{  for all integers } k\geq3
+			\end{align*}
+			Prove that $b_n$ is divisible by 4 for all integers $n\geq1.$
+		\setcounter{question}{6} \question  Suppose $g_1,g_2,g_3,...$ is a sequence defined as follows:
+		\begin{align*} 
+			g_1=&3, g_2=5\\
+			g_k=&3g_{k-1}-2g_{k-2}\textrm{  for all integers } k\geq3
+		\end{align*}
+					Prove that $g_n=2^n+1$ all integers $n\geq1.$
+		\setcounter{question}{8} \question Define a sequence $a_1,a_2,a_3,...$ as follows: $a_1=1,a_2=3,$ and $a_k=a_{k-1}+a_{k+2}$ for all integers $k\geq3$. Use strong mathematical induction to prove that $a_n \leq \left(\frac{7}{4}\right)^n$ for all integers $n\geq1.$
+		\setcounter{question}{17} \question Compute $9^0,9^1,9^2,9^3,9^4,$ and $9^5$. Make a conjecture about the units digit of $9^n$ where $n$ is a positive integer. Use strong mathematical induction to prove your conjecture.
+		\question Find the mistake in the following ``proof" that purports to show that every nonnegative integer power of every nonzero real number is 1.\\
+		\textbf{``Proof:} Let $r$ be any nonzero real number and let the property $P(n)$ be the equation $r^n=1.$\\
+		\textbf{Show that $P(0)$ is true:} P(0) is true because $r^0=1$ by defintion of zeroth power.\\
+		\textbf{Show that for all integers $k\geq0$, if $P(i)$ is true for all integers $i$ from 0 through $k$, then $P(k+1)$ is also true:} Let k be any integer with $k\geq0$ and suppose that $r^i=1$ for all integers $i$ from 0 through $k$. This is the inductive hypothesis. We must show that $r^{k+1}=1.$ Now\\
+		\begin{align*}
+			r^{k+1}&=r^{k+k-(k-1)}\tag{$k+k-(k-1) = k+k-k+1 = k+1$}\\
+			&=\frac{r^k\cdot r^k}{r^{k-1}}\tag{by the laws of exponents}\\
+			&=\frac{1\cdot1}{1}\tag{by inductive hypothesis}\\
+			&=1.
+		\end{align*}
+	Thus $r^{k+1}=1$ \textit{[as was to be shown].}\\
+	\textit{[Since we have proved the basis step and the inductive step of the strong mathematical induction, we conclude that the given statement is true.]"}
+	\setcounter{question}{20} \question Use the well-ordering principle for the integers to prove the existence part of the unique factorization of integers theorem: Every integer greater than 1 is either prime or a product of prime numbers.
+	\setcounter{question}{25} \question Suppose $P(n)$ is a property such that
+	\begin{enumerate}
+	\item $P(0), P(1), P(2)$ are all true,
+	\item for all integers $k\geq0$, if $P(k)$ is true, then $P(3k)$ is true. Must it follow that $P(n)$ is true for all integers $n\geq0$? If yes, explain why; if no, give a counterexample.
+	\end{enumerate}
+	\end{questions}	
+	
+\end{document}

@@ -1,0 +1,108 @@
+\documentclass[12pt,fleqn]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+
+\newtheorem*{prop}{Proposition}
+\newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
+
+\textheight 9in
+\textwidth 6.5in
+\voffset -0.85in
+\hoffset -0.85in
+\begin{document}
+	
+	
+	\noindent Chapter 5 (Sep. 9)\\
+	Indirect proof of conditional statements
+	$$p \longrightarrow q$$
+	1. Proof by contradiction\\
+	2. Contra-positive Proof\\
+	\begin{prop}
+		If $P$, then $Q$
+	\end{prop}
+	\begin{proof}
+		Suppose $\neg Q$\\
+		(details)\\
+		Therefore $\neg P$
+	\end{proof}
+	
+	\begin{tabular}{c c c c c c}
+		P&Q&$P\Longrightarrow Q$&$\neg Q$&$\neg P$&$\neg Q \Longrightarrow \neg P$  \\
+		T&T&T&F&F&T\\
+		T&F&F&T&F&F\\
+		F&T&T&F&T&T\\
+		F&F&T&T&T&T\\
+	\end{tabular}\\
+	\\
+	Chapter 5, Exercise 2\\
+	$$\textrm{Suppose } x\in\mathbb{Z}, \textrm{If }x^2 \textrm{ is odd, then }x \textrm{ is odd} $$
+	Two options:\\
+	1. Direct proof\\
+	$$x^2 \textrm{ is odd } (P) \Longrightarrow$$ 
+	$$x^2=2a+1, a \in\mathbb{Z} \Longrightarrow$$ 
+	$$?$$
+	$$x=2b+1, b\in \mathbb{Z} \Longrightarrow$$
+	$$x \textrm{ is odd } (Q)$$\\
+	
+	2. Indirect proof\\
+	$$x \textrm{ is even } (\neg Q) \Longrightarrow$$ 
+	$$x=2a, a\in \mathbb{Z} \Longrightarrow$$ 
+	$$x^2=(2a)^2=4a^2=2(2a^2)$$ 
+	$$b=2a^2, b\in \mathbb{Z} \Longrightarrow$$
+	$$x^2 \textrm{ is even }(\neg P)$$
+	
+	\begin{proof}
+		We suppose the contra-positive of the given statement. This means we suppose $x$ is not odd, and we argue that $x^2$ is not odd. So suppose $x$ is even. Then $x=2a$ for some $a\in \mathbb{Z}$ by definition of even. This means 
+		$$x^2=(2a)^2=4a^2=2(2a^2).$$
+		Let $b=2a$. Then $x^2=2b$, where $b\in\mathbb{Z},$ so we can conclude that $x^2$ is even by definition. 
+	\end{proof}
+	
+	Chapter 5, Exercise 4\\
+	$$\textrm{Suppose }a,b,c \in \mathbb{Z}. \textrm{ If $a$ does not divide $bc$, then $a$ does not divide b.}$$
+	Recall
+	$$a\mid b \Leftrightarrow b=a\cdot c,  a\in \mathbb{Z}$$
+	Two options:\\
+	1. Direct proof\\
+	$$a \doesnotdivide c\textrm{ }(P) \Rightarrow$$
+	$$?$$
+	$$a \doesnotdivide b\textrm{ }(Q)$$\\
+	2. Indirect proof:\\
+	$$a\mid b\textrm{ }(\neg Q) \Rightarrow$$
+	$$b=ad, d \in \mathbb{Z} \Rightarrow$$
+	$$bc=(a\cdot d)\cdot c =a\cdot(d\cdot c)$$
+	$$e=d\cdot c, e\in \mathbb{Z} \Rightarrow$$
+	$$a\mid bc\textrm{ }(\neg P)$$
+	Definition of congruent modulo n
+	$$a\equiv b \Leftrightarrow n\mid a-b$$
+	$$\Leftrightarrow a-b=n\cdot c, c\in \mathbb{Z}$$
+	$$\Leftrightarrow \textrm{$a$ and $b$ have the same remainder when divided by $n$}$$
+	\noindent Chapter 8 (Oct. 9) - Proofs involving sets\\
+	\textbf{Example 8.8:} Prove that if A and B are sets then $\mathscr{P}(A) \cup \mathscr{P}(B)\subseteq \mathscr{P}(A\cup B)$
+	\begin{proof}
+		$$X \in \mathscr{P}(A) \cup \mathscr{P}(B) \Longrightarrow$$
+		$$X\in \mathscr{P}(A)  \textrm{ or } \mathscr{P}(B) \Longrightarrow$$
+		$$X\subseteq A \textrm{ or } X\subseteq B \Longrightarrow$$
+		$$X \subseteq A \cup B \Longrightarrow$$
+		$$X \in \mathscr{P}(A \cup B)$$
+		$$\mathscr{P}(A) \cup \mathscr{P}(B) \subseteq \mathscr{P}(A \cup B)$$
+	\end{proof}
+	\textbf{Example 8.9:} Suppose A and B are sets. If $\mathscr{P}(A) \subseteq \mathscr{P}(B),$ then $A\subseteq B.$
+	(Page 162)\\
+	\bigskip
+	How do we get proofs with aligned equations on \LaTeX (like Example 8.13)?
+	\begin{proof}
+		\setlength{\mathindent}{5mm}
+	\begin{align*}
+	2x-5y&=y\\
+	3x+9y&=3\\
+\end{align*}
+	\end{proof}
+	
+
+	
+	
+\end{document}
