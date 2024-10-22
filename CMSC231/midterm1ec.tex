@@ -1,0 +1,68 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Chapters 5.2 \& 5.3\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+\newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
+
+\begin{document}
+	
+	\begingroup  
+	\noindent\LARGE Discrete Mathematics\\
+	\noindent\LARGE Extra Problems\\
+	\noindent\large \today\\
+	\noindent\large Mustafa Rashid\par
+	\noindent\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+
+	\begin{questions}
+	\question Prove or disprove the following. If true, use logical equivalences and specify the laws at each step.
+	$$(p\longrightarrow q) \leftrightarrow q \equiv p\lor q $$
+	\begin{solution}
+		True.
+		\begin{align*}
+			&(p \longrightarrow q) \equiv \neg p \lor q \tag{By representation of If-Then as or}\\
+%			&(p\longrightarrow q) \leftrightarrow q\\
+			&\neg p \lor q \rightarrow q \land q \rightarrow \neg p \lor q \tag{By definition of the biconditional}\\
+			&((p \land \neg q)\lor q)\land(\neg q \lor (\neg p \lor q)) \tag{By representation of If-Then as or and DeMorgaan's}\\
+			&((p\lor q)\land \neg q \lor q)\land((\neg q \lor \neg p)\lor (\neg q \lor q)) \tag{By distributive laws}\\
+			&(p\lor q \land T) \land (\neg q \lor \neg p \lor T) \tag{By negation laws}\\
+			& p \lor q \tag{By identity and universal bound laws}
+		\end{align*}
+	\end{solution}
+	\setcounter{question}{7} \question Write the following statement and its negation without using English phrases. Indicate which is true\\
+	 \textit{If $x$ and $y$ are integers where $x-y=8$ then $xy+16$ is a perfect square}
+	 \begin{solution}
+	 	$$\forall x,y \in \mathbb{Z}, x-y=8 \longrightarrow \exists k \in \mathbb{Z},\hspace*{0.15cm} xy+16 = k^2$$
+	 	The negation would then be
+	 	$$\exists x,y \in \mathbb{Z}, x-y=8 \land \forall k \in \mathbb{Z},\hspace*{0.15cm}xy+16\neq k^2$$
+	 	\begin{proof}
+	 	Because $x-y=8$ we can rearrange to get $y=x-8$. Substituting this into $xy+16$ we get
+	 	\begin{align}
+	 			&x(x-8)+16\\
+	 		&x^2-8x+16=(x-4)(x-4)=(x-4)^2
+	 	\end{align}
+	 	Because $xy+16$ can be written as the square integer $(x-4)^2$ then it will always be a perfect square by definition. 
+	 	\end{proof}
+	 \end{solution}
+	 \question Write the following statement as a universal conditional without using English phrases. Assume that the domain is the real numbers.\\
+	 \textit{A sufficient condition for a set to contain only perfect squares is that it be empty.}
+	 \begin{solution}
+	 	$$\forall X \subseteq \mathbb{R}, |X|=0 \longrightarrow \forall x \in X, \exists k \in \mathbb{Z}, x=k^2 $$
+	 \end{solution}
+	\end{questions}
+
+\end{document}

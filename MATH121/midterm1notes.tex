@@ -131,4 +131,42 @@
 			$$D>0 \hspace*{0.25cm}\&\hspace*{0.25cm} f_{xx}(P)>0$$
 			Since $D>0$ and $f_{xx}>0,$ then by the 2nd derivative test $(1,2)$ is a local minimum.
 		\end{itemize}
+		\noindent Optimization\\
+		Steps: Let $f(x,y)$ on a given region R.
+		\begin{enumerate}
+			\item Find critical points.... Set $\nabla f(x,y)=<0,0>$
+			\item Check if critical points are in R
+			\item Classify critical points using the 2nd derivative test
+			\item *Check the values along the boundary $\partial R$, i.e. find boundary points\\
+			NOTE: A boundary may or may not be given. If a boundary is not given, then you can assume R is the entire $xy$-plane
+			\item Compare function output values in region R, and if possible, on the boundary (smallest output $\rightarrow$ global minimum, largest output  $\rightarrow$  global maximum)
+		\end{enumerate}
+		Example: Find global maximum \& global minimum on the region given $-1 \leq x \leq 1$ \& $-1\leq y \leq 1$ for $f(x,y)=x^2-y^2$
+		\begin{enumerate}
+			\item $\nabla f(x,y)=<2x,-2y>$\\
+			Set $<2x,-2y>=<0,0>$\\
+			$2x=0 \hspace*{0.10cm}\&\hspace*{0.10cm} 2y=0$\\
+			$x=0 \hspace*{0.10cm}\&\hspace*{0.10cm}y=0$\\
+			$P=(0,0)$ is a critical point
+			\item P is in R (because of range for $x$ and $y$)
+			\item $f_{xx}=2$\\
+			$f_{yy}=-2$\\
+			$f_{xy}=0$\\
+			$D<0$ so P=(0,0) is a saddly by second derivative test\\
+			\item There is a boundary\\
+			How do we find boundary points?\\
+			Case 1: Let $x=\pm 1$\\
+			$f(x,y)=1-y^2, -1\leq y \leq 1$\\
+			Optimize $1-y^2$ for $-1 \leq y \leq 1$\\
+			Local maximum at $y=0$\\
+			Boundary points (1,0), (-1,0)\\
+			Case 2: Let $y=\pm 1$\\
+			$f(x,y)=x^2-1, -1\leq x \leq 1$\\
+			Optimize $x^2-1$ for $-1\leq x \leq 1$\\
+			Local minimum at $x=0$\\
+			Boundary points $(0,1)$, $(0,-1)$
+			\item Compute $f(0,0), f(1,0), f(-1,0), f(0,1), f(0,-1)$\\
+			Global maximum is at (1,0) and (-1,0)\\
+			Global minimum is at (0,1) and (0,-1)\\
+		\end{enumerate}
 \end{document}

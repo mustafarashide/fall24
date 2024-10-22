@@ -36,14 +36,102 @@
 				b_k=&b_{k-2}+b_{k-1}\textrm{  for all integers } k\geq3
 			\end{align*}
 			Prove that $b_n$ is divisible by 4 for all integers $n\geq1.$
+			\begin{solution}
+				\begin{proof}
+				Let the property $P(n)$ be the sentence
+				\begin{quote}
+						$b_n$ is divisible by 4
+				\end{quote}
+				\textbf{Show that $P(1)$ and $P(2)$ are true:}\\
+				We know that $b_1=4$ and $b_2=12$. Because 4 and 12 are divisible by 4 we know that $P(1)$ and $P(2)$ are true.\\
+				\textbf{Show that for all integers $k\geq2$, if $P(i)$ is true for all integers from 1 to through $k$, then $P(k+1)$ is also true.}\\
+				Let $k$ be any integer with $k\geq2$, and suppose that $b_i$ is divisible for all integers $i$ with $1\leq i\leq k$. We must show that $k+1$ is divisible by 4. We know that $b_{k+1}=b_{k-1}+b_k$ by definition of  $b_1,b_2,b_3,...$\\
+				Since $k-1\leq k$ and $k\leq k$, by our inductive hypothesis $b_{k-1}$ and $b_k$ are both divisible by 4. By definition  $b_{k-1}=4q$ for some integer $q$ and $b_k=4s$ for some integer $s$ so $b_{k+1}=4q+4s=4(q+s)$ and so $b_{k+1}$ is divisible by 4.
+				\end{proof}
+			\end{solution}
 		\setcounter{question}{6} \question  Suppose $g_1,g_2,g_3,...$ is a sequence defined as follows:
 		\begin{align*} 
 			g_1=&3, g_2=5\\
 			g_k=&3g_{k-1}-2g_{k-2}\textrm{  for all integers } k\geq3
 		\end{align*}
 					Prove that $g_n=2^n+1$ all integers $n\geq1.$
-		\setcounter{question}{8} \question Define a sequence $a_1,a_2,a_3,...$ as follows: $a_1=1,a_2=3,$ and $a_k=a_{k-1}+a_{k+2}$ for all integers $k\geq3$. Use strong mathematical induction to prove that $a_n \leq \left(\frac{7}{4}\right)^n$ for all integers $n\geq1.$
+		\begin{solution}
+			\begin{proof}
+			Let  $g_1,g_2,g_3,...$ be the sequence defined by specifiying that $g_1=3$, $g_2=5$, and $g_k=3g_{k-1}-2g_{k-2}$ for all integers $k\geq3$, and let the property $P(n)$ be the formula
+			$$g_{n}=2^n+1$$
+			We will use strong mathematical induction to prove that for all integers $n\geq1$, $P(n)$ is true.\\
+			\textbf{Show that $P(1)$ and $P(2)$ are true:}\\
+			To establish $P(1)$ and $P(2)$, we must show that\\
+			$$g_1=2^1+1 \textrm{ and } g_2=2^2+1$$
+			But, by definition of $g_1,g_2,g_3,....$, we must have that $g_1=3$ and $g_2=5$. Since $2^1+1=2+1=3$ and $2^2+1=4+1=5$, the values of $g_1$ and $g_2$ agree with the values given by the formula.
+			\texbf{Show that for all integers $k\geq2$, if $P(i)$ is true for all integers i from 1 through k, then $P(k+1)$ is also true: }\\
+			Let $k$ be any integer with $k\geq2$ and suppose that
+			$$g_i=2^i+1 \textrm{ for all integers $i$ with } 1\leq i \leq k$$
+			We must show that 
+			$$g_{k+1}=2^{k+1}+1$$
+			But since $k\geq2$, we have that $k+1 \geq3$, and so 
+			\begin{align*}
+				g_{k+1}&=3g_k-2g_{k-1}\\
+				&=3(2^k+1)-2(2^{k-1}+1)\\
+				&=3\cdot2^k+3-2^k-2\\
+				&=3\cdot2^k-2^k+1\\
+				&=(1+2)2^k-2^k+1\\
+				&=2^k+2^{k+1}-2^k+1\\
+				&=2^{k+1}+1
+			\end{align*}
+			\end{proof}
+	\end{solution}
+		\setcounter{question}{8} \question Define a sequence $a_1,a_2,a_3,...$ as follows: $a_1=1,a_2=3,$ and $a_k=a_{k-1}+a_{k-2}$ for all integers $k\geq3$. Use strong mathematical induction to prove that $a_n \leq \left(\frac{7}{4}\right)^n$ for all integers $n\geq1.$
+		\begin{solution}
+			\begin{proof}
+			Let $a_1,a_2,a_3,...$  be the sequence defined by specifying that $a_1=1, a_2=3$ and $a_k=a_{k-1}+a_{k+2}$ for all integers $k\geq3$, and let the property $P(n)$ be the inequality
+			$$a_n\leq \left(\frac{7}{4}\right)^n$$
+			We will use strong mathematical induction to prove that for all integers $n\geq1$, $P(n)$ is true.\\
+			\textbf{Show that $P(1)$ and $P(2)$ are true:}\\
+			To establish $P(1)$ and $P(2)$ we must show that\\
+			$$a_1\leq \left(\frac{7}{4}\right)^1 \textrm{ and }a_2\leq \left(\frac{7}{4}\right)^2$$
+		But by definition of $a_1,a_2,a_3,...$, we have that $a_1=1$ and $a_2=3$. Since $1<\frac{7}{4}$ and $3<(\frac{7}{4})^2$, the inequality holds for $a_1$ and $a_2$.\\
+		\textbf{Show that for all integers $k\geq2$, if $P(i)$ is true for all integers from 1 through $k$, then $P(k+1)$ is also true:}\\
+		Let $k$ be any integer with $k\geq1$ and suppose that 
+		$$a_i \leq \left(\frac{7}{4}\right)^i \textrm{ for all integers } i \textrm{ with } 1\leq i \leq k$$
+		We must show that
+		$$a_{k+1}\leq \left(\frac{7}{4}\right)^{k+1}$$
+		But since $k\geq2$, we have $k+1 \geq 3$, and so
+		$$a_{k+1}=a_k+a_{k-1}\leq \left(\frac{7}{4}\right)^k + \left(\frac{7}{4}\right)^{k-1} $$
+		$$\left(\frac{7}{4}\right)^k + \left(\frac{7}{4}\right)^{k-1} \leq \left(\frac{7}{4}\right)^{k+1}$$
+		$$a_{k+1}\leq \left(\frac{7}{4}\right)^{k+1}$$
+			\end{proof}
+		\end{solution}
+		\pagebreak
 		\setcounter{question}{17} \question Compute $9^0,9^1,9^2,9^3,9^4,$ and $9^5$. Make a conjecture about the units digit of $9^n$ where $n$ is a positive integer. Use strong mathematical induction to prove your conjecture.
+		\begin{solution}
+		\begin{center}
+	\begin{tabular}{c | c}
+	$9^0$&1\\
+	$9^1$&9\\
+	$9^2$&81\\
+	$9^3$&729\\
+	$9^4$&6561\\
+	$9^5$&59049\\
+\end{tabular}\\
+		\end{center}
+	
+		\textbf{Conjecture: }The units digit of $9^n$ equals 1 if $n$ is even and equals 9 if $n$ is odd.
+		\begin{proof}[Proof by strong mathematical induction:]
+		 Let the property $P(n)$ be the sentence
+		\begin{quote}
+			The units digit of $9^n$ equals 1 if $n$ is even and equals 9 if $n$ is odd.
+		\end{quote}
+		\textbf{Show that $P(1)$ and $P(2)$ are true:}\\
+		When $n=1, 9^n=9^1=9$, and the units digit is 9. When $n=2$, then $9^n=9^2=81$, and the units digits is 1. Thus $P(1)$ and $P(2)$ are true.\\
+		\textbf{Show that for any integer $k\geq2$, if the property is true for all integers $i$ with $0\leq i \leq k$ then it is true for $k+1$:}\\
+		Let $k$ be any integer with $k\geq2$, and suppose that for all integers $i$ with $0\leq i \leq k$, the units digit of $9^i$ equals 1 if $i$ is even and equals 9 if $i$ is odd. We must show that the units digit of $9^{k+1}$ equals 1 if $k+1$ is even and equals 9 if $k+1$ is odd.\\
+		\textbf{Case 1 ($k+1$ is even):}\\
+		In this case, $k$ is odd, and so, by inductive hypothesis, the units digit of $9^k$ is 9. Thus $9^k=10q+9$ for some nonnegative integer $q$. It follows that $9^{k+1}=9^k\cdot 9=(10q+9)\cdot 9=90q+81=10(9q+8)+1$. Thus the units digit of $9^{k+1}$ is 1.\\
+		\textbf{Case 2 ($k+1$ is odd):}\\
+		In this case, $k$ is even, and so, by inductive hypothesis, the units digit of $9^k$ is 1. Thus $9^k=10q+1$ for some nonnegative integer $q$. It follows that $9^{k+1}=9^k\cdot 9=(10q+1)\cdot 9=90q+9=10(9q)+9$. Thus the units digit of $9^{k+1}$ is 9.\\
+		\end{proof}
+		\end{solution}
 		\question Find the mistake in the following ``proof" that purports to show that every nonnegative integer power of every nonzero real number is 1.\\
 		\textbf{``Proof:} Let $r$ be any nonzero real number and let the property $P(n)$ be the equation $r^n=1.$\\
 		\textbf{Show that $P(0)$ is true:} P(0) is true because $r^0=1$ by defintion of zeroth power.\\
@@ -57,11 +145,84 @@
 	Thus $r^{k+1}=1$ \textit{[as was to be shown].}\\
 	\textit{[Since we have proved the basis step and the inductive step of the strong mathematical induction, we conclude that the given statement is true.]"}
 	\setcounter{question}{20} \question Use the well-ordering principle for the integers to prove the existence part of the unique factorization of integers theorem: Every integer greater than 1 is either prime or a product of prime numbers.
+	\begin{solution}
+		It is possible to think of examples where the basis step is not true. For instance, $P(1)$ is false because $r^1=r$. This is only true when $r=1$ and it is false for every other real number.
+	\end{solution}
 	\setcounter{question}{25} \question Suppose $P(n)$ is a property such that
 	\begin{enumerate}
 	\item $P(0), P(1), P(2)$ are all true,
 	\item for all integers $k\geq0$, if $P(k)$ is true, then $P(3k)$ is true. Must it follow that $P(n)$ is true for all integers $n\geq0$? If yes, explain why; if no, give a counterexample.
 	\end{enumerate}
+	\begin{solution}
+		No, $P(n)$ is not necessarily true for all integers. Consider the property $P(n)$ which represents the statement ``$n$ is less than 3". $P(3n)$ is not true for $n=1$ or $n=2$.
+	\end{solution}
+	\setcounter{question}{31}\question Prove that if a statement can be proved by ordinary mathematical induction, then it can be proved by the well-ordering principle.
+	\begin{solution}
+		\begin{proof}
+		Suppose not. That is suppose there is a statement the form ``For all integers $n\geq a$, a property $P(n)$ is true.” that can be proved by ordinary mathematical induction and that can not be proved by the well-ordering principle. Because the statement can be proved by ordinary mathematical indudction we know the following:
+		\begin{enumerate}
+			\item $P(a)$ is true.
+			\item For all integers $k\geq a$, if $P(k)$ is true then $P(k+1)$ is true.
+		\end{enumerate}
+		Then, suppose that the set $S$ is the set of all integers greater than or equal to a for which $P(n)$ is false. Because of our supposition the set $S$ does not have a least element but because our statement is proved by ordinary mathematical induction then the set $S$ must be empty, and so the well-ordering principle is not violated and this is a contradiction of our supposition.
+		\end{proof}
+	\end{solution}
 	\end{questions}	
 	
+	\centering\large Supplement A\\
+\begin{questions}
+	\setcounter{question}{1} \question Show that if the predicate is true before entry to the loop, then it is also true after exit from the loop
+		\begin{align*}
+		&\textrm{loop: }\textbf{while}(m\geq0)\textrm{ and }m\leq100)\\
+		&\hspace*{1.5cm}m:=m+4\\
+		&\hspace*{1.5cm}n:=n-2\\
+		&\hspace*{1.25cm}\textbf{end while}\\
+		&\textrm{predicate: }m+n \textrm{ is odd}\\
+	\end{align*}
+	\begin{solution}
+		\begin{proof}
+		Suppose the predicate $m+n$ is odd is true before entry to the loop. Then
+		$$m_{old}+n_{old}=2q+1 \textrm{ for some integer $q$}$$
+		After execution of the loop,
+		$$m_{new}=m_{old}+4 \textrm{ and } n_{new}=n_{old}-2$$
+		so
+		\begin{align*}
+		m_{new}+n_{new}&=m_{old}+4+n_{old}-2\\
+		&=m_{old}+n_{old}+2=2q+1+2\\
+		&=2(q+1)+1
+		\end{align*}
+		Therefore $m_{new}+n_{new}=2(q+1)+1$ and is thus odd by definition.
+		\end{proof}
+	\end{solution}
+	Exercises 7 contains a while loop annotated with a pre- and a post-condition and also a loop invariant. Use the loop invariant theorem to prove the correctness of the loop with respect to the pre- and post-conditions.
+	\setcounter{question}{6} \question \textit{[Pre-condition: largest = A[1] and i=1]}\\
+	\hspace*{0.25cm} \textbf{while} $(i\neq m)$\\
+	\hspace*{0.75cm} 1. $i:=i+1$\\
+	\hspace*{0.75cm} 2. \textbf{if} $A[i]>$ largest \textbf{then} largest: $=A[i]$\\
+	\hspace*{0.25cm} \textbf{end while}\\
+	\textit{[Post-condition: largest = maximum value of A[1], A[2],...,A[m]]}\\
+	loop invariant: $I(n)$ is ``largest = maximum value of $A[1], A[2],A[n+1]$ and $i=n+1$”
+	\begin{solution}\\
+		\textbf{I. Basis Property}\\
+		$I(0)$ is largest = maximum value of  $A[1]$ and $i=1$. According to the pre-condition the largest = A[1] and $i=1$. Therefore $I(0)$ is true.\\
+		\textbf{II. Inductive Property}\\
+		Suppose $k$ is any nonnegative integer such that $G\land I(k)$ is true before iteration of the loop. Then as execution reaches the top of the loop, $i\neq m$, largest =$A[k]$, and $i=k+1$. Since $i\neq m$, the guard is passed and statement 1 is executed. Now before execution of statement 1,
+		$$i_{old}=k+1$$
+		so execution of statement 1 has the following effect:
+		$$i_{new}=i_{old}+1$$
+		Similarly, before execution of statement 2
+		$$largest_{old}=\textrm{ maximum value of } A[1], A[2],...,A[k+1]$$
+		so after exeuction of statement 2,
+		$$largest_{new}=\textrm{ maximum value of } A[1], A[2],...,A[k+2]$$
+		Hence after loop iteration, the two statements $i=k+2$ and largest = maximum value of  $A[1], A[2],...,A[k+2]$ are true, and so $I(k+1)$ is true.\\
+		\textbf{III. Eventual Falsity of Guard}\\
+		The guard G is the condition $i\neq m$, and $m$ is a nonnegative integer. By I and II, it is known that
+		\begin{quote}
+			for every integer $n\geq0$, if the loop is iterated $n$ times then largest = maximum value of $A[1], A[2],...,A[n+1]$ and $i=n+1$ 
+		\end{quote}
+		So after $m$ iterations of the loop, $i=m$. Thus $G$ becomes false after $m$ iterations of the loop\\
+		\textbf{IV. Correctness of the Post-Condition}\\
+		According to the post-condition, the value of largest after execution of the loop should be the maximum of $A[1], A[2],...,A[m]$. But when $G$ is false $i=m$. And when $I(N)$ is true, $i=N+1$ and largest = maximum value of $A[1], A[2],...,A[N+1]$. Since both conditions are satisfied, $m=i=N+1$ and largest = maximum value of $A[1], A[2],...,A[m]$ as required.
+	\end{solution}
+\end{questions}
 \end{document}
