@@ -1,0 +1,152 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Chapters 5.2 \& 5.3\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+\newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
+
+\begin{document}
+	
+	\begingroup  
+	\noindent\LARGE Discrete Mathematics\\
+	\noindent\LARGE Chapters 5.5 \& 5.6 Homework\\
+	\noindent\large \today\\
+	\noindent\large Mustafa Rashid\par
+	\noindent\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	
+	\centering\large Exercise Set 5.5\\
+	\text{Find the first four terms of each of the recursively sequences defined in 2 and 4.}
+	\begin{questions}
+
+	\setcounter{question}{1}\question 
+	\begin{align*}
+		a_k&=2a_{k-1}+k, \textrm{ for all integers }k\geq 2\\
+		a_1&=1\\
+	\end{align*}
+	\begin{solution}
+		\begin{align*}
+		a_1&=1\\
+		a_2&=2\cdot a_1+2=2\cdot1+2=4\\
+		a_3&=2\cdot a_2+3=2\cdot4+3=11\\
+		a_4&=2\cdot a_3+4=2\cdot11+4=26\\
+		a_5&=2\cdot a_4+5=2\cdot26+5=57\\
+		\end{align*}
+	\end{solution}
+	\setcounter{question}{3} \question 
+	\begin{align*}
+		d_k&=k(d_{k-1})^2, \textrm{ for all integers }k\geq 1\\
+		d_0&=3\\
+	\end{align*}
+	\begin{solution}
+		\begin{align*}
+			d_0&=3\\
+			d_1&=1(d_0)^2=1\cdot3^2=9\\
+			d_2&=2(d_1)^2=2\cdot9^2=162\\
+			d_3&=3(d_2)^2=3\cdot162^2=78,732\\
+			d_4&=4(d_3)^2=4\cdot52,488^2=2.4794911\times10^{10}\\
+		\end{align*}
+	\end{solution}
+	\setcounter{question}{9} \question Let $b_0,b_1,b_2,...$ be defined by the formula $b_n=4^n$, for all integers $n\geq0$. Show that this sequence satisfies the recurrence relation $b_k=4b_{k-1}$, for all integers $k\geq1$
+	\begin{solution}
+		\begin{proof}
+		Let the property $P(n)$ be the equation
+		$$b_n=4^n=4b_{n-1} \textrm{ for all integers }n\geq1$$ 
+		\textbf{Show that $P(1)$ is true:}\\
+		To establish $P(1)$, we must show that
+		$$4^1=4b_0$$
+		But the left-hand side of this equation is 4 and from the definition of the sequence we know that $b_0=4^0=1$ so the right-hand side is $4\cdot1$ which is also equal to 4. Hence $P(1)$ is true.\\
+		\textbf{Show that for all integers $k\geq1$, if $P(k)$ is true then $P(k+1)$ is also true:}\\
+		Suppose that $k$ is any intger with $k\geq1$ such that
+		$$b_k=4^k=4b_{k-1}$$
+		We must show that
+		$$4^{k+1}=4b_{k}$$
+		The left-handside of $P(k+1)$ is
+		\begin{align*}
+			4^k\cdot4&\\
+			&=4b_{k-1}\cdot4\tag{By substituing the inductive hypothesis}\\
+			&=16b_{k-1}
+		\end{align*}
+		The right-handside of $P(k+1)$
+		\begin{align*}
+			4b_{k}&\\
+			&=4\cdot4b_{k-1}\tag{By substituting the inductive hypothesis}\\
+			&=16b_{k-1}\\
+		\end{align*}
+		The two sides of $P(k+1)$ are equal to the same qunatity and so they are equal to each other. Therefore the equation $P(k+1)$ is true.
+		\end{proof}
+	\end{solution}
+	\setcounter{question}{20} \question\textit{Double Tower of Hanoi:} In this variation of the Tower of Hanoi there are three poles in a row and $2n$ disks, two of each of $n$ different sizes, where $n$ is any positive integer. Initially one of the poles contains all the disks placed on top of each other in pairs of decreasing size. Disks are transferred one by one from one pole to another, but at no time may a larger disk be placed on top of a smaller disk. However, a disk may be placed on top of one of the same size. Let $t_n$ be the minimum number of moves needed to transfer a tower of $2n$ disks from one pole to another.
+	\begin{parts}
+		\part Find $t_1$ and $t_2$
+		\setcounter{partno}{2}\part Find a recurrence relation for $t_1,t_2,t_3,...$
+	\end{parts}
+	\begin{solution}
+		\begin{parts}
+				\part $t_1=2$ and $t_2=6$
+			\setcounter{partno}{2}\part We know that our initial condition is $t_1=2$. For a pole with $2n$ disks we need to move the top $2n-2$ disks from the first pole to the second pole (let this be $t_{n-1}$ moves). This will leave two disks in the first pole that can be moved to the third pole in 2 moves. We then move the $2n-2$ disks again to the third pole. This will again be $t_{n-1}$ moves so in total we have:
+			$$t_n=2+t_{n-1}+t_{n-1}$$
+			$$t_n=2+2\cdot t_{n-1}$$
+		\end{parts}
+	\end{solution}
+	\setcounter{question}{31}\question It turns out theat the Fibonacci sequence satisfies the following explicit formula: For all integers $F_n\geq0$,
+	$$F_n=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt[]{5}}{2}\right)^{n+1}-\left(\frac{1-\sqrt[]{5}}{2}\right)^{n+1}\right]}$$
+	Verify that the sequence defined by this formula satisfies the recurrence relation $F_k=F_{k-1}+F_{k-2}$ for all integers $k\geq2.$
+	\setcounter{question}{36}\question \textit{Compound Interest:} Suppose a certain amount of money is deposited in an account paying $3\%$ annual interest compounded monthly. For each positive integer $n$, let $S_n=$ the amount on deposit at the end of the $n$th month, and let $S_0$ be the inital amount deposited.
+	\begin{parts}
+		\part Find a recurrence relation for $S_0,S_1,S_2,...,$ assuming no additional deposits or withdrawals during the year.
+		\part If $S_0=\$10,000$, find the amount on deposit at the end one year.
+		\part Find the APR for the account.
+	\end{parts}
+	\setcounter{question}{38}\question A set of blocks contains blocks of heights 1,2, and 4 centimeters. Imagine constructing towers by piling blocks of different height directly on top of one another. (A tower of height 6 cm could be obtained using six 1-cm blocks, three 2-cm blocks one 2-cm block with one 4-cm block on top, one 4-cm block with one 2-cm block on top, and so forth.) Let $t$ be the number of ways to contruct a tower of height $n$ cm using blocks from the set. (Assume an unlimited supply of blocks of each size.) Find a recurrence relation for $t_1,t_2,t_3,...$.
+	\setcounter{question}{41}\question Use the recursive definition of the product, together with mathematical induction, to prove that for all positive integers $n,$ if $a_1,a_2,....,a_n$ and $c$ are real numbers, then
+	$$\prod_{i=1}^{n}(ca_i)=c^n\left(\prod_{i=1}^{n}a_i\right).}$$
+	\end{questions}
+	\pagebreak
+	\centering\large Exercise Set 5.6\\
+	
+	
+	\begin{questions}
+	\question The formula
+	$$1+2+3+...+n=\frac{n(n+1)}{2}$$
+	is true for all integers $n\geq1$. Use this fact to solve the following problem:
+	\begin{parts}
+		\setcounter{partno}{2}\part If $n$ is an integer and $n\geq1$, find a formula for the expression $3+3\cdot2+3\cdot3+....+3\cdot n+n.$
+	\end{parts}
+	\end{questions}
+	In 4 and 6 a sequence is defined recursively. Use iteration to guess an explicit formula for the sequence. Use the formulas from Section 5.2 to simplify your answers whenever possible.
+	\begin{questions}
+			\setcounter{question}{3} \question \begin{align*}
+				b_k&=\frac{b_{k-1}}{1+b_{k-1}}, \textrm{ for all integers $k\geq1$}\\
+				b_0&=1
+			\end{align*}
+					\setcounter{question}{5} \question \begin{align*}
+			d_k&=2d_{k-1}+3 \textrm{ for all integers $k\geq2$}\\
+			d_1&=2
+		\end{align*}
+	\setcounter{question}{16}\question Solve the recurrence relation obtained as the answer to exercise 21(c) of Section 5.5.
+		\setcounter{question}{24}\question A certain computer algorithm executes twice as many operations when it is run with an input of size $k$ as when it is run with an input of size $k-1$ (where $k$ is an integer greater than 1). When the algorithm is run with an input of size 1, it executes seven operations. How many operations does it execute when it is run with an input of size 25?
+	\setcounter{question}{28} \question Use mathematical induction to verify the correctness of the formula you obtained in Exercise 4.
+		\setcounter{question}{30} \question Use mathematical induction to verify the correctness of the formula you obtained in Exercise 6.
+		\setcounter{question}{52}\question Compute $\begin{bmatrix}
+			1 & 1\\ 
+			1 & 0
+		\end{bmatrix}^n$ for small values of $n$ (up to about 5 or 6). Conjecture explicit formulas for the entries in this matrix, and prove your conjecture using mathematical induction.
+	\end{questions}
+
+
+	
+\end{document}

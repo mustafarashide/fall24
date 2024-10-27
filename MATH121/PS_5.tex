@@ -1,0 +1,170 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb,commath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{gensymb}
+\graphicspath{ {.} }
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Problem Set 4\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+
+
+
+\begin{document}
+	
+	\begingroup  
+	\centering
+	\LARGE Multi-variable Calculus\\
+	\LARGE Problem Set 5\\[0.5em]
+	\large \today\\[0.5em]
+	\large Mustafa Rashid\par
+	\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	
+	
+	
+	\begin{questions}
+		
+		\question Consider the function $g(x,y,z)=x^2-y^2-z^2$, and its level surface $g(x, y, z) =-1.$ We are
+		interested in the tangent plane to the level surface at the point $P= (1,1,-\sqrt[]{3})$. You will
+		find the tangent plane in two ways, using two-variable calculus as follows in this problem,
+		and then using three-variable calculus in the next problem.
+		\begin{parts}
+			\part Can the level surface be written as a graph $z=f(x,y)$ for some function $f$?
+			\part  Find a function $f (x,y)$ so that the part of the surface that contains $P$ is the
+			graph $z = f (x, y)$.
+			\part Find an equation for the tangent plane to $z = f (x, y)$ at the point $P$ using the ideas of Section 14.3 (point-slope formula for tangent planes).
+		\end{parts}	
+		
+		\begin{solution}
+			\begin{parts}
+				\part No it cannot. Rearranging $g(x,y,z)=-1$ we get $z^2=x^2+y^2+1$ and so $z=\pm\sqrt{x^2+y^2+1}$ which is not the graph of a function. The surface level can be written as two graphs where $z=\sqrt{x^2+y^2+1}$ and $z=-\sqrt{x^2+y^2+1}$
+				\part $f(x,y)=-\sqrt{x^2+y^2+1}$ because $f(1,1)=-\sqrt{(1)^2+(1)^2+1}=-\sqrt{3}$ and so $P$ is in this part of the level surface.
+				\part The equation of the tangent plane at P where $(a,b)=(1,1)$ is given by 
+				$$f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(a-b)$$
+				$$f_x=-\frac{1}{2}(x^2+y^2+1)^{-1/2}\cdot2x=-\frac{x}{\sqrt{x^2+y^2+1}}$$
+				$$f_y=-\frac{1}{2}(x^2+y^2+1)^{-1/2}\cdot2y=-\frac{y}{\sqrt{x^2+y^2+1}}$$
+				$$f(1,1)=-\sqrt{(1)^2+(1)^2+1}=-\sqrt{3}$$
+				$$f_x(1,1)=-\frac{1}{\sqrt{(1)^2+(1)^2+1}}=-\frac{1}{\sqrt{3}}$$
+				$$f_y(1,1)=-\frac{1}{\sqrt{(1)^2+(1)^2+1}}=-\frac{1}{\sqrt{3}}$$
+				So the equation of the tangent plane will then be
+				$$z=-\sqrt[]{3}-\frac{1}{\sqrt{3}}(x-1)-\frac{1}{\sqrt[]{3}}(y-1)$$
+			\end{parts}
+		\end{solution}
+		\question  Now, let $g(x, y, z) = x^2 + y^2-z^2$ and $P= (1,1,-\sqrt[]{3})$ be as in Problem 1, and find the tangent plane to the graph of g at the point P using three-variable calculus, as follows.
+		\begin{parts}
+			\part Find the gradient vector $\nabla g(P )$.
+			\part Use your answer in (a) to find an equation for the tangent plane using the ideas of Section 14.5.
+			\part (Convince yourself that the equation is equivalent to the equation you got in Problem 1, i.e., they can be obtained from each other by simple algebraic manipulations, but don’t write or submit any proofs.)
+		\end{parts}
+		\begin{solution}
+			\begin{parts}
+				\part \begin{align*}
+					\nabla g&=<g_x,g_y,g_z>\\
+					g_x&=2x, g_y=2y,g_z=-2z\\
+					\nabla g&=<2x,2y,-2z>\\
+					\nabla g(P)&=<2(1),2(1),-2(-\sqrt{3})>\\
+					\nabla g(P)&=<2,2,2\sqrt{3}>\\
+				\end{align*}
+				\part The equation for the tangent plane to the graph of $g$ is at the point $(a,b,c)$ where $a=1, b=1,$ and $c=-\sqrt[]{3}$ is given by
+				$$f_x(a,b,c)(x-a)+f_y(a,b,c)(y-b)+f_z(a,b,c)(z-c)=0$$
+				By substuting for $f_x(a,b,c)$, $f_y(a,b,c)$, and $f_z(a,b,c)$ from $\nabla g(P)$ we get
+				$$2(x-1)+2(y-1)+2\sqrt[]{3}(z+\sqrt{3})=0$$
+				\part *convincing myself*
+			\end{parts}
+		\end{solution}
+		\question A steel bar with square cross sections 5 cm by 5 cm and length 3 m is being heated. For each dimension, the bar expands $13\times10^{-6}$ m for each 1 celsius rise in temperature.
+		What is the rate of change in the volume of the steel bar with respect to temperature? You
+		may want to use $l=l(T)$, $w=w(T )$, and $h=h(T )$ to denote the length, width and height of the bar, respectively, each of which viewed as a function of temperature $T$ . (Hint: this
+		is a problem about the chain rule.)
+		\begin{solution}
+			We have $V=l\cdot w \cdot h$ where $l=3$ m, $w=0.05$ m, and $h=0.05$ m because $V(l,w,h)$ where $l=l(T)$, $w=w(T )$, and $h=h(T)$ then 
+			\begin{align*}
+				\od{V}{T}&=\od{V}{l}\cdot \od{l}{T}+\od{V}{w}\cdot\od{w}{T}+\od{V}{h}\cdot\od{h}{T}\\
+				&=wh(13\times10^{-6})+lh(13\times10^{-6})+lw(13\times10^{-6})\\
+				&=13\times10^{-6}(0.05^2+3\times0.05+3\times0.05)\\
+				&=3.9\times10^{-6} m^3/^{\circ}C\\
+			\end{align*}
+		\end{solution}
+		\question Consider $f(x,y)=\frac{k}{2}x^2+\frac{1}{2}y^2-xy$
+		\begin{parts}
+			\part Verify that for any value of $k, (0, 0)$ is a critical point.
+			\part Use the second derivative test to determine the values of $k$ (if any) for which
+			$0, 0)$ is
+			\begin{itemize}
+				\item a local minimum,
+				\item a local maximum,
+				\item a saddle point.
+			\end{itemize}
+			\part In Question (4)b, the second derivative test gives no information when $k = 1$.
+			For $k = 1$, find all critical points of f and then classify them by using software to plot
+			the graph of $f$.
+		\end{parts}
+		\begin{solution}
+			\begin{parts}
+				\part At a critical point $\nabla f(P)=<0,0>$ we have $\nabla f=<kx-y,y-x>$. Substituting $x=0$ and $y=0$ we get $\nabla f=<k\cdot0,0>$. Because for any $k\in\mathbb{R}, k\cdot0=0$ then $\nabla f(P)=<0,0>$ so $P$ is a critical point for any value of $k$.
+				\part The discriminant $D$ is equal to
+				$$=f_{xx}(a,b)f_{yy}{a,b}-(f_{xy}(a,b))^2$$
+				We have $f_x=kx-y$ and $f_y=y-x$, so
+				\begin{align*}
+					f_{xx}&=k\\
+					f_{yy}&=1\\
+					f_{xy}&=-1\\
+				\end{align*}
+				So $D=k-(-1)^2=k-1$
+				\begin{itemize}
+					\item At a local minimum $D>0$ and $f_{xx}>0$ so $k-1>0$ and $k>0$ so the range of values will be $k>1$
+					\item At a local maximum $D>0$ and $f_{xx}<0$ so $k-1>0$ or $k>1$ and $k<0$ which is a contradiction. So it is not possible to have a local maximum.
+					\item At a saddle point $D<0$ so $k-1<0$ and so the range of values will be $k<1$.
+				\end{itemize}
+				\part Because $k=1$, $\nabla f = <x-y,y-x>$ and because $\nabla f=<0,0>$ at a critical point so $<x-y,y-x>=<0,0>$. The critical points will then be the infinite set of all ordered pairs $a,b \in \mathbb{R}$ such that $a=b$. From the graph below we can see that these are all minimum points. 
+
+					\centering
+					\includegraphics[width=0.7\linewidth]{ps_5_3dgraph}
+					\caption{}
+
+				
+			\end{parts}
+		\end{solution}
+		\question The following table gives selected values of the quadratic polynomial
+	$$P(x,y)=a+bx+cy+dx^2+exy+fy^2$$
+
+		\begin{center}
+	\begin{tabular}{|l|l|l|l|}
+	\hline
+	y/x & 10 & 12 & 14 \\ \hline
+	10  & 26 & 36 & 54 \\ \hline
+	15  & 31 & 41 & 59 \\ \hline
+	20  & 36 & 46 & 64 \\ \hline
+\end{tabular}
+		\end{center}
+	\begin{parts}
+		\part Express $P_x, P_{xx}, P_{xy}$ and $P_{yy}$ in terms of $a, b, c, d, e$ and $f$ (and $x, y$). Show
+		your work.
+		\part Determine the signs of $d$ and $e$ (i.e., determine if they are positive, negative,
+		or zero). Explain your reasoning. Hint: You’ll want to use the table to estimate some
+		second-order partial derivatives.
+	\end{parts}
+	\begin{solution}
+		\begin{parts}
+			\part 	\begin{align*}
+			P_x&=\frac{\partial(a+bx+cy+dx^2+exy+fy^2)}{\partial x}=b+2dx+ey\\
+			P_{xx}&=\frac{\partial(b+2dx+ey)}{\partial x}=2d\\
+			P_{xy}&=\frac{\partial(b+2dx+ey)}{\partial y}=e\\
+			P_{y}&=\frac{\partial(a+bx+cy+dx^2+exy+fy^2)}{\partial y}=c+ex+2fy\\
+			P_{yy}&=\frac{\partial(c+ex+2fy)}{\partial y}=2f\\
+			\end{align*} 
+			\part Using the first row of the table we can estimate the value for $P_{xx}$. The value of $P(x,10)$ changes from 26 to 36 as $x$ increases from 10 to 12. So the rate of change with respect to $x\approxeq5$. The value of $P(x,y)$ then changes from 36 to 54 as $x$ increases from 12 to 14. So the rate of change with respect to $x\approxeq9$. Because the rate of change of the rate of the change of $x$ with respect to changing values of x is increasing so $d$ must be positive.\\
+			Computing $P_x$ at each row we get the same estimates for $P_x$ namely $5$ and $9$, so changing the value of y has no effect on the rate of change of $x$ and therefore $e=0.$
+		\end{parts}
+	\end{solution}
+	\end{questions}
+\end{document}
