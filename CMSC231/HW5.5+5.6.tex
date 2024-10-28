@@ -111,9 +111,55 @@
 		\part If $S_0=\$10,000$, find the amount on deposit at the end one year.
 		\part Find the APR for the account.
 	\end{parts}
+	\begin{solution}
+		\begin{parts}
+		\part The interest earned during the $k$th period $S_k=S_{k-1}\left(1+\frac{i}{m}\right)$ where $i=0.03$ and $m=12$. 
+		$$S_k=(1.0025)\cdot S_{k-1}$$
+		\part \begin{align*}
+			S_0&=\$10,000\\
+			S_{12}&=(1.0025)^{12}\cdot S_0=(1.0025)^{12}\cdot\$10,000\\
+			S_{12}&=\$10304.16\\
+		\end{align*}
+		\part The APR is
+		$$\frac{10304.16-10000}{10000}=0.30416=\%3.042$$
+		\end{parts}
+	
+	\end{solution}
 	\setcounter{question}{38}\question A set of blocks contains blocks of heights 1,2, and 4 centimeters. Imagine constructing towers by piling blocks of different height directly on top of one another. (A tower of height 6 cm could be obtained using six 1-cm blocks, three 2-cm blocks one 2-cm block with one 4-cm block on top, one 4-cm block with one 2-cm block on top, and so forth.) Let $t$ be the number of ways to contruct a tower of height $n$ cm using blocks from the set. (Assume an unlimited supply of blocks of each size.) Find a recurrence relation for $t_1,t_2,t_3,...$.
+	\begin{solution}
+		For a set blocks there are three possible values for the height of the bottom block. If the bottom block is 1 cm, then the top blocks have a height of $n-1$ cm. If the bottom block is 2 cm, then the top blocks have a height of $n-2$ cm. If the bottom block has a height of 4 cm, then the top blocks have a height of $n-4$ cm. So in total the number of ways to construct a tower of height $n$ cm would be $t_n=t_{n-1}+t_{n-2}+t_{n-4}$ where $n
+		\geq4$. The initial values would be $t_1=1, t_2=2,t_3=3$ and $t_4=6$.
+	\end{solution}
 	\setcounter{question}{41}\question Use the recursive definition of the product, together with mathematical induction, to prove that for all positive integers $n,$ if $a_1,a_2,....,a_n$ and $c$ are real numbers, then
 	$$\prod_{i=1}^{n}(ca_i)=c^n\left(\prod_{i=1}^{n}a_i\right).}$$
+	\begin{solution}
+		\begin{proof}
+		Let the property $P(n)$ be the equation
+		$$\prod_{i=1}^{n}(ca_i)=c^n\left(\prod_{i=1}^{n}a_i\right)}$$
+		We must show that $P(n)$ is true for all integers $n\geq1$. We will do this by mathematical induction and by the recursive definition of the product.\\
+		\textbf{Show that $P(1)$ is true:} To establish $P(1)$ we must show that 
+		$$\prod_{i=1}^{1}(ca_i)=c^1\left(\prod_{i=1}^{1}a_i\right)}$$
+		But\\
+		\begin{align*}
+			\prod_{i=1}^{1}(ca_i)&=ca_1\\
+			&=c^1\left(\prod_{i=1}^{1}a_i\right)=ca_1\\
+		\end{align*}
+		Hence $P(1)$ is true.\\
+			\textbf{Show that for all integers $k\geq1$, if $P(k)$ is true then $P(k+1)$ is also true:}\\
+			Suppose that $a_1,a_2,...,a_n$ and $c$ are real numbers and that for some $k\geq1$
+			$$\prod_{i=1}^{k}(ca_i)=c^k\left(\prod_{i=1}^{k}a_i\right)}$$
+			We must show that
+			$$\prod_{i=1}^{k+1}(ca_i)=c^{k+1}\left(\prod_{i=1}^{k+1}a_i\right)}$$
+			But the left-handside of the equation is
+			\begin{align*}
+				\prod_{i=1}^{k+1}(ca_i)&\\
+				&=\prod_{i=1}^{k}(ca_i)\cdot ca_k\tag{By recursive definition of the product}\\
+				&=c^k\left(\prod_{i=1}^{k}a_i\right)\cdot ca_k \tag{By our inductive hypothesis}\\
+				&=c^{k+1}\left(\prod_{i=1}^{k+1}a_i\right)
+			\end{align*}
+			which equals the right-handside of the equation.
+		\end{proof}
+	\end{solution}
 	\end{questions}
 	\pagebreak
 	\centering\large Exercise Set 5.6\\
@@ -126,25 +172,166 @@
 	\begin{parts}
 		\setcounter{partno}{2}\part If $n$ is an integer and $n\geq1$, find a formula for the expression $3+3\cdot2+3\cdot3+....+3\cdot n+n.$
 	\end{parts}
+	\begin{solution}
+		\begin{align*}
+			3(1+2+3+...+n)+n&\\
+			&=3\left(\frac{n(n+1)}{2}\right)+n\\
+		\end{align*}
+	\end{solution}
 	\end{questions}
-	In 4 and 6 a sequence is defined recursively. Use iteration to guess an explicit formula for the sequence. Use the formulas from Section 5.2 to simplify your answers whenever possible.
+	\noindent In 4 and 6 a sequence is defined recursively. Use iteration to guess an explicit formula for the sequence. Use the formulas from Section 5.2 to simplify your answers whenever possible.
 	\begin{questions}
 			\setcounter{question}{3} \question \begin{align*}
 				b_k&=\frac{b_{k-1}}{1+b_{k-1}}, \textrm{ for all integers $k\geq1$}\\
 				b_0&=1
 			\end{align*}
+			\begin{solution}
+			\begin{align*}
+				b_0&=1\\
+				b_1&=\frac{1}{1+1}=\frac{1}{2}\\
+				b_2&=\frac{1/2}{1+1/2}=\frac{1}{3}\\
+				b_3&=\frac{1/3}{1+1/3}=\frac{1}{4}\\
+				b_n&=\frac{1}{n+1}, n\geq0\\
+			\end{align*}
+			\end{solution}
 					\setcounter{question}{5} \question \begin{align*}
 			d_k&=2d_{k-1}+3 \textrm{ for all integers $k\geq2$}\\
 			d_1&=2
 		\end{align*}
+			\begin{solution}
+			\begin{align*}
+				d_1&=2\\
+				d_2&=2\cdot d_1+3=2^2+3=7\\
+				d_3&=2\cdot d_2+3=2^3+6+3=17\\
+				d_4&=2\cdot d_3 +3=2^4+12+6+3=37\\
+				d_n&=2^n+2^{n-2}\cdot3+2^{n-3}\cdot3+...+2^2\cdot3+2\cdot3+3\\
+				&=2^n+3(2^{n-2}+2^{n-3}+...+2^2+2+1)\\
+				&=2^n+3\left(\frac{2^{(n-2)+1}-1}{2-1}\right)\\
+				&=2^n+3(2^{n-1}-1)\\
+				&=5\cdot2^{n-1}-3
+			\end{align*}
+		\end{solution}
 	\setcounter{question}{16}\question Solve the recurrence relation obtained as the answer to exercise 21(c) of Section 5.5.
+	\begin{solution}
+	\begin{align*}
+		t_n&=2+2\cdot t_{n-1}\\
+		t_1&=2\\
+		t_2&=2+2\cdot t_1=2+2^2\\
+		t_3&=2+2\cdot t_2 = 2+2(2+2^2)=2+2^2+2^3\\
+		t_4&=2+2\cdot t_3=2+2(2+2^2+2^3)=2+2^2+2^3+2^4\\
+		t_n&=2\left(\frac{2^n-1}{2-1}\right)=2^{n+1}-2
+	\end{align*}
+	\end{solution}
 		\setcounter{question}{24}\question A certain computer algorithm executes twice as many operations when it is run with an input of size $k$ as when it is run with an input of size $k-1$ (where $k$ is an integer greater than 1). When the algorithm is run with an input of size 1, it executes seven operations. How many operations does it execute when it is run with an input of size 25?
+		\begin{solution}
+			Let $w_k$ be the number of operations with input size $k$. By definition $w_k=2w_{k-1}$. We know that $w_1=7$. 
+			\begin{align*}
+				w_{1}&=7\\
+				w_{2}&=2w_{1}=14\\
+				w_{3}&=2w_{2}=2\cdot2\cdot7=28\\
+				w_{4}&=2w_{3}=2\cdot2\cdot2\cdot7=56\\
+				w_{n}&=2^{n-1}\cdot7\\
+				w_{25}&=2^{25-1}\cdot7=117440512 \textit{ operations }
+			\end{align*}
+		\end{solution}
 	\setcounter{question}{28} \question Use mathematical induction to verify the correctness of the formula you obtained in Exercise 4.
+	\begin{solution}
+		\begin{proof}
+		Let $b_0,b_1,b_2,...$ be the sequence defined by specifying that $b_0=1$ and $b_k=\frac{b_{k-1}}{1+b_{k-1}}$ for all integers $k\geq1$, and let the property $P(n)$ be the equation
+		$$b_n=\frac{1}{n+1}$$
+		We will prove that for all integers $n\geq0$, $P(n)$ is true.\\
+		\textbf{Show that P(0) is true:} To establish $P(0)$, must show that 
+		$$b_0=\frac{1}{0+1}$$
+		But the left-hand side of $P(0)$ is $b_0=1$ by definition of  $b_0,b_1,b_2,...$ and the right-hand side of $P(0)$ is also 1. Hence $P(0)$ is true.\\
+		\textbf{Show that for all integers $k\geq0$, if $P(k)$ is true then $P(k + 1)$ is also true:}\\
+		Suppose that $k$ is any integer with $k\geq0$ such that
+		$$b_k=\frac{1}{k+1}$$
+		We must show that
+		$$b_{k+1}=\frac{1}{k+2}$$
+		But the left-hand side of $P(k+1)$ is
+		\begin{align*}
+			b_{k+1}&=\frac{b_k}{1+b_k}\\
+			&=\frac{\frac{1}{k+1}}{1+\frac{1}{k+1}}\\
+			&=\frac{\frac{1}{k+1}}{\frac{k+2}{k+1}}\\
+			&=\frac{1}{k+2}
+		\end{align*}
+		which equals the right-hand side of $P(k+1)$.
+		\end{proof}
+	\end{solution}
 		\setcounter{question}{30} \question Use mathematical induction to verify the correctness of the formula you obtained in Exercise 6.
+		\begin{solution}
+			\begin{proof}
+				Let $d_1,d_2,d_3,...$ be the sequence defined by specifying that $d_1=2$ and $d_k=2d_{k-1}+3$ for all integers $k\geq2$, and let the property $P(n)$ be the equation
+				$$d_n=5\cdot2^{n-1}-3$$
+				We will prove that for all integers $n\geq1$, $P(n)$ is true.\\
+				\textbf{Show that P(0) is true:} To establish $P(1)$, must show that 
+				$$d_1=5\cdot2^{0}-3$$
+				But the left-hand side of $P(1)$ is $d_1=2$ by definition of  $d_1,d_2,d_3,...$ and the right-hand side of $P(1)$ is also 2. Hence $P(1)$ is true.\\
+				\textbf{Show that for all integers $k\geq1$, if $P(k)$ is true then $P(k + 1)$ is also true:}\\
+				Suppose that $k$ is any integer with $k\geq1$ such that
+				$$d_k=5\cdot2^{k-1}-3$$
+				We must show that
+				$$d_{k+1}=5\cdot2^{k}-3$$
+				But the left-hand side of $P(k+1)$ is
+				\begin{align*}
+					d_{k+1}&=2d_k+3\\
+					&=2(5\cdot2^{k-1}-3)+3\\
+					&=5\cdot2^k-6+3\\
+					&=5\cdot2^k-3
+				\end{align*}
+				which equals the right-hand side of $P(k+1)$.
+			\end{proof}
+		\end{solution}
 		\setcounter{question}{52}\question Compute $\begin{bmatrix}
 			1 & 1\\ 
 			1 & 0
 		\end{bmatrix}^n$ for small values of $n$ (up to about 5 or 6). Conjecture explicit formulas for the entries in this matrix, and prove your conjecture using mathematical induction.
+		\begin{solution}
+			\begin{align*}
+				\begin{bmatrix}
+					1 & 1\\ 
+					1 & 0
+				\end{bmatrix}^1&=\begin{bmatrix}
+				1 & 1\\ 
+				1 & 0
+				\end{bmatrix}\\
+					\begin{bmatrix}
+					1 & 1\\ 
+					1 & 0
+				\end{bmatrix}^2&=\begin{bmatrix}
+					2 & 1\\ 
+					1 & 1
+				\end{bmatrix}\\
+					\begin{bmatrix}
+					1 & 1\\ 
+					1 & 0
+				\end{bmatrix}^3&=\begin{bmatrix}
+					3 & 2\\ 
+					2 & 1
+				\end{bmatrix}\\
+						\begin{bmatrix}
+					1 & 1\\ 
+					1 & 0
+				\end{bmatrix}^4&=\begin{bmatrix}
+					5 & 3\\ 
+					3 & 2
+				\end{bmatrix}\\
+							\begin{bmatrix}
+					1 & 1\\ 
+					1 & 0
+				\end{bmatrix}^5&=\begin{bmatrix}
+					8 & 5\\ 
+					5 & 3
+				\end{bmatrix}\\
+			\end{align*}
+			\textbf{Conjecture:}$\begin{bmatrix}
+				1 & 1\\
+				1 & 0
+			\end{bmatrix}^n=\begin{bmatrix}
+				G_{n+2} & G_{n+1}\\
+				G_{n+1}& G_{n}
+			\end{bmatrix}$ where $G_1=0, G_2=1, G_k=G_{k-1}+2G_{k-2}+3G_{k-3}$
+		\end{solution}
 	\end{questions}
 
 
