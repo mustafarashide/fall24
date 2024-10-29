@@ -1,0 +1,69 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Chapters 5.9,6.1 \& 6.2\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+\newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
+
+\begin{document}
+	
+	\begingroup  
+	\noindent\LARGE Discrete Mathematics\\
+	\noindent\LARGE Chapters 5.9,6.1 \& 6.2 Homework\\
+	\noindent\large \today\\
+	\noindent\large Mustafa Rashid\par
+	\noindent\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	
+	\centering\large Exercise Set 5.9\\
+	\begin{questions}
+	\setcounter{question}{5}\question Define a set S recursively as follows:
+	\begin{enumerate}[label=\Roman*.]
+		\item BASE: $a\in S$
+		\item RECURSION: If $s\in S$, then,\\
+		a. $sa \in S$\hspace*{2.5cm}b. $sb\in S$
+		\item RESTRICTION: Nothin is in S other than objects defined in I and II above.
+	\end{enumerate}
+	Use structual induction to prove that every string in S beings with an $a$.
+	\setcounter{question}{10}\question Define a set S recursively as follows:
+		\begin{enumerate}[label=\Roman*.]
+		\item BASE: $0\in S$
+		\item RECURSION: If $s\in S$, then,\\
+		a. $s+3 \in S$\hspace*{2.5cm}b. $s-3\in S$
+		\item RESTRICTION: Nothin is in S other than objects defined in I and II above.
+	\end{enumerate}
+	Use structual induction to prove that integer in S is divisible by 3.
+	\setcounter{question}{15}\question Give a recursive definition for the set of all strings of 0's and 1's for which all the 0's precede all the 1's.
+	\setcounter{question}{17}\question Give a recursive definition for the set of all strings of $a$'s and $b$'s that contain an odd number of $a$'s.
+	\setcounter{question}{24}\question Student C tries to define a function $G:\mathbb{Z^{+}\rightarrow Z}$ by the rule
+	\begin{equation*}
+		G(n)=
+		\begin{cases}
+			1 & \text{if } n \text{ is 1}}\\
+			G\left(\frac{n}{2}\right)&\text{if } n \text{ is even}}\\
+			2+G(3n-5)&\text{if } n \text{ is odd and $n>1$}}\\
+		\end{cases}
+	\end{equation*}
+	for all integers $n\geq1$. Student $D$ claims that $G$ is not well defined. Justify sutdent $D$'s claim.
+	\end{questions}
+	\centering\large Exercise Set 6.1\\
+	\begin{questions}
+	\end{questions}
+	
+	\centering\large Exercise Set 6.2\\
+	\begin{questions}
+	\end{questions}	
+\end{document}

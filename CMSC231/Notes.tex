@@ -1,0 +1,48 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Notes\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+\newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
+
+\begin{document}
+
+\begingroup  
+\noindent\LARGE Discrete Mathematics\\
+\noindent\large \today\\
+\noindent\large Mustafa Rashid\par
+\noindent\large Fall 2024\par
+\endgroup
+\rule{\textwidth}{0.4pt}
+\pointsdroppedatright
+\printanswers
+\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+
+
+	\section{General Recursive Definitions and Structural Induction}
+	Recursively defined sets 
+	\begin{enumerate}
+		\item BASE: A statement that certain objects belong to the set.
+		\item RECURSION: A collection of rules indicating how to form new set objects from those already known to be in the set.
+		\item RESTRICTION: A statement that no objects belong to the set other than those coming from 1 and 2.
+	\end{enumerate}
+	\textbf{A string over S}: Let S be a finite set with at least one element. A string over S is a finite sequnce of elemnts from S. The elements of S are \textbf{characters} of the string, and the \textbf{length} of a string is the number of characters it contains. The \textbf{null string over S} is defined to be the ``string" with no characters. It is usually denoted $\epsilon$ and is said to have length 0.\\
+		\textbf{Structural Induction for Recursively Defined Sets}\\
+		Let S be a set that has been defined recursively, and consider a property that objects in S may or may not satisfy. To prove that every object in S satisfies the property:
+		\begin{enumerate}
+			\item Show that each object in the BASE for S satisfies the property;
+			\item Show that for each rule in the RECURSION, if the rule is applied to objects in S that satisfy the property, then the objects defined by the rule also satisfy the property.\\
+			NOTE: Because no objects other than those obtained through the BASE and RECURSION conditions are contained in S, it must be the case that every object in S satisfies the property.
+			\end{enumerate}
+			\textbf{Recursive Function:} A function is said to be defined recursively or to be a recursive function if its rule of definition refers to itself. Because of this self-reference, it is sometimes difficult to tell whether a given recursive function is well defined.
+
+\end{document}
