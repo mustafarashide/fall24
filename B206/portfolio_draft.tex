@@ -3,6 +3,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \newtheorem*{prop}{Proposition}
+\newtheorem*{lemma}{Lemma}
 \thispagestyle{empty} 
 \newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
 \begin{document}
@@ -15,15 +16,15 @@
 	\large Fall 2024\par
 	\endgroup
 
-	\section{Chapter 4}(Use direct proof)\\
-	\\
+	\section{Chapter 4}\\
 	\centerline {Problem 8}
 	\begin{prop}
 	Suppose $a$ is an integer. If $5\mid 2a$ then $5\mid a$
 	\end{prop}
 	
 	\begin{proof}
-		
+	Suppose $a\in\mathbb{Z}$ and $5\mid 2a$.\\
+	Because $5\mid 2a$ then by definition of divisibility $2a=5k$ for some $k\in\mathbb{Z}$. Because $5k=2a$ then $5k$ is even by definition.  This means $k$ is even  and so by definition $k$ can be written as $k=2c$ for some $c\in\mathbb{Z}$. We now have $2a=5k=5\cdot(2c)$ which then becomes $2a=10c$. Dividing both sides by 2 gives $a=5c$ and thus we have written $a$ as $c$ multiples of 5 where $c\in\mathbb{Z}$. Therefore, $5\mid a$ by definition.
 	
 	\end{proof}
 	\centerline{Problem 18}
@@ -32,63 +33,74 @@
 	\end{prop}
 	
 	\begin{proof}
-		
-		
+		Suppose $x,y \in \mathbb{R^{+}}$ and $x<y$.\\
+		Consider the inequality $x<y$. Multiplying both sides by $x$ gives $x^2<xy$. The sign of the inequality does not change as $x>0$. Taking $x<y$ again and multiplying both sides by $y$ gives $xy<y^2$. The sign of the inequality does not change as $y>0$. We can combine the two inequalities to get $x^2<xy<y^2$. Therefore, $x^2<y^2$.
 	\end{proof}
 		\section{Chapter 5}
-	\centerline{Problem 10 (Use contrapositive proof)}
+	\centerline{Problem 10 }
 	\begin{prop}
 	Suppose $x,y,z\in \mathbb{Z}$ and $x\neq0$. If $x\doesnotdivide yz$, then $x\doesnotdivide y$ and $x\doesnotdivide z.$
 	\end{prop}
-	
+
 	\begin{proof}
-	
+		Suppose it is not true that $x\doesnotdivide y$ and $x\doesnotdivide z$. That is, by DeMorgan's law through negating the ``and", suppose $x\mid y$ or $x\mid z$.\\
+		\textbf{Case 1: }Suppose $x\mid y$. Then $y=ax$ for some $a\in\mathbb{Z}$. Multiplying both sides by $z$ gives $yz=axz$ or $yz=(az)x$. Therefore $x\mid yz$.\\
+		\textbf{Case 2: }Suppose $x\mid z$. Then $z=bx$ for some $b\in\mathbb{Z}$. Multiplying both sides by $y$ gives $yz=bxz$ or $yz=(bz)x$. Therefore $x\mid yz$.\\
+		Case 1 and Case 2 show that $x\mid yz$. Therefore it is not true that $x\doesnotdivide yz$.
 	\end{proof}
-		\centerline{Problem 22 (Use contrapositive/direct proof)}
+		\centerline{Problem 22}
 	\begin{prop}
-		Let $a\in \mathbb{Z}, n\in \mathbb{N}.$ If $a$ has a remainder $r$ when dvided by $n,$ then $a\equiv r \pmod n$.
+		Let $a\in \mathbb{Z}, n\in \mathbb{N}.$ If $a$ has a remainder $r$ when divided by $n,$ then $a\equiv r \pmod n$.
 	\end{prop}
 	
 	\begin{proof}
-		
+		Suppose $a\in \mathbb{Z}, n\in \mathbb{N}$ and that $a$ has a remainder $r$ when divided by $n$. By the division algorithm we have $a=qn+r$ where $q\in\mathbb{Z}$ and $0\leq r <n$. We can rearrange this to get $a-r=qn$. Therefore $n\mid (a-r)$. Hence  $a\equiv r \pmod n$ by definition.
 	\end{proof}
 	
 	\section{Chapter 6}
 	
-	\centerline{Problem 4 (Use contradiction)}
+	\centerline{Problem 4}
 	\begin{prop}
 		$\sqrt[]{6}$ is irrational
 	\end{prop}
 	
 	\begin{proof}
-		
+		Suppose, for the sake of contradiction, that $\sqrt{6}$ is rational. Therefore by definition $\sqrt{6}=\frac{a}{b}$ where $a,b \in\mathbb{Z}$ and that $a$ and $b$ have no common divisiors. Squaring both sides gives $6=\frac{a^2}{b^2}$. This then gives $6b^2=a^2$. The left-handside of this equation is even because 6 is even the product of an even integer with any integer is even. 
+		\begin{lemma}
+		The product of an even integer $a$ and any other integer $b$ is even\\
+		\textbf{Case 1:} Suppose $a,b\in\mathbb{Z}$ and that $a$ is even and $b$ is odd. Therefore by definition $a=2k, k\in\mathbb{Z}$ and $b=2q+1, q\in\mathbb{Z}$. The product $ab$ is equal to $2k\cdot (2q+1)=4kq+2k=2(2kq+k)$ and is thus even by definition.\\
+		\textbf{Case 2:} Suppose $a,b\in\mathbb{Z}$ and that both $a$ and $b$ are even. Therefore by definition $a=2r, r\in\mathbb{Z}$ and $b=2s, s\in\mathbb{Z}$. The product $ab$ is equal to $2r\cdot2s=4rs=2(2rs)$ and is thus even by definition.
+		\end{lemma}
+		This means that $a^2$ is even and so by the previous lemma $a$ is also even so $a=2l, l\in\mathbb{Z}$. We can substitute this in $6b^2=a^2$ to get $6b^2=4l^2$. Dividing both sides by 2 gives $3b^2=2l^2$. Here the right-hand side is even and so the left-hand side must also be even. Because $3b^2$ is even then either $3$ or $b^2$ is even. We know that 3 is odd and so $b^2$ must be even. Therefore by our previous lemma, $b$ must also be even and so $b=2w, w\in\mathbb{Z}$. So we have shown that both $a$ and $b$ are even. This means that they have a common factor of 2 but this contradicts our initial suppositioin that $a$ and $b$ have no common divisors. Therefore, $\sqrt{6}$ must be irrational.
 	\end{proof}
-	\centerline{Problem 8 (Use contradiction)}
+	\centerline{Problem 8}
 		\begin{prop}
-		Suppose $a,b,c\in \mathbb{Z}$. If $a^2+b^2=c$ then $a$ or $b$ is even.
+		Suppose $a,b,c\in \mathbb{Z}$. If $a^2+b^2=c^2$ then $a$ or $b$ is even.
 	\end{prop}
-	
 	\begin{proof}
-		
+			Suppose, for the sake of contradiction, that $a^2+b^2=c^2$ and that $a$ and $b$ are  odd. Therefore by definition $a=2d+1,d\in\mathbb{Z}$ and $b=2e+1,e\in\mathbb{Z}$. Subsituting this into $a^2+b^2=c^2$  gives $c^2=(2d+1)^2+(2e+1)^2=4d^2+4d+1+4e^2+4e+1=4(d^2+d+e^2+e)+2$\\
+			The integer $c$ is either odd or even.\\
+			\textbf{Case 1:} $c$ is odd, and so by definition $c=2q+1, q\in\mathbb{Z}$. Thus $c^2=4q^2+4q+1=4(d^2+d+e^2+e)+2$. This means that $4q^2+4q=4(d^2+d+e^2+e)+1=2(2(d^2+d+e^2+e))+1$. Which is a contradiction because the left-hand side is even and the right-hand side is odd.\\
 	\end{proof}
 	\section{Chapter 7}
 	\centerline{Problem 6}
 	\begin{prop}
-	Suppose $x,y\in\mathbb{R}$. Then  $x^3+x^2+y=y^2+xy$ if and only if $y=x^2$ or $y=x$
+	Suppose $x,y\in\mathbb{R}$. Then  $x^3+x^2y=y^2+xy$ if and only if $y=x^2$ or $y=-x$
 	\end{prop}
 	
 	\begin{proof}
-		
+	Suppose $x,y\in\mathbb{R}$ and that $x^3+x^2y=y^2+xy$. We then have $x^2(x+y)=y(x+y)$. If $x+y\neq0$, dividing both sides gives $x^2=y$. If $x+y=0$ we then get $y=-x$. Therefore if $x^3+x^2+y=y^2+xy$ then $y=x^2$ or $y=-x$.\\
+	Suppose $x,y\in\mathbb{R}$ and either $x=y^2$ or $y=-x$. If $y=x^2$ then  $x^3+x^2y=x^3+x^2(x^2)=x^3+x^4.$ and $y^2+xy=x^4+x^3$. If $y=-x$ then $x^3+x^2(-x)=x^3-x^3=0$ and $y^2+xy=x^2-x^2=0$. Therefore if $y=x^2$ or $y=-x$ then $x^3+x^2+y=y^2+xy$ .
 	\end{proof}
 	
 	\section{Chapter 8}
 	\centerline{Problem 2}
 	\begin{prop}
-		\{$6n:n\in\mathbb{Z}$\}=\{$2n:n\in\mathbb{Z}$\}$\cap$\{$3n:n\in\mathbb{Z}\}
+		\{$6n:n\in\mathbb{Z}$\}=\{$2n:n\in\mathbb{Z}$\}$\cap$\{$3n:n\in\mathbb{Z}\}$
 	\end{prop}
 	
 	\begin{proof}
-		
+		Every element in \{$6n:n\in\mathbb{Z}$\} can be written as $3n\cdot2$ or $2n\cdot3$ therefore it must also exist in \{$2n:n\in\mathbb{Z}$\}$\cap$\{$3n:n\in\mathbb{Z}\}$
 	\end{proof}
 \end{document}
 
