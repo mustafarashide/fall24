@@ -1,0 +1,168 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb,commath,siunitx}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{gensymb}
+\usepackage{etoolbox}
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+\graphicspath{ {.} }
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Problem Set 6\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+
+
+
+\begin{document}
+	
+	\begingroup  
+	\centering
+	\LARGE Multi-variable Calculus\\
+	\LARGE Problem Set 6\\[0.5em]
+	\large \today\\[0.5em]
+	\large Mustafa Rashid\par
+	\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	
+	
+	
+	\begin{questions}
+		
+		\question True or False?
+		\begin{quote}
+			If $f(x,y)$ has a critical point at $(0,0)$ and both cross sections $x=0$ and $y=0$ are concave down, then $f$ has a local maximum at $(0,0)$.
+		\end{quote}
+		If true explain. If false, find a concrete example, providing a formula for $f$ and explaining why it is a counterexample.
+
+		\begin{solution}
+			Let $f$ be any function with $\nabla f=\vec{0}$. The quadratic Taylor polynomial near $(0,0)$ would then be 
+			\begin{align*}
+				f(x,y)&\approx f(0,0)+f_x(0,0)x+f_y(0,0)y+\frac{1}{2}f_{xx}(0,0)x^2+f_{xy}(0,0)xy+\frac{1}{2}f_{yy}(0,0)y^2\\
+				f(0,y)&\approx f(0,0)+f_y(0,0)y+\frac{1}{2}f_{yy}(0,0)y^2\tag{Cross section where $x=0$}\\
+				f(x,0)&\approx f(0,0)+f_x(0,0)x+\frac{1}{2}f_{xx}(0,0)x^2\tag{Cross section where $y=0$}
+			\end{align*}
+			Because both cross sections are concave down, then both $f_{xx}(0,0)$ and $f_{yy}(0,0)$ are less than zero. For $f$ to have a local maximum at $(0,0)$ the following has to be true
+			\begin{enumerate}
+				\item $D>0$
+				\item $f_{xx}(0,0)<0$
+			\end{enumerate}
+			We know that $f_{xx}(0,0)<0$ and that the the discriminant, $D$, is equal to $f_{xx}(0,0)f_{yy}(0,0)-\left(f_{xy}(0,0)\right)^2$. For $D>0$, $f_{xx}(0,0)f_{yy}(0,0)$ has to be greater than $\left(f_{xy}(0,0)\right)^2$ but this is not always the case. Consider the function $f(x,y)=-x^2-y^2+5xy$ where $(0,0)$ is a critical point and $f_{xx}=-2<0$, $f_{yy}=-2<0$ and $f_{xy}=5$. This means that the discriminant is $D=-1$ and so $(0,0)$ is not a local maximum but a saddle point.
+		\end{solution}
+	\question The quantity of a product demanded by consumers is a function of its price. The quanitity of one product demanded may also depend on the price of other products. For example, if the only chocolate shop in town (a monopoly) sells milk and dark chocolates, the price it sets for each affects the demand of the other. The quantities demanded, $q_1$ and $q_2$, of two products depend on their prices, $p_1$ and $p_2$, as follows: 
+	$$q_1=150-2p_1-p_2,\hspace*{0.75cm}q_2=200-p_1-3p_2$$
+	\begin{parts}
+		\part What does the fact that the coefficients of $p_1$ and $p_2$ are negative tell you?
+		Give an example of two products that might be related this way.
+		\part If one manufacturer sells both products, how should the prices be set to generate the maximum possible revenue? What is that maximum possible revenue? Note that revenue is the product of price and quantity demanded.
+	\end{parts}
+	\begin{solution}
+		\begin{parts}
+			\part  It means that $p_1$ and $p_2$ are complementary goods. For example consider $q_1$ at a cross-section where $p_1$ is fixed at some positive integer. An increase in $p_2$ would decrease the quantity demanted of $p_1$. The same is true for $q_2$ where $p_2$ is fixed at some positive integer. An increase in $p_1$ would decrease the quantity demanded of $p_2$. An example of two products that are releated this way is gaming consoles and video games. An increase in the price of video games would decrease the quantity demanded of gaming consoles and an increase in the price of gaming consoles would decrease the quantity demanded of video games.
+			\part The revenue is the product of price and quantity demanded. Multiplying $q_1$ by $p_1$ and $q_2$ by $p_2$ gives the following
+			\begin{align*}
+				p_1q_1&=150p_1-2p_1^2-p_2p_1\\
+				p_2q_2&=200p_2-p_1p_2-3p_2^2
+			\end{align*}
+			Let $R(p_1,p_2)=p_1q_1+p_2q_2}$
+			\begin{align*}
+			R(p_1,p_2)&=150p_1+200p_2-2p_1p_2-2p_1^2-3p_2^2\\
+			\nabla R&=<150-2p_2-4p_1,200-2p_1-6p_2>
+			\end{align*}
+			At a critical point, $\nabla R=\vec{0}$, so this gives us the following system of linear equations:
+			\begin{align}
+				4p_1+2p_2&=150\\
+				2p_1+6p_2&=200
+			\end{align}
+			Multiplying $(2)$ by 2 and carrying out $(2)-(1)$ gives $10p_2=250$ and so $p_2=25$. Substituting $p_2=25$ into $(1)$ gives $p_1=\$25$. This  means that we have a critical point at $(25,25)$. We must now verify if this point is a global maximum. The second partial derivatives are as follows:
+			\begin{align*}
+				&\frac{\partial^2 R}{\partial p_1^2}=-4,\hspace*{0.75cm}\frac{\partial^2 R}{\partial p_2^2}=-6,\hspace*{0.75cm}\frac{\partial^2 R}{\partial p_1\partial p_2}=-2\\
+				&D=	\frac{\partial^2 R}{\partial p_1^2}\cdot\frac{\partial^2 R}{\partial p_2^2}-\left(\frac{\partial^2 R}{\partial p_1\partial p_2}\right)^2=(-4)(-6)-(-2)^2=20
+			\end{align*}
+			Therefore, the maximum revenue is when $p_1=p_2=25$ and so $R(25,25)=150(25)+200(25)-2(25)(25)-2(25)^2-3(25)^2=\$4375$.
+		\end{parts}
+	\end{solution}
+	\question A neighborhood health clinic has a budget of $\$600,000$ per quarter. The director of the clinic wants to allocate the budget to maximize the number of patient visits, $V$,which is
+	given as a function of the number of doctors, $D$, and the number of nurses, $N$,by
+	$$V=1000D^{0.6}N^{0.3}.$$
+	A doctor gets $\$40,000$ per quarter; nurses get $\$10,000$ per quarter.
+	\begin{parts}
+		\part Set up the director’s constrained optimization problem.
+		\part Solve the problem formulated in Part (a). In addition, check the reasonableness of your solution by producing a plot of the constraint curve superimposed on the contour plot for the objective function, and marking the approximate maximum on the plot.
+	\end{parts}
+	\begin{solution}
+		\begin{parts}
+			\part We are looking for the maximum value of $V(D,N)=1000D^{0.6}N^{0.3}$ subject to the constraint $40000D+10000N\leq600000$. To find which critical points are in the region we set $\nabla V=\vec{0}=<600D^{-0.4}N^{0.3},300D^{0.6}N^{-0.7}>$
+			\begin{equation*}
+				V(D,N)=
+				\begin{cases}
+				600D^{-0.4}N^{0.3}&=\lambda 40000\\
+				300D^{0.6}N^{-0.7}&=\lambda 10000\\
+		40000D+10000N&=600000\\
+		\end{cases}
+	\end{equation*}
+	Dividing the first equation by the second gives $N=2D$ and plugging this into our constraint gives $D=10$ and $N=20$.
+			\part The maximum number of visits is $V(10,20)=1000(10)^{0.6}(20)^{0.3}\approx9779$.
+			\begin{center}
+				\includegraphics[width=0.7\linewidth]{ps_6_3b}
+				\caption{}
+				\label{fig:ps63b}
+			\end{center}
+		\end{parts}
+	\end{solution}
+	\question A closed rectangular box has volume  \SI{38}{\cm\textsuperscript{3}}. What are the lengths of the edges that give the minimum surface area?\\
+
+	\textbf{Note: }This problem has three variables: length $(l)$, width $(w)$, and height $(h)$. Solve it using both of the methods described below.\\
+
+	\textbf{Method 1: }Reduce to a two-variable problem by using the volume constraint to solve for one of the variables in terms of the others. Then, express surface area as a two-variable function and minimize. Be sure to state what the region of optimization is and include a contour plot for the two-variable objective function to confirm that you are finding the global minimum for the two-variable function on this region.
+
+	\textbf{Method 2: }The method of Lagrange multipliers generalizes to three variables. Using the three-variable objective function and the three-variable constraint, set up a Lagrange system with \textit{four} equations and \textit{four} unknowns. Then, use \textit{WolframAlpha} to solve this system. (Of course, you should get the same answer as Method 1)
+	\begin{solution}
+	\begin{parts}
+		\part \textbf{Method 1}: The volume constraint is $V=lwh=\SI{38}{\cm\textsuperscript{3}}$. We can rearrange this to express the height, $h$, as $h=\frac{38}{lw}$. Substituting this into the formula for surface area gives the following two-variable function  $A(l,w)$:
+		$$A(l,w)=2lw+\frac{76}{w}+\frac{76}{l}$$
+		We are looking for the minimum value of $A(l,w)$ and because both the length and width of the box have to positive our contraints are $l>0$ and $w>0$. The critical points occur where $A_l(l,w)=0$ and $A_w(l,w)=0$. 
+		\begin{align}
+			A_l(l,w)&=2w-\frac{76}{l^2}=0\\
+			A_w(l,w)&=2l-\frac{76}{w^2}=0
+		\end{align}
+		From $(1)$ we get $w=\frac{38}{l^2}$ and substituting this into $(2)$ gives $l=\sqrt[3]{\frac{2\cdot38^2}{76}}\approx\SI{3.36}{\cm}$ and substituting this value for $l$ into $w=\frac{38}{l^2}$  gives $w\approx\SI{3.36}{\cm}$. This means that the minimum surface area is when the box has its length and width equal to $\SI{3.36}{\cm}$. To check that this is a minimum we use the second derivative test.
+		\begin{align*}
+			A_{ll}(l,w)&=\frac{152}{l^3}\\
+			A_{ww}(l,w)&=\frac{152}{w^3}\\
+			A_{lw}(l,w)&=2\\
+			D(3.36,3.36)&=	A_{ll}(l,w)\cdot A_{ww}(l,w)-\left(A_{lw}(l,w)\right)^2\\
+			&=\frac{152}{3.36^3}\cdot\frac{152}{3.36^3}-4=12>0
+		\end{align*}
+
+		Because $D(3.36,3.36)>0$ and $A_{ll}(l,w)>0$ the minimum surface area is when the length and width are equal to $\SI{3.36}{\cm}$.\\
+			\newpage
+		This is a \textit{global} minimum since the value of the function as the value of the surface area decreases as the contours get closer and closer to the point $(3.6,3.6)$
+		\begin{center}
+		\includegraphics[width=0.35\linewidth]{ps_6_4}
+		\caption{}
+		\label{fig:ps64}
+		\end{center}
+
+		\part \textbf{Method 2:} We need to minimize $A(l,w,h)=2lw+2lh+2wh$ subject to the contraint $V(l,w,h)=lwh=38$. Therefore, the Lagrangian function will be:
+		$$\mathcal{L}(l,w,h,\lambda)=2lw+2lh+2wh-\lambda(lwh-38)$$
+		Setting grad $\mathcal{L}=\vec{0}$ gives the following system of equations:
+		\begin{align*}
+			\frac{\partial\mathcal{L}}{\partial l}&=2w+2h-\lambda wh=0,\\
+			\frac{\partial\mathcal{L}}{\partial w}&=2l+2h-\lambda lh=0,\\
+			\frac{\partial\mathcal{L}}{\partial h}&=2l+2w-\lambda lw=0,\\
+			\frac{\partial\mathcal{L}}{\partial \lambda}&=-(lwh-38)=0
+		\end{align*}
+		Plugging this into \textit{WolframAlpha} gives $l=w=h=\sqrt[3]{38}\approx3.36$ and $\lambda\approx1.19$
+	\end{parts}
+
+	\end{solution}
+	\end{questions}
+\end{document}
