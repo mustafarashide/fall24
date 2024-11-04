@@ -95,7 +95,7 @@
 			2+G(3n-5)&\text{if } n \text{ is odd and $n>1$}}\\
 		\end{cases}
 	\end{equation*}
-	for all integers $n\geq1$. Student $D$ claims that $G$ is not well defined. Justify  $D$'s claim.
+	for all integers $n\geq1$. Student $D$ claims that $G$ is not well defined. Justify  student $D$'s claim.
 	\begin{solution}
 		Suppose $G$ is a function, then by definition of $G$,
 		\begin{align*}
@@ -106,7 +106,7 @@
 		\text{However,}\\
 			G(5)&=2+G(10)=2+G(5).
 		\end{align*}
-		Subtracting $G(5)$ from both sides gives $0=2$ which is false. Since supposing $G$ is a function leads to a logically false statement, then $G$ cannot be a function and Student D's claim is justified.
+		Subtracting $G(5)$ from both sides gives $0=2$ which is false. Since supposing $G$ is a function leads to a logically false statement, then $G$ cannot be a function and student D's claim is justified.
 	\end{solution} 
 	\end{questions}
 	
@@ -230,6 +230,65 @@
 		A_3&=\{n\in\mathbb{Z}:n=4k+3, \text{ for some integer }k\},
 	\end{align*}
 	Is $\{A_0,A_1,A_2,A_3\}$ a partition of $\mathbb{Z}$? Explain your answer.
+	\begin{solution}
+		For $\{A_0,A_1,A_2,A_3\}$ to be a partition of $\mathbb{Z}$ then, by definition, the following has to be true:
+		\begin{enumerate}
+			\item $\mathbb{Z}=A_0\cup A_1 \cup A_2 \cup A_3$
+			\item The sets $A_0,A_1,A_2$ and $A_3$ are mutually disjoint.
+			\end{enumerate}
+			Yes. By the quotient remainder theorem, when an integer $n$ is divided by 4 there exists unique integers $q$ and $r$ such that $n=4q+r$ where $0\leq r \leq 4$. Clearly, the only integer values for $r$ are $0,1,2,3,$ and $4$. Therefore $n$ can be written in exactly one of the following forms $n=4q$ or $n=4q+1$ or $n=4q+2$ or $n=4q+3$. Because $k$ and $q$ are both some integers we can say that $k=q$ and therefore each unique representation of $n$ corresponds to $A_0, A_1, A_2, A_3$ respectively. This means that there is no integer $n$ that is in both sets $A_i$ and $A_j$ whenever $i\neq j$ and so the sets sets $A_0,A_1,A_2$ and $A_3$ are mutually disjoint.   Moreover, because any integer $n$ can be written in exactly one of the forms $n=4k$ or $n=4k+1$ or $n=4k+2$ or $n=4k+3$ then the union of the sets must be equal to $\mathbb{Z}$.
+	\end{solution}
+\end{questions}
+	\centerline{Exercise Set 6.2}
+	\begin{questions}
+		\setcounter{question}{13}\question For all sets $A,B,$ and $C$, if $A\subseteq B$ then $A\cup C \subseteq B\cup C$
+		\begin{solution}
+			\begin{proof}
+			Suppose $A,B,$ and $C$ are sets and $A\subseteq B$. Let $x\in A\cup C$ and so by definition of union $x\in A$ or $x\in C$.  If $x\in A$ then, by $A\subseteq B, x\in B$ and consequently $x\in B \cup C$. On the other hand, if $x\in C$ then $x\in B \cup C$. Therefore in the two cases all the elements $x \in A\cup C$ are also in $B\cup C$.
+			\end{proof}
+		\end{solution}
+		\question For all sets $A$ and $B$, if $A\subseteq B$ then $B^c \subseteq A^c$.
+		\begin{solution}
+			\begin{proof}
+			Suppose $A$ and $B$ are sets and that $A\subseteq B$ and also suppose, for the sake of contradiction, that $B^c \not\subseteq A^c$. Because $B^c \not\subseteq A^c$ then there must be an element $x \in B^c$ such that $x\notin A^c$. But by definition of complement $x\in B^c \Leftrightarrow x\notin B$ and $x\notin A^c$ is the negation of $x\in A^c$ which is equivalent to $x\in A$. But from the definition of $A\subseteq B$ we have that $\forall x\in A, x\in B$. So that means there is an element $x$ such that $x\notin B$ and $x\in B$ which is a contradiction meaning that our supposition is false and the original statement is true.
+			\end{proof}
+		\end{solution}
+		\setcounter{question}{25}\question For all sets, $A,B$, and $C$,
+		\begin{align*}
+							(A-C)\cap (B-C)\cap (A-B)=\phi
+							\!
+		\end{align*}
+		\begin{solution}
+			\begin{proof}
+				Suppose, for the sake of contradiction, that there is an element $x\in(A-C)\cap (B-C)\cap (A-B)$
+				\begin{align*}
+					&x\in (A\cap C^c) \cap (B\cap C^c) \cap (A\cap B^c)\tag{By definition of difference}\\
+					&x\in (A\cap C^c) \cap (C^c \cap B) \cap (B^c\cap A)\tag{By commutativity}\\
+					&x\in (A\cap C^c) \cap C^c \cap (B \cap B^c)\cap A\tag{By associativity}\\
+					&x\in (A\cap C^c) \cap C^c \cap \phi\cap A\tag{By complement}\\
+					&x\in (A\cap C^c) \cap C^c \cap \phi\tag{By universal bound}\\
+					&x\in (A\cap C^c) \cap \phi\tag{By universal bound}\\
+				&x\in A\cap (C^c \cap \phi)\tag{By associativity}\\
+				&x\in A\cap \phi\tag{By universal bound}\\
+				&x\in\phi\tag{By universal bound}
+				\end{align*}
+				This means that we have found an element $x$ that is in the empty set $\phi$. This contradicts the definition of $\phi$ and thus our supposition is false and the original statement must be true.
+			\end{proof}
+		\end{solution}
+		\pagebreak
+	\setcounter{question}{40}\question For all integers $n\geq1$, if $A$ and $B_1,B_2,B_3,...$ are any sets, then
+	$$\bigcap_{i=1}^n(A\times B_i)=A\times\left(\bigcap_{i=1}^n B_i\right)$$
+	\begin{solution}
+		\begin{proof}
+		Suppose $A$ and $B_1,B_2,B_3,...$ are any sets.
+		$$\textbf{Proving that: }\bigcap_{i=1}^n(A\times B_i)\subseteq A\times\left(\bigcap_{i=1}^n B_i\right)}:$$
+		Suppose $(x,y)$ is any element in $\bigcap_{i=1}^n(A\times B_i)$. By definition of general intersection, $(x,y)\in A\times B_i$ for all $i=1,2,...,n$. By definition of Cartesian product, this implies that (1) $x\in A$ and (2) $y\in B_i$ for all $i=1,2,...,n$. By definition of general intersection (2) implies that $y\in\bigcap_{i=1}^n B_i$. Thus $x\in A$ and $y\in\bigcap_{i=1}^n B_i$, and so by definition of Cartesian product, $(x,y) \in A\times\left(\bigcap_{i=1}^n B_i\right)$
+		$$\textbf{Proving that: }A\times\left(\bigcap_{i=1}^n B_i\right)\subseteq \bigcap_{i=1}^n(A\times B_i)}:$$
+		Suppose $(x,y)$ is any element in $A\times\left(\bigcap_{i=1}^n B_i\right)$. By definition of Cartesian product, (1) $x\in A$ and (2) $y\in\bigcap_{i=1}^n B_i$. By definition of general intersection (2) implies that $y\in B_i$ for all $i=1,2,3,...,n$. Thus $x\in A$ and $y\in B_i$ for all $i=1,2,3,...,n$, and so, by definition of Cartesian product, $(x,y)\in A\times B_i$ for all $i=1,2,3,...,n$. It follows from the definition of general intersection that $(x,y)\in\bigcap_{i=1}^n\left(A\times B_i\right)$\\
+		\centerline{\textbf{Conclusion:}}\\
+		Since both containments have been proved, it follows by definition of set equality that $\bigcap_{i=1}^n(A\times B_i)=A\times\left(\bigcap_{i=1}^n B_i\right)$.
+		\end{proof}
+	\end{solution}
 	\end{questions}
 	
-\end{document}
+ \end{document}
