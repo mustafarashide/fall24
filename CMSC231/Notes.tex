@@ -44,5 +44,73 @@
 			NOTE: Because no objects other than those obtained through the BASE and RECURSION conditions are contained in S, it must be the case that every object in S satisfies the property.
 			\end{enumerate}
 			\textbf{Recursive Function:} A function is said to be defined recursively or to be a recursive function if its rule of definition refers to itself. Because of this self-reference, it is sometimes difficult to tell whether a given recursive function is well defined.
-
+	\section{6.3: Disproofs and Algebraic Proofs}
+	Finding counterexamples\\
+	Ask:$(A-B)\cup(B-C)=^?A-C$
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{findingcounterexamples}
+	\end{center}
+	There are obvious differences and so the equivalence is not true. For example if $A=\{2,3,5,6\}, B=\{1,2,3,4\}, C=\{3,4,6\}$\\
+	What does the venn diagram for four sets look like?
+	Is $A\cap C \subseteq B\cup D$? Consider $A=C=\{1\}$ and $B=D=\phi$ so $A\cap C\not\subseteq B\cup D$ and this cannot be the Venn digaram for 4 sets as it doesn't have all the regions we need.
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{wrong4setvenndiagram}
+	\end{center}
+	The Venn diagram for four sets with all regions present
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{correct4setdiagram}
+	\end{center}
+	$A \cap C =\{8,\textbf{10},12,13\}$\\
+	$B \cup D =\{1,4,5,6,7,8,9,11,12,13,14,15\}$\\
+	$A \cap C \not\subseteq B \cup D$\\
+	$2^n$ regions $(2^{n-1})$ for $n$ sets\\
+	\textbf{Algebraic Proofs}\\
+	Is $(A\cup B)-C=(A-C)\cup (B-C)$?
+	\begin{align*}
+		(A\cup B)&=(A\cup B)\cap C^c\tag*{By definition of minus}\\
+		&= C^c \cap (A\cup B) \tag*{By commutativity}\\
+		&=(A\cap C^c)\cup(C^c\cap B)\tag*{By distribution}\\
+		&=(A\cap C^c)\cup(B\cap C^c)\tag*{By commutativity}\\
+		&=(A-C)\cup(B-C)\tag*{By definition of minus}
+	\end{align*}
+	\section{6.4: Boolean \& Russel's Paradox}
+	\textbf{Boolean Algebra:}\\
+	Is a set $B$ with operations '+' and '$\cdot$' with the following properties:\\
+	0. Closure: $\forall x,y \in B, x+y\in B \land x\cdot y \in B$\\
+	1. Commutavity: $\forall x,y \in \B, x+y=y+x \land x\cdot y=y\cdot x$\\
+	2. Associativity: $\forall x,y,z \in B, (x+y)+z=x+(y+z) \land (x\cdot y)\cdot z=x\cdot(y\cdot z)$\\
+	3. Distributivity: $\forall x,y,z \in B, x+(y\cdot z)=(x+y)\cdot(x+z) \land x(y+z)=(x\cdot y)+(x\cdot z)$\\
+	4. Identity: $\exists 0,1 \in B$ such that $\forall x \in B, x+0=x \land x\cdot1=x$ (0 is false like thing, 1 is true, + corresponds to or, $\cdot$ corresponds to and)\\
+	5. Complement: $\forall x \in B, \exists \overline{x}$ such that $x+\overline{x}=1$ and $x\cdot\overline{x}=0$\\
+	\textbf{Canonical examples of boolean algebra}
+	\begin{itemize}
+		\item $S=\{\text{propositional formulae}\}$, 0=false, 1=true, + is $\lor$, $\cdot$ is $\land$, $\overline{x}=\neg x$
+		\item $S=\{\text{sets}\}, 0=\phi, 1=S, +$ is $\cup$, $\cdot$ is $\cap$, $\overline{x}=x^c$.
+	\end{itemize}
+		\textbf{Russel's Paradox:}\\
+		$S=\{A:A \text{ is a set and $A\notin A$}\}$\\
+		$S\in S:$ suppose $S\in S$. Then $S$ is a set $S\notin S$ which is a contradiction. Alternatively, Suppose $S\notin s$. Then either $S$ is not a set, or $S\in S$. If $S$ is a set:$\Rightarrow\!\Leftarrow$
+	\section{7.1-7.2: Functions}
+	A function $f$ from domain $X$ to codomain $Y (f:x \rightarrow y)$ is a total, single-valued relation $(x,y)\in f, f(x)=y$ the latter can be read ($f$ of $x$ is $y$, the value of $f$ at $x$ is y, the output of $f$ for input $x$ is $y$, the image of $x$ under $f$ is $y$)\\
+	Range: $f(X)=\{f(x):x\in X\}$ - the image of the domain 
+	Image of set under $f$\\
+	$$f(A)=\{f(x):x\in A\}$$
+	Pre-image (also known as Inverse Image)
+	$$f^{-1}(C)=\{x\in X:f(x)\in C\}$$
+	$$f^{-1}(y)=f^{-1}(\{y\})$$
+	Remember: A function is not well defined if it is not total or signle-valued. Example $f(x)=x^2$ then $f^-1$ is not a well-defined function.\\
+	New terminology:
+	\begin{enumerate}
+		\item Injective (one-to-one:inverse is single valued): A function is injective if $f(x)=f(y)\Leftrightarrow x=y$
+		\item Surjective (onto: inverse is total): $\forall y\in Y, \exists x \in X$ such that $f(x)=y$.
+		\item Bijective (one-to one correspondence): Injective and surjective meaning that the inverse is a well-defined function
+		\item Identity function: $$I_x:X\rightarrow X$$ $$I_x(a)=a\hspace*{0.25cm},\forall a\in X$$
+	\end{enumerate}
+	Logarithm:\\
+	$$\log_b:\mathbb{R^+}\rightarrow \mathbb{R}$$
+	$$\log_b x=y \Leftrightarrow b^y=x$$
+	$$\log_b (xy)=log_b x+log_b y$$
+	$$\log_b x^y=y\cdot log_b x$$
+	$$\log_b \left(\frac{x}{y}\right)=\log_b(xy^-1)=\log_b x+\log_b y^-1=\log_b x-\log_b y$$
+	$$$$
 \end{document}
