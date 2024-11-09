@@ -1,0 +1,117 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb,commath,siunitx}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{gensymb}
+\usepackage{etoolbox}
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+\graphicspath{ {.} }
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Problem Set 7\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+\newcommand{\Int}{\int\limits}
+
+
+\begin{document}
+	
+	\begingroup  
+	\centering
+	\LARGE Multi-variable Calculus\\
+	\LARGE Problem Set 7\\[0.5em]
+	\large \today\\[0.5em]
+	\large Mustafa Rashid\par
+	\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	
+	
+	
+\begin{questions}
+	\question Consider the following iterated integral
+	$$(*)\Int_{0}^{1} \Int_{x}^{1}\cos(y^2) \,dy\,dx$$
+	Note that the inner integral is not actually doable! Evaluate (*) by changing the order of integration. As part of your work, sketch the region of integration.
+	\begin{solution}\\
+			\includegraphics[width=0.2\linewidth]{question1ps7}
+		\begin{align*}
+			\Int_{0}^{1} \Int_{x}^{1}\cos(y^2) \,dy\,dx&=\Int_{0}^{1} \Int_{0}^{y}\cos(y^2) \,dx\,dy\\
+			&=	\Int_{0}^{1} \left[x\cdot \cos(y^2)\right]\Big|_{x=0}^{x=y}\,dy\\
+			&=\Int_{0}^{1} y\cdot\cos(y^2)\,dy\tag{By u-substitution, let $u=y^2$}\\
+			&=\frac{1}{2}\Int_{0}^{1} \cos(u)\,du\\
+			&=\frac{1}{2}\sin(u)\Big|_{u=0}^{u=1}\\
+			&=\frac{1}{2}\cdot \sin(1)
+		\end{align*}
+	\end{solution}
+	\pagebreak
+	\question Explain what is wrong with the following statement:
+		$$\Int_{0}^{1} \Int_{0}^{x}f(x,y)\,dy\,dx=\Int_{0}^{1} \Int_{0}^{y}f(x,y)\,dx\,dy$$
+		As part of your explanation, include an example for $f(x,y)$ and show that the given statement is wrong for your $f$.
+	\begin{solution}
+		The regions of integrations are not the same for the iterated integrals. Consider the sketches below of the regions of integration for the integral on the left-hand side and right-hand side.
+		\begin{center}
+			\includegraphics[width=0.5\linewidth]{../MATH121/question2ps7}
+		\end{center}
+		
+		Suppose $f(x,y)=e^x+y$. The iterated integral on the left-hand side would then be:
+			\begin{align*}
+			\Int_{0}^{1} \Int_{0}^{x}e^x+y \,dy\,dx&=\frac{7}{6}\approx 1.1667\tag{Computed on \textit{WolframAlpha}}
+		\end{align*}
+		On the other hand, the integral on the right-hand side would be:
+		\begin{align*}
+			\Int_{0}^{1} \Int_{0}^{y}e^x+y \,dx\,dy&=e-\frac{5}{3}\approx 1.0516\tag{Computed on \textit{WolframAlpha}}
+		\end{align*}
+		Because the values of the iterated integrals are not equal for $f(x,y)=e^x+y$ the statement is not true
+	\end{solution}
+	\question Integrate the function $f(x,y)=xy$ over the shaded region R shown below.
+	\begin{center}
+		\includegraphics[width=0.3\linewidth]{question3ps7}
+	\end{center}
+	\begin{solution}
+		\begin{align*}
+				\Int\Int_R xy \,dR&=\Int_{0}^{1} \Int_{0}^{x}xy \,dy\,dx+\Int_{1}^{2} \Int_{0}^{2-x}xy \,dy\,dx\\
+				&=\Int_{0}^{1} \left[\frac{xy^2}{2}\Big|_{y=0}^{y=x}\right]\,dx+\Int_{1}^{2}\left[\frac{xy^2}{2}\Big|_{y=0}^{y=2-x}\right]\,dx\\
+				&=\Int_{0}^{1} \frac{x^3}{2} \,dx + \frac{1}{2}\Int_{1}^{2} x^3-4x^2+4x\,dx\\
+				&=\left[\frac{x^4}{8}\Big|_{x=0}^{x=1}\right]+\left[\frac{x^4}{8}-\frac{4x^3}{6}+x^2\Big|_{x=1}^{x=2}\right]\\
+				&=\frac{1}{3}
+		\end{align*}
+   \end{solution}
+	\question \begin{parts}
+		 \part Sketch the region R of integration of the following integral
+		$$\Int_{0}^{1}\Int_{\sqrt{1-x^2}}^{\sqrt{4-x^2}} x\,dy\,dx+\Int_{1}^{2}\Int_{0}^{\sqrt{4-x^2}} x\,dy\,dx.$$
+		\part Express the above integral as an integral in polar coordinates, and then evaluate the integral.
+		\pagebreak
+	\end{parts}
+	\begin{solution}
+		\begin{parts}
+			\part  \includegraphics[width=0.3\linewidth]{../MATH121/question4ps7}
+			\part \begin{align*}
+				\Int_{0}^{1}\Int_{\sqrt{1-x^2}}^{\sqrt{4-x^2}} x\,dy\,dx+\Int_{1}^{2}\Int_{0}^{\sqrt{4-x^2}} x\,dy\,dx&=\Int_{0}^{\frac{\pi}{2}}\Int_{1}^{2} r\cos(\theta)r\,dr\,d\theta\\
+				&=\Int_{0}^{\frac{\pi}{2}}\left[\frac{r^3}{3}\cos\theta\Big|_{r=1}^{r=2}\right]\,d\theta\\
+				&=\frac{7}{3}\Int_{0}^{\frac{\pi}{2}}\cos\theta\,d\theta\\
+				&=\frac{7}{3}\left[\sin\theta\Big|_{\theta=0}^{\theta=\frac{\pi}{2}}\right]\\
+				&=\frac{7}{3}
+			\end{align*}
+		\end{parts}
+	\end{solution}
+	\question Consider the integral $I=\Int_{0}^{\frac{\pi}{4}}\Int_{0}^{1/\cos(\theta)=}r \,dr\,d\theta$.
+	\begin{parts}
+		\part Sketch the region of integration for the integral I. Clearly mark the $x$ and $y$ coordinates of all corners of the region. Also, write down the equations describing the boundaries of the region in terms of $x,y$. You don’t need to explain your answer for this part.
+		\part Now set up the same integral I using Cartesian coordinates, and in the order $dydx$. (Make sure you do it in this order and not $dxdy$ you will get zero credit if you use the wrong order.) No explanation is necessary.
+		\part Compute the integral using either polar coordinates, Cartesian coordinates, or geometry, whichever you find more convenient. Show your work/reasoning.
+	\end{parts}
+	\begin{solution}
+	\begin{parts}
+			\part \includegraphics[width=0.3\linewidth]{question5ps7}
+			\part $\Int_{0}^{1}\Int_{0}^{x} \,dy\,dx$
+			\part The region is a right-angled triangle. Therefore, the integral is just the area which is equal to $\frac{1}{2}(1)(1)=\frac{1}{2}$
+	\end{parts}
+	\end{solution}
+\end{questions}
+\end{document}
