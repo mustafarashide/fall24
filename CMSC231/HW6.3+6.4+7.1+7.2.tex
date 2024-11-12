@@ -4,7 +4,7 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
 \lhead{Mustafa Rashid\\}
-\rhead{Chapters 6.3,6.4,7.1 \& 7,2\\}
+\rhead{Chapters 6.3,6.4,7.1 \& 7.2\\}
 \chead{\hline} 
 \thispagestyle{empty} 
 \newcommand*{\setdef}[1]{\left\{#1 \right\}} 
@@ -28,11 +28,63 @@
 	\noindent For 20\& 21 prove the statement that is true and find a counterexample for the statement that is false. Assume all sets are subsets of a universal set U.
 \begin{questions}
 	\setcounter{question}{19}\question For all sets $A$ and $B, \mathscr{P}(A \cap B)=\mathscr{P}(A)\cap \mathscr{P}(B)$
+	\begin{solution}
+		\begin{proof}
+		Let $A$ and $B$ be any two sets. To prove that $\mathscr{P}(A \cap B)=\mathscr{P}(A)\cap \mathscr{P}(B)$ we must prove 1)$\mathscr{P}(A \cap B)\subseteq\mathscr{P}(A)\cap \mathscr{P}(B)$ and 2)$\mathscr{P}(A)\cap \mathscr{P}(B)\subseteq\mathscr{P}(A \cap B)$\\
+		 1)$\mathscr{P}(A \cap B)\subseteq\mathscr{P}(A)\cap \mathscr{P}(B)$\\
+		Let $X$ be an arbitrary element of $\mathscr{P}(A \cap B)$. By definition of the power set, $X\in(A\cap B)$. Also, by definition of intersection, $X\subseteq A$ and $X\subseteq B$. Therefore, $X\in\mathscr{P}(A)$ and 
+		 $X\in\mathscr{P}(B)$ and so $X\in\mathscr{P}(A)\cap\mathscr{P}(B)$\\
+		2)$\mathscr{P}(A)\cap \mathscr{P}(B)\subseteq\mathscr{P}(A \cap B)$\\
+		Let $X$ be an arbitrary element of $\mathscr{P}(A)\cap \mathscr{P}(B)$. By definition of intersection, $X\in\mathscr{P}(A)$ and $X\in\mathscr{P}(B)$. By definition of power set, $X\subseteq A$ and $X\subseteq B$. By definition of intersection, $X\subseteq (A\cap B)$. Therefore, $X\in\mathscr{P}(A\cap B)$\\
+		Because $\mathscr{P}(A \cap B)\subseteq\mathscr{P}(A)\cap \mathscr{P}(B)$ and $\mathscr{P}(A)\cap \mathscr{P}(B)\subseteq\mathscr{P}(A \cap B)$, then $\mathscr{P}(A \cap B)=\mathscr{P}(A)\cap \mathscr{P}(B)$.
+		\end{proof}
+	\end{solution}
 	\setcounter{question}{20}\question For all sets $A$ and $B, \mathscr{P}(A \times B)=\mathscr{P}(A)\times \mathscr{P}(B)$
+	\begin{solution}
+		\begin{proof}
+			This is false. Consider the following counterexample where $A=\{0,1\}$ and $B=\{2\}$. The cross product $A\times B$ is $\{(0,2),(1,2)\}$. The power sets are therefore the following:
+			\begin{align*}
+				\mathscr{P}(A\times B)&=\{\phi, \{(0,2)\},\{(1,2)\},\{(0,2),(1,2)\}\}\\
+				\mathscr{P}(A)&=\{\phi,\{0\},\{1\},\{0,1\}\}\\
+				\mathscr{P}(B)&=\{\phi,\{2\}\}
+			\end{align*}
+			Therefore, $\mathscr{P}(A)\times\mathscr{P}(B)$ will then be equal to         $$\{(\phi,\phi),(\phi,\{2\}),(\{0\},\phi),(\{0\},\{2\}),(\{1\},\phi),(\{1\},\{2\}),(\{0,1\},\phi),(\{0,1\},\{2\})\}$$
+			
+			It is clear that $\mathscr{P}(A \times B)\neq\mathscr{P}(A)\times \mathscr{P}(B)$ because they have different cardinalities and $\mathscr{P}(A\times B)$ is a set of sets while $\mathscr{P}(A)\times\mathscr{P}(B)$ is a set of ordered pairs.
+		\end{proof}
+	\end{solution}
 	\setcounter{question}{31}\question For all sets $A$ and $B, (A-B)\cup (A\cap B)=A.$ (Construct an algebraic proof and cite a property from Theorem 6.2.2 for every step)
+	\begin{solution}
+			\begin{align*}
+			(A-B)\cup(A\cap B)&=(A\cap B^c)\cup(A\cap B)\tag{By the set difference law}\\
+			(A\cap B^c)\cup(A\cap B)&=(A\cap B^c)\cup(B\cap A)\tag{By the commutative laws}\\
+			(A\cap B^c)\cup(B\cap A)&=A\cap(B^c\cup B)\cap A\tag{By the associative laws}\\
+			A\cap(B^c\cup B)\cap A&=A\cap U \cap A\tag{By the complement laws}\\
+						A\cap U \cap A&=A\cap A\tag{By the identity laws}\\
+						A\cap A&=A\tag{By the idempotent laws}
+		\end{align*}
+	\end{solution}
+	\pagebreak
 	\setcounter{question}{42}\question $((A\cap (B\cup C))\cap(A-B))\cap (B \cup C^c)$ (Simplify the given expression. Cite a property from
 	Theorem 6.2.2 for every step)
+	\begin{solution}
+		\begin{align*}
+			((A\cap (B\cup C))&\cap(A-B))\cap(B \cup C^c)\\
+			&=(((A\cap B)\cup(A\cap C))\cap(A-B))\cap (B \cup C^c)\tag{By the distributive laws}\\
+			&=(((A\cap B)\cup(A\cap C))\cap(A\cap B^c))\cap (B \cup C^c)\tag{By the set difference law}\\
+			&=(((A\cap B)\cap(A\cap B^c)\cup(A\cap C)\cap(A\cap B^c)))\cap (B \cup C^c)\tag{By the distributive laws}\\
+			&=(((A\cap B)\cap(B^c\cap A)\cup(A\cap C)\cap(A\cap B^c)))\cap (B \cup C^c)\tag{By the commutative laws}\\
+			&=(((A\cap (B\cap B^c)\cap A)\cup(A\cap C)\cap(A\cap B^c)))\cap (B \cup C^c)\tag{By the associative laws}\\
+			&=(((A\cap \phi\cap A)\cup(A\cap C)\cap(A\cap B^c)))\cap (B \cup C^c)\tag{By the complement laws}\\
+			&=((A\cap C)\cap(A\cap B^c))\cap (B \cup C^c)\tag{By the universal bound and identity laws}\\
+			&=((A\cap C)\cap(B\cup C^c)\cap(A\cap B^c)\cap(B\cup C^c))\tag{By the distributive laws}\\
+			&=((A\cap (C\cap C^c)\cup B)\cap(A\cap (B^c\cap B)\cup C^c))\tag{By the associative and commutative laws}\\
+			&=((A\cap \phi\cup B)\cap(A\cap\phi\cup C^c))\tag{By the complement laws}\\
+			&=B\cap C^c\tag{By the universal bound and identity laws}\\
+		\end{align*}
+	\end{solution}
 \end{questions}
+
 	\centerline{Exercise Set 6.4}
 
 \begin{questions}
@@ -47,13 +99,51 @@
 				\item the commutative law for $+$
 				\item the commutative law for $\cdot$
 				\item the associative law for $+$
-				\item the commutative law for $\cdot$
+				\item the associative law for $\cdot$
 				\item the distributive law for $+$ over $\cdot$
 				\item the distributive law for $\cdot$ over $+$
 				\end{enumerate}
 			\part Show that 0 is an identity element for $+$ and that 1 is an identity element for $\cdot$.
 			\part Define $\overline{0}=1$ and $\overline{1}=0.$ Show that for all $a$ in $S,$ $a+\overline{a}=1$ and $a\cdot\overline{a}=0.$ It follows from parts (a)-(c) that $S$ is a Boolean algebra with operations $+$ and $\cdot$.
 		\end{parts}
+		\begin{solution}
+			\begin{parts}
+				\part \begin{enumerate}[label = (\roman*)]
+					\item According to the table $1+0=0+1=1$.
+					\item According to the table $0\cdot1=1\cdot0=0$.
+					\item According to the table $(0+1)+1=0+(1+1)=1,(0+0)+1=0+(0+1)=1,(0+0)+0=0+(0+0)=0,(1+1)+1=1+(1+1)=1$.
+					\item According to the table $(0\cdot1)\cdot1=0\cdot(1\cdot1)=0,(0\cdot0)\cdot0=0\cdot(0\cdot0)=0,(1\cdot1)\cdot1=1\cdot(1\cdot1)=1$.
+					\item \begin{align*}
+						0+(0\cdot0)&=0+0=0=(0+0)\cdot(0+0)=0\cdot0=0\\
+						0+(0\cdot1)&=0+0=0=(0+0)\cdot(0+1)=0\cdot1=0\\
+						0+(1\cdot0)&=0+0=0=(0+1)\cdot(0+0)=1\cdot0=0\\
+						0+(1\cdot1)&=0+1=1=(0+1)\cdot(0+1)=1\cdot1=1\\
+						1+(0\cdot0)&=1+0=1=(1+0)\cdot(1+0)=1\cdot1=1\\
+						1+(0\cdot1)&=1+0=1=(1+0)\cdot(1+1)=1\cdot1=1\\
+						1+(1\cdot0)&=1+0=1=(1+1)\cdot(1+0)=1\cdot1=1\\
+						1+(1\cdot1)&=1+1=1=(1+1)\cdot(1+1)=1\cdot1=1\\
+					\end{align*}
+					\item \begin{align*}
+					0\cdot(0+0)&=0\cdot0=0=(0\cdot0)+(0\cdot0)=0+0=0\\
+					0\cdot(0+1)&=0\cdot1=0=(0\cdot0)+(0\cdot1)=0+0=0\\
+					0\cdot(1+0)&=0\cdot1=0=(0\cdot1)+(0\cdot0)=0+0=0\\
+					0\cdot(1+1)&=0\cdot1=0=(0\cdot1)+(0\cdot1)=0+0=0\\
+					1\cdot(0+0)&=1\cdot0=0=(1\cdot0)+(1\cdot0)=0+0=0\\
+					1\cdot(0+1)&=1\cdot1=1=(1\cdot0)+(1\cdot1)=0+1=1\\
+					1\cdot(1+0)&=1\cdot1=1=(1\cdot1)+(1\cdot0)=1+0=1\\
+					1\cdot(1+1)&=1\cdot1=1=(1\cdot1)+(1\cdot1)=1+1=1\\
+					\end{align*}
+				\end{enumerate}
+				\part 0 is an identity element for + because for all elements $p$ in the set $0+p=p$. Namely, $0+0=0$ and $0+1=1$. On the other hand, 1 is an identity element for $\cdot$ because for all elements $p$ in the set $1\cdot p=p$. Namely, $1\cdot1=1$ and $1\cdot0=0$. 
+				\part 
+					\begin{tabular}{|l|l|l|l|}
+						\hline
+						$a$ & $\overline{a}$ & $a\cdot\overline{a}$ & $a+\overline{a}$ \\ \hline
+						1 & 0 & 0 & 1 \\ \hline
+						0 & 1 & 0 & 1 \\ \hline
+					\end{tabular}
+			\end{parts}
+		\end{solution}
 		\setcounter{question}{11}\question Prove that the associative laws for a Boolean algebra can be omitted from the definition. That is, prove that the associative laws can be derived from the other laws in the definition.
 		\setcounter{question}{18}\question   \begin{parts} \part Assuming that the following sentence is a statement, prove that $1+1=3$:
 			\begin{center}
@@ -61,16 +151,36 @@
 			\end{center}
 			\part What can you deduce from part (a) about the status of ``This sentence is true"? Why? (This example is known as \textbf{Löb's paradox.})
 		\end{parts}
+		\begin{solution}
+		\begin{parts}
+				\part The contrapositive of the statement is ``If $1+1\neq3,$ then this sentence is false". The statement would then be false.
+			\part The only way for an if then statement to be false is if the hypothesis is true and the statement is false. In (a) the hypothesis was true but it was also true that the sentence was false however the statement was false which is condradictory.
+		\end{parts}
+		\end{solution}
 
 \end{questions}
 
 	\centerline{Exercise Set 7.1}
 \begin{questions}
 	\setcounter{question}{13}\question Let $J_5=\{0,1,2,3,4\}$, and define functions $h:J_5\rightarrow J_5$ and $k:J_5 \rightarrow J_5$ as follows: For each $x\in J_5, h(x)=(x+3)^3\mod 5$ and $k(x)=(x^3+4x^2+2x+2)\mod5.$ Is $h=k$? Explain.
+	\begin{solution}
+		Yes. $h=k$ because both functions have the same domain $J_5$ and they map each element in this domain to another element that is equal to some integer $\mod 5$. By the quotient remainder theorem, any integer $n$ divided by $5$ can be represented in one of the forms $5q$ or $5q+1$ or $5q+2$ or $5q+3$ or $5q+4$ where $q$ is some integer. Because both functions $h$ and $k$ give the remainder of an integer divided by 5, their codomain will be equal to $\{0,1,2,3,4\}$ or $J_5$.
+	\end{solution}
 	\setcounter{question}{23}\question If $b$ and $y$ are positive real numbers such that $\log_b y=2$, what is $\log_{b^2}(y)$? Why?
-	\setcounter{question}{27}\question Student $C$ tries to define a function $h: Q \rightarrow Q$ by the rule 
+	\begin{solution}
+	It is equal to 1.
+	\begin{align*}
+		\log_{b^2}(y)&=\frac{\log_b(y)}{\log_b(b^2)}\\
+		&=\frac{2}{2\cdot\log_b(b)}\\
+		&=1.
+	\end{align*}
+	\end{solution}
+	\setcounter{question}{27}\question Student $C$ tries to define a function $h: \mathbb{Q}\rightarrow\mathbb{Q}$ by the rule 
 	$$h\left(\frac{m}{n}\right)=\frac{m^2}{n}, \text{ for all integers $m$ and $n$ with $n\neq0$.}$$
-	Student D claims that $h$ is not well defined. Justify student 
+	Student D claims that $h$ is not well defined. Justify student D's claim.
+	\begin{solution}
+		There are inputs $\frac{m}{n}$ that are equal but have different outputs. For example $h\left(\frac{1}{3}\right)=\frac{1}{3}$ but $h\left(\frac{3}{9}\right)=\frac{9}{9}=1$. Because $1/3=3/9$ we should get the same output if this is a function but this is not the case so student D is right. 
+	\end{solution}
 	\setcounter{question}{42}\question Given a set $S$ and a subset $A$, the \textbf{characteristic function of A,} denoted $\chi_A,$ is the function defined from $S$ to $\mathbb{Z}$ with the property that for all $u\in S$,
 	\begin{equation*}
 	\chi_A(u)=
@@ -95,12 +205,39 @@ Show that each of the following holds for all subsets $A$ and $B$ of $S$ and all
 		\end{enumerate}
 		\part Define $G:\mathbb{R}\rightarrow\mathbb{R}$ by the rule $G(x)=2-3x$ for all real numbers $x$. Is $G$ onto? Prove or give a counterexample.
 	\end{parts}
+	\begin{solution}
+	\begin{parts}
+		\part \begin{enumerate}[label=(\roman*)]
+			\item $F$ is one-to-one. Suppose $F(n_1)=F(n_2), n_1,n_2\in\mathbb{Z}$. By defintion of $F$, $2-3n_1=2-3n_2$. This is can be written as $-3n_1=-3n_2$ and so $n_1=n_2$. 
+			\item No, suppose $F(n)=0$, then $n=\frac{2}{3}$ and $n\notin\mathbb{Z}$. Hence, there is no integer for which $F(n)=0$.
+		\end{enumerate}
+		\part Let $y\in\mathbb{R}$. Let $x=\frac{2-y}{3}$
+		Then $x$ is a real number since differences and quotients (other than by 0) of real numbers are real numbers. It follows that
+		\begin{align*}
+			G(x)&=G\left(\frac{2-y}{3}\right)\\
+			&=2-3\left(\frac{2-y}{3}\right)\\
+			&=2-(2-y)=y
+		\end{align*}
+	\end{parts}
+	\end{solution}
 	\setcounter{question}{23}\question Define $J:\mathbb{Q}\times\mathbb{Q}\rightarrow\mathbb{R}$ by the rule $J(r,s)=r+\sqrt{2}s$ for all $(r,s)\in\mathbb{Q}\times\mathbb{Q}$.
 	\begin{parts}
 		\part Is $J$ one-to-one? Prove or give a counter example
 		\part Is $J$ onto? Prove or give a counterexample.
 	\end{parts}
+	\begin{solution}
+		\begin{parts}
+		 \part Suppose $J(r_1,s_1)=J(r_2,s_2)$ and $r_1,r_2,s_1,s_2\in\mathbb{Q}$. By defintion of $J$, $r_1+\sqrt[]{2}s_1=r_2+\sqrt[]{2}s_2$. This is can be written as $r_1-r_2=\sqrt[]{2}(s_2-s_1)$. Because $r_1,r_2,s_1,s_2\in\mathbb{Q}$ then either $r_1-r_2=0$ or $s_2-s_1=0$. Therefore $r_1=r_2$ and $s_1=s_2$. Thus, the function is one-to-one.
+		 \part No, there are many real numbers that are cannot be obtained from $J$. For example $\pi$.
+		\end{parts}
+	\end{solution}
 	\setcounter{question}{30}\question If $f:\mathbb{R}\rightarrow\mathbb{R}$ and $g:\mathbb{R}\rightarrow\mathbb{R}$ are both onto, is $f+g$ also onto? Justify your answer.
+	\begin{solution}
+		No, suppose $f(x)=x$ and $g(x)=-x$. Then $f+g=0$ where every input is mapped to 0 and therefore $f+g$ is not onto.
+	\end{solution}
 		\setcounter{question}{32}\question Let $f:\mathbb{R}\rightarrow\mathbb{R}$ be a function and $c$ a nonzero real number. If $f$ is onto, is $c\cdot f$ also onto? Justify your answer.
+		\begin{solution}
+			Yes, let $f(x)$ be a function whose output is some real number $q$. Then $c\cdot f(x)=c\cdot q$.  Because $q$ can be any real number since $f$ is onto, then this is also true for $c\cdot q$ and $c\cdot f$ is also onto.
+		\end{solution}
 \end{questions}
 \end{document}

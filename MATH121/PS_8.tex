@@ -1,0 +1,105 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb,commath,siunitx}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{gensymb}
+\usepackage{etoolbox}
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+\graphicspath{ {.} }
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Problem Set 8\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+\newcommand{\Int}{\int\limits}
+
+
+\begin{document}
+	
+	\begingroup  
+	\centering
+	\LARGE Multi-variable Calculus\\
+	\LARGE Problem Set 8\\[0.5em]
+	\large \today\\[0.5em]
+	\large Mustafa Rashid\par
+	\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  	
+	\begin{questions}
+		\question Consider the parametric curve $\vec{r}(t)=\langle1-3t, t^2-1\rangle$ for $-1\leq t\leq1$.
+		\begin{parts}
+			\part By eliminating $t$, write down an equation with $x$ and $y$ which describes the path of $\vec{r}(t)$.
+			\part Provide a sketch of $\vec{r}(t)$. Label the starting point, the ending point, and the orientation.
+		\end{parts}
+		\begin{solution}
+			\begin{parts}
+			\part \begin{align}
+			x&=1-3t\\
+			t&=\frac{1-x}{3}\\
+			y&=t^2-1=\left(\frac{1-x}{3}\right)^2-1\tag*{Substituting $t$ from (2)}\\
+			y&=\frac{x^2-2x+1}{9}-1\\
+			9y&=x^2-2x-8
+		\end{align}
+		\part \makebox[0pt][l]{%
+			\begin{minipage}{\textwidth}
+				\centering
+			 \includegraphics[width=0.35\linewidth]{ps8q1}
+			\end{minipage}
+		} 
+			\end{parts}
+		\end{solution}
+		\question At the point when $t=-1$, find an equation for the plane perpendicular to the line
+		$$x=5-3t,\hspace*{0.10cm}y=5t-7,\hspace*{0.10cm}z=6t.$$
+		\question A point $P$ moves in a circle of radius $a$ centered at the origin. Show that $\vec{r}(t)$, the position vector of $P$, is perpendicular to the velocity vector $\vec{r}\hspace*{0.08cm}'(t)$ for every $t$.
+		\begin{solution}\\
+			Let $\vec{r}(t)=\langle a\cos(t),a\sin(t)\rangle$ and so $\vec{r}\hspace*{0.08cm}'(t)=\langle -a\sin(t),a\cos(t)\rangle$. Because these vectors are perpendicular their dot product is equal to 0. 
+			\begin{align*}
+				\vec{r}(t)\cdot\vec{r}\hspace*{0.08cm}'(t)&=\langle a\cos(t),a\sin(t)\rangle\cdot\langle -a\sin(t),a\cos(t)\rangle\\
+				&=-a^2\sin(t)\cos(t)+a^2\sin(t)\cos(t)\\
+				&=0
+			\end{align*}
+			For any value of $t$, the dot product of the position vector and the velocity vector will be equal to 0 and thus the vectors are perpendicular to each other. 
+		\end{solution}
+		\question A stone is thrown from a rooftop at time $t=0$ seconds. Its position at time $t$ is given by
+		$$\vec{r}(t)=\langle10t,-5t,6.4-4.9t^2\rangle$$
+		The origin is at the base of the building, which is standing on flat ground. The first two coordinates of $\vec{r}(t)$ describe east and north ground position from the origin. The third coordinate describes your position upwards from the origin. Distance is measured in meters. Make sure to include units in all your answers.
+		\begin{parts}
+			\part How high is the rooftop above the ground?
+			\part At what time does the stone hit the ground? Round to the second decimal.
+			\part How fast is the stone moving when it hits the ground? Round to the second decimal.
+			\part Where does the stone hit the ground i.e. what is its $x$ and $y$ position?
+		\end{parts}
+		\begin{solution}
+		\begin{parts}
+			\part At $t=0$ the stone is on the rooftop. Its position upwards from the origin is given by $6.4-4.9(0)^2=\SI{6.4}\m$
+			\part When the stone hits the ground, the po
+		\end{parts}
+		\end{solution}
+		\question Each vector field in the figures (I)-(IV) shown on the last page represents the force on a particle at different points in space as a result of another particle at the origin. Match up the vector fields with the descriptions below; no explanation necessary.
+		\begin{parts}
+			\part A repulsive force whose magnitude decreases as distance increases, such as between electric charges of the same sign.
+			\part A repulsive force whose magnitude increases as distance increases.
+			\part An attractive force whose magnitude decreases as distance increases, such as gravity.
+			\part An attractive force whose magnitude increases as distance increases.
+		\end{parts}
+		\begin{solution}
+			\begin{parts}
+				\part
+				\part
+				\part
+				\part 
+			\end{parts}
+		\end{solution}
+		\pagebreak
+		 \begin{center}
+		 	\includegraphics[width=0.35\linewidth]{images/ps8q5}
+		 \end{center}
+		 
+	\end{questions}
+\end{document}
