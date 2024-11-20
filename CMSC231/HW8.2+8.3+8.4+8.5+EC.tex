@@ -1,0 +1,92 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath,graphicx, mathrsfs, amssymb, amsthm, enumitem, caption, array}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Chapters 8.1,8.2,8.3 \& 8.4\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+\newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
+\newcommand{\pnt}[1]{{\scriptstyle#1}}
+
+\begin{document}
+	
+	\begingroup  
+	\noindent\LARGE Discrete Mathematics\\
+	\noindent\LARGE Chapters 8.1,8.2,8.3 \& 8.4 Homework\\
+	\noindent\large \today\\
+	\noindent\large Mustafa Rashid\par
+	\noindent\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	
+	\centerline{Exercise Set 8.1}
+	\begin{questions}
+		\setcounter{question}{19}\question Let $A=\{-1,1,2,4\}$ and $B=\{1,2\}$ and define relations $R$ and $S$ from $A$ to $B$ as follows: For all $(x,y)\in A\times B,$
+		\begin{align*}
+			x\mathrel{R}y &\Leftrightarrow |x|=|y| \text{ and}\\
+			x\mathrel{S}y&\Leftrightarrow x-y \text{ is even}
+		\end{align*}
+		State explicitly which ordered pairs are in $A\times B, R, S, R\cup S,$ and $R\cap S$. 
+		\begin{solution}
+			\begin{align*}
+				A\times B&=\{(-1,1),(-1,2),(1,1),(1,2),(2,1),(2,2),(4,1),(4,2)\}\\
+				R&=\{(-1,1),(1,1),(2,2)\}\\
+				S&=\{(-1,1),(1,1),(2,2),(4,2)\}\\
+				R\cup S&=\{(-1,1),(1,1),(2,2),(4,2)\}\\
+				R\cap S&=\{(-1,1),(1,1),(2,2)\}\\
+			\end{align*}
+		\end{solution}
+	\end{questions}
+	\centerline{Exercise Set 8.2}
+	\begin{questions}
+		\setcounter{question}{13}\question $O$ is the relation defined on $\mathbb{Z}$ as follows: For all $m,n\in\mathbb{Z},$ $m\mathrel{O}n \Leftrightarrow m-n$ is odd. Determine whether this relation is reflexive, symmetric, transitive, or none of these. Justify your answer.
+		\begin{solution}\\
+			\textbf{O is not reflexive:} Suppose $m$ is a particular but arbitrarily chosen integer. Now $m-m=0$. But this is not odd. Hence $m-m$ is not odd and $O$ is not reflexive.\\
+			\textbf{O is symmetric:} Suppose $m$ and $n$ are particular but arbitrarily chosen integers that satisfy the condition $m\mathrel{O}n$. By definition of $O$, since $m\mathrel{O}n$ then $m-n$ is odd. By definition of odd, this means that $m-n=2k+1$ for some integer $k$. Multiplying both sides by $-1$ gives $n-m=2(-k-1)+1$ since $-k-1$ is an integer, this equation shows that $n-m$ is odd. Hence, by defintion of $O$, $n\mathrel{O}m$.\\
+			\textbf{O is not transitive:} Suppose $m,n$ and $p$ are particular but arbitrarily chosen integers that satisfy condtion $m\mathrel{O}n$ and $n\mathrel{O}p$. By definition of $O$, since $m\mathrel{O}n$ and $n\mathrel{O}p$, then $m-n$ is odd and $n-p$ is also odd. By definition of odd, this means that $m-n=2k+1$ and $n-p=2q+1$ for some integers $k$ and $q$. Adding the two equations gives $(m-n)+(n-p)=2k+1+2q+1$ and simplifying this gives $m-p=2(k+q+1)$. Since $k+q+1$ this equation shows that $m-p$ is even and not odd. Hence, by defintion of $O$, $m \not \mathrel{O} p$.
+		\end{solution}
+		\setcounter{question}{35}\question If $R$ is transitive, then $R^{-1}$ is transitive. (Prove or disprove this statement.)
+		\begin{solution}
+			Suppose $R$ is any relation on  a set $A$ that is transitive. By defintion of transitive, this means that for all $x,y,$ and $z$ in $A$, if $(x,y)\in R$ and $(y,z)\in R$ then $(x,z)\in R$. Suppose that $x\mathrel{R}y$ and  $y\mathrel{R}z$. Because $R$ is transitive, then $x\mathrel{R}z$. The inverse relation by definition would contain the relations $y\mathrel{R^{-1}}x$, $z\mathrel{R^{-1}}y$, and $z\mathrel{R^{-1}}x$. This means that for any $x,y,$ and $z$ in $A$ if $z\mathrel{R^{-1}}y$ and $y\mathrel{R^{-1}}x$ then $z\mathrel{R^{-1}}x$. Hence, $R^{-1}$ is also transitive.
+					\end{solution}
+	\setcounter{question}{39}\question If $R$ and $S$ are reflexive, is $R\cup S$ reflexive? Why? (Assume $R$ and $S$ are relations on a set $A$. Prove or disprove the statement.)
+	\begin{solution}
+	Suppose not, suppose that $R$ and $S$ are reflexive and that $R\cup S$ is not reflexive. This means that there is an element $x$ in $R\cup S$ such that $(x,x) \notin R$ or $(x,x)\notin S$. But we know that $R$ and $S$ are reflexive so it is not true that that there is an element $x$ in $R$ such that $(x,x)\notin R$ and it is not true that here is an element $x$ in $S$ such that $(x,x)\notin R$. This means that $R\cup S$ also has to be reflexive because all ordered pairs $(x,x)$ in $R\cup S$ come are in $R$ or $S$ and so they are also reflexive.
+	\end{solution}
+	\end{questions}
+	\pagebreak
+	\centerline{Exercise Set 8.3}
+		   In 9 and 10 the relation R is an equivalence relation on the set A. Find the distinct equivalence classes of R.\\
+	\begin{questions}
+		\setcounter{question}{8}\question $X=\{-1,0,1\}$ and $A=\mathscr{P}(X)$. $R$ is defined on $\mathscr{P}(X)$ as follows: For all sets $\pnt{S}$ and $\pnt{T}$ in $\mathscr{P}(X)$,
+		\begin{align*}
+			\pnt{S}\mathrel{R}\pnt{T}\Leftrightarrow \text{ the sum of elements in $\pnt{S}$ equals the sum of the elements in $\pnt{T}$}
+		\end{align*}
+		\begin{solution}
+			\begin{align*}
+			&\{\phi\}\\
+			&\{\{-1\},\{-1,0\}\}\\
+			&\{\{0\},\{-1,1\},\{-1,0,1\}\}\\
+			&\{\{1\},\{0,1\}\}
+			\end{align*}
+		\end{solution}
+		\setcounter{question}{9}\question $A=\{-5,-4,-3,-2,-1,0,1,2,3,4,5\}.$ $R$ is defined on $A$ as follows: For all $m,n\in\mathbb{Z},$
+		$$m\mathrel{R}n\Leftrightarrow 3\mid(m^2-n^2).$$
+		\setcounter{question}{38}\question The following argument claims to prove that the requirement that an equivalence relation be reflexive is redundant. In other words, it claims to show that if a relation is symmetric and transitive, then it is reflexive. Find the mistake in the argument.\\
+		``\textbf{Proof:} Let $R$ be a relation on a set $A$ and suppose $R$ is symmetric and transitive. For any two elements $x$ and $y$ in $A$, if $x\mathrel{R}y$ then $y\mathrel{R}x$ since $R$ is symmetric. But then it follows by transitivity that $x\mathrel{R}x$. Hence $R$ is reflexive."
+	\end{questions}
+
+	\centerline{Exercise Set 8.4}
+	\begin{questions}
+		
+	\end{questions}
+	\centerline{Exercise Set 8.5}
+	\centerline{Extra-credit}
+	
+	\end{document}

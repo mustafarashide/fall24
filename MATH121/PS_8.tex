@@ -49,13 +49,19 @@
 		\part \makebox[0pt][l]{%
 			\begin{minipage}{\textwidth}
 				\centering
-			 \includegraphics[width=0.35\linewidth]{ps8q1}
+			 \includegraphics[width=0.35\linewidth]{ps8q1}\\
+			\noindent\textit{Starting from $(0,4)$ and moving counterclockwise to $(-2,0)$. }  
 			\end{minipage}
 		} 
 			\end{parts}
 		\end{solution}
 		\question At the point when $t=-1$, find an equation for the plane perpendicular to the line
 		$$x=5-3t,\hspace*{0.10cm}y=5t-7,\hspace*{0.10cm}z=6t.$$
+		\begin{solution}
+			When $t=-1$, the point $P$ is $(8,-12,6)$. Because the plane is perpendicular to the line, its normal vector will be the direction vector of the line. The direction vector will then be $\langle -3,5,6 \rangle$. This means that the equation of the plane will then be 
+			$$-3(x-8)+5(y+12)+6(z+6)=0$$
+			$$-3x+5y+6z=-120$$
+		\end{solution}
 		\question A point $P$ moves in a circle of radius $a$ centered at the origin. Show that $\vec{r}(t)$, the position vector of $P$, is perpendicular to the velocity vector $\vec{r}\hspace*{0.08cm}'(t)$ for every $t$.
 		\begin{solution}\\
 			Let $\vec{r}(t)=\langle a\cos(t),a\sin(t)\rangle$ and so $\vec{r}\hspace*{0.08cm}'(t)=\langle -a\sin(t),a\cos(t)\rangle$. Because these vectors are perpendicular their dot product is equal to 0. 
@@ -78,7 +84,9 @@
 		\begin{solution}
 		\begin{parts}
 			\part At $t=0$ the stone is on the rooftop. Its position upwards from the origin is given by $6.4-4.9(0)^2=\SI{6.4}\m$
-			\part When the stone hits the ground, the po
+			\part When the stone hits the ground, the position upwards from the origin is 0. Setting $6.4-4.9t^2=0$ gives $t^2=\frac{6.4}{4.9}$ taking the positive square root of $t^2$ we get $t=\SI{1.14}\s$.
+			\part The velocity vector is given by $\vec{r}\hspace*{0.08cm}'(t)=\langle 10,-5,-9.8t \rangle$. We know from (b) that the stone hits the ground at $t=1.14$. Plugging this into $\vec{r}\hspace*{0.08cm}'(t)$ gives $\langle 10,-5,-11.2 \rangle$. The magnitude of this vector is $\sqrt{10^2+(-5)^2+(-11.2)^2}=15.83$. The stone is moving at a speed of $\SI{15.83}\ms^{-1}$.
+			\part Plugging $t=1.14$ into $\vec{r}(t)$ we get $\langle 11.4,-5.7,0.03196 \rangle$. This means that the stone is at the position where $x=11.4$ and $y=-5.7$ or that the stone is $\SI{11.4}\m$ east and $\Si{5.7}\m$ south from the origin. 
 		\end{parts}
 		\end{solution}
 		\question Each vector field in the figures (I)-(IV) shown on the last page represents the force on a particle at different points in space as a result of another particle at the origin. Match up the vector fields with the descriptions below; no explanation necessary.
@@ -90,10 +98,10 @@
 		\end{parts}
 		\begin{solution}
 			\begin{parts}
-				\part
-				\part
-				\part
-				\part 
+				\part (IV)
+				\part (III)
+				\part (I)
+				\part (II)
 			\end{parts}
 		\end{solution}
 		\pagebreak

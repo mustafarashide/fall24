@@ -168,6 +168,25 @@
 			\item Compute $f(0,0), f(1,0), f(-1,0), f(0,1), f(0,-1)$\\
 			Global maximum is at (1,0) and (-1,0)\\
 			Global minimum is at (0,1) and (0,-1)\\
-			\centering{Session 24 : Parameterized Curves}
+		\end{enumerate}
+		Session 24 : Parameterized Curves: missing notes}\\
+		\noindent § Line Integrals via Parametrization (11/18/2024)\\
+		Goal: Compute $\int_c \vec{F}\cdotd\vec{r}$ using a parametrization of $\vec{r}(t)$.\\
+		\begin{itemize}
+			\item Let $\vec{r}(t)$ be a parametrization (smooth) of curve $C$ for $a\leq t \leq b$.
+			\item Let $\vec{F}$ be a vector field which ?contains? C.
+			\item Then, $\int_c \vec{F}\cdotd\vec{r}=\int_{a}^{b}\vec{F}(\vec{r}(t))\cdot\vec{r}^{\hspace*{0.1cm}'}(t) dt$
+		\end{itemize}
+		Example:\\
+		$$\vec{F}=\langle x+y,y\rangle$$
+		Let $C$ be given by $\vec{r}(t)=\langle cost(t), sin(t)\rangle$ for $0\leq t \leq \frac{\pi}{2}$. \\
+		Compute $\int_c \vec{F}\cdot d\vec{r}$
+		\begin{enumerate}
+			\item $\vec{r}(t)=\langle cos(t),sin(t) \rangle$ - [$x=cos(t),y=sin(t)$]\\
+			$\vec{r}^{\hspace*{0.1cm}'}(t)=\langle -sin(t),cos(t) \rangle$\\
+			$\vec{F}(\vec{r}(t))=\langle x+y, y \rangle=\langle cos(t)+sin(t),sin(t) \rangle$
+			\item $\vec{F}(\vec{r}(t))\cdot\vec{r}^{\hspace*{0.1cm}'}(t)=\langle cos(t)+sin(t),sin(t) \rangle \cdot \langle-sin(t), cos(t)\rangle = -sin^2(t)$
+			\item $\int_c \vec{F}\cdot d\vec{r}=\int _{0}^{\frac{\pi}{2}}-sin^2(t) dt; sin^2(t)=\frac{1-cos(2t)}{2}$\\
+			$=\int_{0}^{\frac{\pi}{2}}\frac{cos(2t)-1}{2}dt=-\frac{\pi}{4}$
 		\end{enumerate}
 \end{document}
