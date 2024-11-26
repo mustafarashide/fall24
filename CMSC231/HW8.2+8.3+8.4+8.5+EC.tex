@@ -1,6 +1,6 @@
 \documentclass[12pt,letterpaper, onecolumn]{exam}
 \usepackage{amsmath,graphicx, mathrsfs, amssymb, amsthm, enumitem, caption, array}
-
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
 \lhead{Mustafa Rashid\\}
@@ -78,15 +78,94 @@
 		\end{solution}
 		\setcounter{question}{9}\question $A=\{-5,-4,-3,-2,-1,0,1,2,3,4,5\}.$ $R$ is defined on $A$ as follows: For all $m,n\in\mathbb{Z},$
 		$$m\mathrel{R}n\Leftrightarrow 3\mid(m^2-n^2).$$
+		\begin{solution}
+			\begin{align*}
+				[0]=[3]=[-3]&=\{-3,0,3\}\\
+				[1]=[-1]=[2]=[-2]=[4]=[-4]=[5]=[-5]&=\{-5,-4,-2,-1,1,2,4,5\}
+			\end{align*}
+		\end{solution}
 		\setcounter{question}{38}\question The following argument claims to prove that the requirement that an equivalence relation be reflexive is redundant. In other words, it claims to show that if a relation is symmetric and transitive, then it is reflexive. Find the mistake in the argument.\\
 		``\textbf{Proof:} Let $R$ be a relation on a set $A$ and suppose $R$ is symmetric and transitive. For any two elements $x$ and $y$ in $A$, if $x\mathrel{R}y$ then $y\mathrel{R}x$ since $R$ is symmetric. But then it follows by transitivity that $x\mathrel{R}x$. Hence $R$ is reflexive."
+		\begin{solution}
+			By definiton, a relation $R$ is symmetric if, and only if, for all $x,y\in A$, if $x\mathrel{R}y$ then $y\mathrel{R}x$. However, this is still vacuously true (that is the relation is still symmetric by definition) in the following cases where: $$x\not\mathrel{R}y \lor y\mathrel{R}x$$
+			$$x\not\mathrel{R}y \lor y\not\mathrel{R}x$$
+			The second case shows that there is an element $x$ in $A$ such that $x\not\mathrel{R}x$ and so $R$ is not necessarily reflexive. 
+		\end{solution}
 	\end{questions}
 
 	\centerline{Exercise Set 8.4}
 	\begin{questions}
-		
+		\setcounter{question}{15}\question What is the units digit of $3^{1789}$?
+		\begin{solution}
+			By looking at $3^0=1, 3^1=3,3^2=9,3^3=27,3^4=81$ we can see that
+			\begin{align*}
+ 				 3^4 &\equiv 1 \Mod{10}
+			\end{align*}
+			By Theorem 8.4.3 and exponent laws we get
+				\begin{align*}
+				3^{1788}=(3^4)^{447} &\equiv 1^{447} \Mod{10}\\
+				3^{1788}&\equiv1\Mod{10}
+			\end{align*}
+			We know that $3\equiv1\Mod{10}$ and so by Theorem 8.4.3, $3^{1788}\cdot3\equiv 1\cdot3\Mod{10}$. Therefore, the units digit of $3^{1789}$ is 3.
+		\end{solution}
+		\setcounter{question}{31}\question Prove that in any commutative ring $R$, there is only one multiplicative identity. In other words, prove that in any commutative ring $R$, if $ec=c$ for all elements $c$ in $R$, then $e=1$
+		\begin{solution}
+			\begin{proof}
+			Suppose $c=1$,and so because $ec=c$ then $e\cdot1=1$ by the identity for multiplication. Because $1$ is the identity for multiplication $e\cdot1=e$ and therfore $e=e\cdot1=1$.
+			\end{proof}
+		\end{solution}
+		\setcounter{question}{32}\question Prove that given any element $a$ in any commutative ring $R$, there is only one additive inverse for $a$. In other words, prove that if $a+b=0$ and $a+c=0$, then $b=c$.
+		\begin{solution}
+			\begin{proof}
+			Because $a+b=0$ and $a+c=0$ we can say that $a+b=a+c$. Subtracting $a$ from both sides gives $b=c$.
+			\end{proof}
+		\end{solution}
 	\end{questions}
 	\centerline{Exercise Set 8.5}
-	\centerline{Extra-credit}
+	\begin{questions}
+			\setcounter{question}{18}\question Use the extended Euclidean algorithm to find the greatest common divisor of 2583 and 349. Express the greatest common divisor as a linear combination of the two numbers.
+			\begin{solution}
+			\begin{enumerate}
+				\item Applying the Euclidean Algorithm
+				\begin{enumerate}[label=(\alph*)] 
+					\item gcd(2583,349): $2583=348\cdot7+140$
+					\item gcd(349,140):$349=140\cdot2+69$
+					\item gcd(140,69):$140=69\cdot2+2$
+					\item gcd(69,34):$69=34\cdot2+1$
+					\item gcd(34,1):$34=1\cdot34+0$
+					\item gcd(1,0)$=1$
+				\end{enumerate}
+				\item Substituting back the results
+				\begin{align*}
+					1&=69-34\cdot2\tag*{By (d)}\\
+					&=69-(140-69\cdot2)34\tag*{By (c)}\\
+					&=69\cdoy69-(2583-349\cdot7)\cdot34\tag*{By (a) \& algebra}\\
+					&=69(349-140\cdot2)-2583\cdot34+349\cdot7\cdot34\tag*{By (b)}\\
+					&=2583\cdot(-172)+349\cdot1273\tag*{By algebra}
+				\end{align*}
+			\end{enumerate}
+			\end{solution}
+			\setcounter{question}{40}\question Use the extended Euclidean algorithm to find a postive integer $n$ so that $2\leq n \leq 30$ and $[n]$ is an inverse for $[13]$ in $\mathbb{Z}_{31}$
+			\begin{solution}
+				$\exists x$ such that $[13]\cdot[x]$ if, and only if, $13x\equiv1\Mod{31}$. So $13x+31(-k)=1$ and applying the euclidean algorithm on 31 and 13 gives:
+					\begin{enumerate}[label=(\alph*)] 
+					\item gcd(31,13): $31=13\cdot2+5$
+					\item gcd(13,5):$13=5\cdot2+3$
+					\item gcd(5,2):$5=3\cdot1+2$
+					\item gcd(3,2):$3=2\cdot1+1$
+					\item gcd(2,1):$2=1\cdot2+0$
+					\item gcd(1,0)$=1$
+				\end{enumerate}
+				Substituting the results back gives:
+				\begin{align*}
+					1&=3-2\cdot1\\
+					&=3-(5-3\cdot1)\cdot1\tag*{By (c)}\\
+					&=2(13-5\cdot2)-(31-13\cdot2)\tag{By algebra \& (a)}\\
+					&=13\cdot4-31-4(31-13\cdot2)\tag*{By algebra \& (a)}\\
+					&=13(12)+31(-5)\\
+				\end{align*}
+				So $1=13(12)+31(-5)$ or $13\cdot12\equiv1\Mod{31}$ and so $n=12$.
+			\end{solution}
+	\end{questions}
 	
-	\end{document}
+\end{document}

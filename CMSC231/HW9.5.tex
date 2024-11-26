@@ -1,0 +1,97 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath,graphicx, mathrsfs, amssymb, amsthm, enumitem, caption, array}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Chapter 9.5\\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+\newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
+\newcommand{\pnt}[1]{{\scriptstyle#1}}
+
+\begin{document}
+	
+	\begingroup  
+	\noindent\LARGE Discrete Mathematics\\
+	\noindent\LARGE Chapter 9.5 Homework\\
+	\noindent\large \today\\
+	\noindent\large Mustafa Rashid\par
+	\noindent\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	
+	\centerline{Exercise Set 9.5}
+	\begin{questions}
+	\setcounter{question}{3}\question Write an equation relating $P(8,3)$ and $\binom{8}{3}$.
+	\begin{solution}
+	$\frac{P(8,3)}{3!}$
+	\end{solution}
+	\setcounter{question}{5}\question Use Theorem 9.5.1 to compute each of the following
+	\begin{parts}
+		\setcounter{partno}{2}\part $\binom{6}{2}$
+		\part $\binom{6}{3}$
+		\part $\binom{6}{4}$
+		\part $\binom{6}{5}$
+		\part $\binom{6}{6}$
+	\end{parts}
+	\begin{solution}
+		\begin{parts}
+			\setcounter{partno}{2}\part $\binom{6}{2}=\frac{6!}{2!(6-2)!}=15$
+			\part $\binom{6}{3}=\frac{6!}{3!(6-3)!}=20$
+			\part$\binom{6}{4}=\frac{6!}{4!(6-4)!}=15$
+			\part $\binom{6}{5}=\frac{6!}{5!(6-5)!}=6$
+			\part $\binom{6}{6}=\frac{6!}{6!(6-6)!}=1$
+		\end{parts}
+	\end{solution}
+	\setcounter{question}{19}\question\begin{parts}
+		\part How many distinguishable ways can the letters of the word MILLIMICRON be arranged in order?
+		\part How many distinguishable orderings of the letters of MILLIMICRON begin with U and end with L?
+		\part How many distinguishable orderings of the letters of MILLIMICRON contain the two letters HU next to each other in order?
+	\end{parts}
+	\begin{solution}
+	\begin{parts}
+		\part $11!=39916800$ ways
+		\part $9!=362880$ orderings
+		\part $9!=362880$ orderings
+	\end{parts}
+	\end{solution}
+	\question In Morse code, symbols are represented by variable-length sequences of dots and dashes. How many different symbols can represented by sequences of seven or fewer dots and dashes?
+	\begin{solution}
+		$7!+6!+5!+4!+3!+2!+1!=5913$ different symbols.
+	\end{solution}
+	\question Each symbol in the Braille code is represented by a rectangular arrangement of six dots, each of which may be raised or flat against a smooth background. Given that at least one of the six dots must be raised, how many symbols can be represented in the Braille code?
+	\begin{solution}
+		$2^6-1=63$ symbols.
+	\end{solution}
+	\setcounter{question}{23}\question The number 42 has the prime factorization $2\cdot3\cdot7$. Thus 42 can be written in four ways as a product of two positive integer factors (without regard to the order of the factors): 1· 42, 2· 21, 3· 14 and 6· 7. Answer a,c,\&d below without regard to the order of the factors.
+	\begin{parts}
+		\part List the distinct ways the number 210 can be written as a product of two positive integer factors.
+		\setcounter{partno}{2}\part If $n = p_1p_2p_3p_4p_5$, where the $p_i$ are distinct prime
+		numbers, how many ways can n be written as a product of two positive integer factors?
+		\part If $n=p_1p_2....p_k$ , where the $p_i$ are distinct prime numbers, how many ways can n be written as a product of two positive integer factors?
+	\end{parts}
+	\begin{solution}
+		\begin{parts}
+						\part $210=2\cdot3\cdot5\cdot7$. Thus $210$ can be written as $1\cdot210,2\cdot105,3\cdot70,5\cdot42,7\cdot30,10\cdot21,14\cdot15$.
+			\setcounter{partno}{2}\part Let $S=\{p_1,p_2,p_3,p_4,p_5\}.$ Let $P=p_1p_2p_3p_4p_5$, and let $f_1f_2$ be any factorization of $P$. The product of the numbers in any subset $A\subseteq S$ can be used for $f_1$, with the product of the numbers in $A^c$ being $f_2$. There are many ways to write $f_1f_2$ as there are subsets of $S$, namely $2^5=32$ (by Theorem 6.3.1). But given any factors $f_1$ and $f_2$, $f_1f_2=f_2f_1$. Thus counting the number of ways to write $f_1f_2$ counts each factorization twice, so the answer is $\frac{32}{2}=16$.
+			\part In $\frac{2^k}{2}$ ways.
+		\end{parts}
+	\end{solution}
+	\setcounter{question}{26}\question Let $A$ be a set with eight elements.
+	\begin{parts}
+		\setcounter{partno}{1}\part How many relations on A are reflexive?
+		\setcounter{partno}{3}\part How many relations on $A$ are both reflexive and symmetric?
+	\end{parts}
+	\begin{solution}
+		\begin{parts}
+				\setcounter{partno}{1}\part The total set of relations is the number of subsets of the set $A\times A$ and so there are $2^{64}$ possible relations. For a relation to be reflexive, there must be $n$ ordered pairs of the form $(a,a)$ for each element $a$ in the set. This gives $2^{64-8}$ or $2^{56}$ relations.
+		\end{parts}
+	\end{solution}
+	\end{questions}
+	
+\end{document}

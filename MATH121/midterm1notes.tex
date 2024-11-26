@@ -189,4 +189,33 @@
 			\item $\int_c \vec{F}\cdot d\vec{r}=\int _{0}^{\frac{\pi}{2}}-sin^2(t) dt; sin^2(t)=\frac{1-cos(2t)}{2}$\\
 			$=\int_{0}^{\frac{\pi}{2}}\frac{cos(2t)-1}{2}dt=-\frac{\pi}{4}$
 		\end{enumerate}
+		\section*{17.3 Vector Fields}
+		\begin{itemize}
+			\item A vector field in 2-space is a function $\vec{F}(x,y)$ whose value at a point $(x,y)$ is a 2-dimensional vector. Similarly, a vector field in 3-space is a function $F(x,y,z)$ whose values are 3-dimensional vectors.
+		\end{itemize}
+		\section*{Fundamental Theorem Of Calculus for Line Integrals}
+		Let $C$ be a piecewise, smooth oriented path starting @ $P$ and ending @ $Q$. Let $f$ be a function such that $\nabla f$ is continuous on $C$ then,
+		$$\int_c \nabla f \cdot d\vec{r}=f(Q)-f(P)$$
+		Rank: If $\vec{F}$ is a gradient field ($\vec{F}=\nabla f$ for some $f$), then 
+		$$\int_c \vec{F}\cdot d\vec{r}=f(Q)-f(P)$$
+		E.g. Let $\vec{F}=\langle x,y \rangle$. Let $C$ be given by $\vec{r}(t)=\langle t,-t^2+1 \rangle, 0\leq t \leq 1$.\\
+		Compute $\int_c \vec{F}\cdot d\vec{r}$\\
+		Note: If $f(x,y)=\frac{x^2}{2}+\frac{y^2}{2},$ then $\nabla =\langle x,y \rangle $ and so $\vec{F}=\nabla f$\\
+		Also,
+		\section*{Green's Theorem}
+		Green: Let $C$ be a piecewise, smooth, simple, closed curve that is the boundary of a region $R$. Let $C$ be oriented so that the region is on the left as we move aorund $C.$\\
+		\begin{center}
+			\includegraphics[width=0.7\linewidth]{images/screenshot001}
+		\end{center}
+		Let $\vec{F}=\langle F_1, F_2 \rangle$ be a smooth vector field on $R$. Then,
+		$$\int_C \vec{F}\cdot d\vec{r} = \int_R\left(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\right)dxdy$$
+		Note: Green can be given by
+		$$\oint_{\partial R}\vec{F}\cdot d\vec{r}=\int_R\left(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\right)dA$$
+		Example: Let $\vec{F}=<y^2,x>$\\
+		Let $C$ be the counter-clockwise path around the perimeter of the rectangle $0\leq x \leq 2$ and $0\leq y \leq 3$\\
+		Compute $\int_C \vec{F}\cdot d\vec{r}$
+		Use Green! $\int_R\left(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\right)dxdy$
+		\begin{align*}
+			F_1=y^2=\frac{\partial F_1}{\partial y}=2y
+		\end{align*}
 \end{document}
