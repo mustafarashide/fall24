@@ -1,0 +1,104 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath,graphicx, mathrsfs, amssymb, amsthm, enumitem, caption, array}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry}
+\lhead{Mustafa Rashid\\}
+\rhead{Chapters 9.1,9.2,9.3 \& 9.9 \\}
+\chead{\hline} 
+\thispagestyle{empty} 
+\newcommand*{\setdef}[1]{\left\{#1 \right\}} 
+\newcommand{\doesnotdivide}{\not\hspace{2.5pt}\mid}
+\newcommand{\pnt}[1]{{\scriptstyle#1}}
+
+\begin{document}
+	
+	\begingroup  
+	\noindent\LARGE Discrete Mathematics\\
+	\noindent\LARGE Chapters 9.1,9.2,9.3 \& 9.9 Homework\\
+	\noindent\large \today\\
+	\noindent\large Mustafa Rashid\par
+	\noindent\large Fall 2024\par
+	\endgroup
+	\rule{\textwidth}{0.4pt}
+	\pointsdroppedatright
+	\printanswers
+	\renewcommand{\solutiontitle}{\noindent\textbf{Ans:}\enspace}  
+	
+	\centerline{Exercise Set 9.1}
+	\begin{questions}
+	\setcounter{question}{23}\question If the largest of 87 consecutive integers is 326, what is the smallest?
+	\begin{solution}
+	\begin{align*}
+		87&=326-m+1\\
+		m&=240\\
+	\end{align*}
+	The smallest integer is 240.
+	\end{solution}
+	\end{questions}
+	\centerline{Exercise Set 9.2}
+	\begin{questions}
+	\setcounter{question}{16}\question \begin{parts}
+		\part How many integers are there from 1000 through 9999?
+		\part How many odd integers are there from 1000 through 9999?
+	\end{parts}
+	\begin{solution}
+		\begin{parts}
+			\part 9000
+			\part $9\cdot9\cdot9\cdot5=3645$
+			\end{parts}
+	\end{solution}
+	\setcounter{question}{35}\question Prove that for all integers $n\geq3,$
+	$$P(n+1,3)-P(n,3)=3P(n,2)$$
+	\begin{solution}
+		\begin{proof}
+			Suppose $n$ is an integer greater than or equal to 3, then 
+			$$P(n+1,3)=\frac{(n+1)!}{(n-2)!}=(n+1)(n)(n-1)=n^3-n$$
+			$$P(n,3)=\frac{n!}{(n-3)!}=n(n-1)(n-2)=n^3-3n^2+2n$$
+			$$P(n+1,3)-P(n,3)=n^3-n-n^3+3n^2-2n=3n^2-3n$$
+			but $3P(n,2)$ is equal to $3\cdot\frac{n!}{(n-2)!}$ or $3(n(n-1))=3n^2-3n$. Therefore $P(n+1,3)-P(n,3)=3P(n,2)$.
+		\end{proof}
+	\end{solution}
+	\question Prove that for all integers $n\geq2$, $P(n,n)=P(n,n-1).$
+	\begin{solution}
+		\begin{proof}
+		Suppose $n$ is an integer greater than or equal to 2. 
+		$$P(n,n)=\frac{n!}{(n-n)!}=n!$$
+		But $P(n,n-1)$ is equal to $\frac{n!}{1!}$ or $n!$. Therefore $P(n,n)=P(n,n-1).$
+		\end{proof}
+	\end{solution}
+	\end{questions}
+	
+	\centerline{Exercise Set 9.3}
+	\begin{questions} 
+	\setcounter{question}{22}\question \begin{parts}
+		\part How many integers from 1 through 1,000 are multiples of 2 or multiples of 9?
+		\part Suppose an integer from 1 through 1,000 is chosen at random. Use the result of part (a) to find the probability that the integer is a multiple of 2 or a multiple of 9.
+		\part How many integers from 1 through 1,000 are neither multiples of 2 nor multiples of 9?
+	\end{parts}
+	\begin{solution}
+		\begin{parts}
+			\part Let $A$ be the set of multiples of 2 and $B$ be the set of multiples of 9. $N(A)=500$ and $N(B)=111$. The intersection, or the set of multiples of 18 will then have $N(A\cap B)=55$. Therefore, there are $500+111-55$ or $556$ integers that are multiples of 2 or multiples of 9.
+			\part $\frac{556}{1000}=0.556$
+			\part $(1-0.556)\cdot1000=444$
+		\end{parts}
+	\end{solution}
+	\end{questions}
+	
+	\centerline{Exercise Set 9.9}
+	\begin{questions}
+		\setcounter{question}{23}\question A company uses two proofreaders $X$ and $Y$ to check a certain manuscript. $X$ misses $12\%$ of typographical errors and $Y$ misses $15\%$. Assume that the proofreaders work independently. 
+		\begin{parts}
+			\part What is the probability that a randomly chosen typographical error will be missed by both proofreaders?
+			\part If the manuscript contains 1,000 typographical errors, what number can be expected to be missed?
+		\end{parts}
+		\begin{solution}
+			\begin{parts}
+				\part  $0.12\cdot0.15=0.018$ or 18\%
+				\part $1000\cdot0.018$ or 18 errors.
+			\end{parts}
+		\end{solution}
+%		\setcounter{question}{25}\question Describe a sample space and events $A,B,$ and $C$ where $P(A\cup B \cup C)$
+	\end{questions}
+	
+\end{document}
